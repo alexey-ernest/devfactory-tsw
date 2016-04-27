@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {TswIndexComponent} from './+tsw-index';
 
 @Component({
   moduleId: __moduleName,
@@ -11,6 +12,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
   pipes: []
 })
 @RouteConfig([
+  {path: '/', name: 'TswIndex', component: TswIndexComponent}
 ])
 export class TestingServicesWebsite2016App {
   defaultMeaning: number = 42;
