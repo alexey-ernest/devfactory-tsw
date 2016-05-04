@@ -693,6 +693,12 @@ export class TswIndexComponent implements OnInit {
       closedSymbol: '<i class="fa fa-angle-right"></i>',
       openedSymbol: '<i class="fa fa-angle-down"></i>',
     });
+
+    $(document).ready(function() {
+      $('.carousel').carousel({
+        interval: 4000
+      })
+    });
   }
 
 }
