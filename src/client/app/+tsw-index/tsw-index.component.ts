@@ -1,16 +1,14 @@
 import {Component, OnInit} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+
 interface Window { $: any; jQuery: any; start: any; }
+
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-index',
   templateUrl: 'tsw-index.component.html',
   styleUrls: ['tsw-index.component.css'],
-  directives: [ROUTER_DIRECTIVES]
+  directives: []
 })
-
-
-
 export class TswIndexComponent implements OnInit {
 
   constructor() {

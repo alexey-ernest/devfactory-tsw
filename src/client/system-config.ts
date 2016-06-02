@@ -2,6 +2,7 @@ const barrels: string[] = [
   'app',
   'app/shared',
   'app/+tsw-index',
+  'app/tsw-header',
   /** @cli-barrel */
 ];
 
