@@ -1,4 +1,4 @@
-import {Directive, Inject, ElementRef, Input} from 'angular2/core';
+import {Directive, ElementRef, Input} from 'angular2/core';
 
 @Directive({
   selector: 'tsw-carousel-slide'

@@ -9,7 +9,8 @@ import {TswCarouselSlideDirective} from './tsw-carousel-slide.directive';
   directives: [TswCarouselSlideDirective]
 })
 export class TswCarouselComponent implements OnInit {
-  @ContentChildren(TswCarouselSlideDirective) slides: QueryList<TswCarouselSlideDirective>;
+  @ContentChildren(TswCarouselSlideDirective)
+  slides: QueryList<TswCarouselSlideDirective>;
 
   ngOnInit() {
     var $ = window['$'];
