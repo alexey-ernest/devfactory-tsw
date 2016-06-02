@@ -2,6 +2,9 @@ const barrels: string[] = [
   'app',
   'app/shared',
   'app/+tsw-index',
+  'app/tsw-header',
+  'app/tsw-carousel',
+  'app/tsw-back-to-top'
   /** @cli-barrel */
 ];
 
