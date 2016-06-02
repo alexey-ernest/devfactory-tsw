@@ -368,9 +368,10 @@
 
 @media (min-width : 992px) {
     
-    #main-slide .slider-content h2{
-		font-size: 68px;
-	}
+    #main-slide .slider-content h2 {
+			font-size: 68px;
+    	line-height: 1;
+		}
 }
 
 
