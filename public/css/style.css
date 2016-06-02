@@ -829,6 +829,10 @@ ul.social-list li:last-child a i {
 
 /*-- Main slide --*/
 
+#home {
+    margin-top: 75px;
+}
+
 #main-slide .item img {
     width: 100%;
 }
@@ -853,7 +857,7 @@ ul.social-list li:last-child a i {
 
 #main-slide .slider-content {
     top: 50%;
-    margin-top: -70px;
+    margin-top: -80px;
     left: 0;
     padding: 0;
     text-align: center;

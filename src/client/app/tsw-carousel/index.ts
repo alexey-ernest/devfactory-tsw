@@ -1,0 +1,1 @@
+export {TswCarouselComponent} from './tsw-carousel.component';

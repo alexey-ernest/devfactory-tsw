@@ -1,8 +1,10 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
-import {TswIndexComponent} from './+tsw-index';
 import {TswHeaderComponent} from './tsw-header';
+import {TswCarouselComponent} from './tsw-carousel';
+import {TswBackToTopComponent} from './tsw-back-to-top';
+import {TswIndexComponent} from './+tsw-index';
 
 @Component({
   moduleId: __moduleName,
@@ -12,6 +14,8 @@ import {TswHeaderComponent} from './tsw-header';
   styleUrls: ['testing-services-website-2016.component.css'],
   directives: [
     TswHeaderComponent,
+    TswCarouselComponent,
+    TswBackToTopComponent,
     TswIndexComponent
   ],
   pipes: []
