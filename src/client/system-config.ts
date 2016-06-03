@@ -5,6 +5,7 @@ const barrels: string[] = [
   'app/tsw-header',
   'app/tsw-carousel',
   'app/tsw-highlights',
+  'app/tsw-services',
   'app/tsw-back-to-top'
   /** @cli-barrel */
 ];

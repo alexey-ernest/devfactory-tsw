@@ -150,20 +150,6 @@ export class TswIndexComponent implements OnInit {
         isPause = true;
       }
 
-      ////------- Projects Carousel
-      $(".projects-carousel").owlCarousel({
-        navigation: true,
-        pagination: false,
-        slideSpeed: 400,
-        stopOnHover: true,
-        autoPlay: 3000,
-        items: 4,
-        itemsDesktopSmall: [900, 3],
-        itemsTablet: [600, 2],
-        itemsMobile: [479, 1]
-      });
-
-
       ////------- Testimonials Carousel
       $(".testimonials-carousel").owlCarousel({
         navigation: true,

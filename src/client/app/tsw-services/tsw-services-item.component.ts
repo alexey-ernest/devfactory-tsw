@@ -2,17 +2,17 @@ import {Component, Input} from 'angular2/core';
 
 @Component({
   moduleId: __moduleName,
-  selector: 'tsw-highlights-item',
-  templateUrl: 'tsw-highlights-item.component.html'
+  selector: 'tsw-services-item',
+  templateUrl: 'tsw-services-item.component.html'
 })
-export class TswHighlightsItemComponent {
+export class TswServicesItemComponent {
   /**
-   * Icons css class.
+   * Thumb image src.
    * 
    * type {string}
    */  
   @Input()
-  iconClass: string;
+  imageSrc: string;
 
   /**
    * Title.
