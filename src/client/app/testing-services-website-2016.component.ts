@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 
 import {TswHeaderComponent} from './tsw-header';
 import {TswCarouselComponent, TswCarouselSlideDirective} from './tsw-carousel';
+import {TswHighlightsComponent, TswHighlightsItemComponent} from './tsw-highlights';
 import {TswBackToTopComponent} from './tsw-back-to-top';
 import {TswIndexComponent} from './+tsw-index';
 
@@ -16,6 +17,8 @@ import {TswIndexComponent} from './+tsw-index';
     TswHeaderComponent,
     TswCarouselComponent,
     TswCarouselSlideDirective,
+    TswHighlightsComponent,
+    TswHighlightsItemComponent,
     TswBackToTopComponent,
     TswIndexComponent
   ],
