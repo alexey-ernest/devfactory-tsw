@@ -11,7 +11,7 @@
 
     <!-- Carousel inner -->
     <div class="carousel-inner">
-      <div *ngFor="#slide of slides; #first=first" [innerHTML]="slide.innerHTML" class="item" [class.active]="first"></div>
+      <ng-content></ng-content>
     </div>
     <!-- Carousel inner end-->
 

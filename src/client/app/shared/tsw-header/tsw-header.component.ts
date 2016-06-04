@@ -3,7 +3,8 @@ import {Component, OnInit} from 'angular2/core';
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-header',
-  templateUrl: 'tsw-header.component.html'
+  templateUrl: 'tsw-header.component.html',
+  styleUrls: ['tsw-header.component.css']
 })
 export class TswHeaderComponent implements OnInit {
   ngOnInit() {

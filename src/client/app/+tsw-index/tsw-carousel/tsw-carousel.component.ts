@@ -1,21 +1,22 @@
 import {Component, OnInit, ContentChildren, QueryList} from 'angular2/core';
 
-import {TswCarouselSlideDirective} from './tsw-carousel-slide.directive';
+import {TswCarouselSlideComponent} from './tsw-carousel-slide.component';
 
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-carousel',
   templateUrl: 'tsw-carousel.component.html',
-  directives: [TswCarouselSlideDirective]
+  styleUrls: ['tsw-carousel.component.css'],
+  directives: [TswCarouselSlideComponent]
 })
 export class TswCarouselComponent implements OnInit {
   /**
-   * Child TswCarouselSlideDirective components.
+   * Child TswCarouselSlideComponent components.
    * 
-   * type {QueryList<TswCarouselSlideDirective>}
+   * type {QueryList<TswCarouselSlideComponent>}
    */  
-  @ContentChildren(TswCarouselSlideDirective)
-  slides: QueryList<TswCarouselSlideDirective>;
+  @ContentChildren(TswCarouselSlideComponent)
+  slides: QueryList<TswCarouselSlideComponent>;
 
   ngOnInit() {
     var $ = window['$'];

@@ -1,4 +1,4 @@
 import {TswCarouselComponent} from './tsw-carousel.component';
-import {TswCarouselSlideDirective} from './tsw-carousel-slide.directive';
+import {TswCarouselSlideComponent} from './tsw-carousel-slide.component';
 
-export const CAROUSEL_DIRECTIVES: any[] = [TswCarouselComponent, TswCarouselSlideDirective];
+export const CAROUSEL_DIRECTIVES: any[] = [TswCarouselComponent, TswCarouselSlideComponent];
