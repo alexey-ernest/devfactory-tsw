@@ -9,6 +9,11 @@ import {TswCarouselSlideDirective} from './tsw-carousel-slide.directive';
   directives: [TswCarouselSlideDirective]
 })
 export class TswCarouselComponent implements OnInit {
+  /**
+   * Child TswCarouselSlideDirective components.
+   * 
+   * type {QueryList<TswCarouselSlideDirective>}
+   */  
   @ContentChildren(TswCarouselSlideDirective)
   slides: QueryList<TswCarouselSlideDirective>;
 
@@ -19,10 +24,8 @@ export class TswCarouselComponent implements OnInit {
       "use strict";
 
       // configure bootrstrap carousel
-      $(document).ready(function() {
-        $('.carousel').carousel({
-          interval: 4000
-        })
+      $('.carousel').carousel({
+        interval: 4000
       });
     });
   }

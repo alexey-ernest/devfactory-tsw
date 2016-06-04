@@ -8,6 +8,7 @@ const barrels: string[] = [
   'app/tsw-services',
   'app/tsw-latest-news',
   'app/tsw-statistics',
+  'app/tsw-clients',
   'app/tsw-back-to-top'
   /** @cli-barrel */
 ];

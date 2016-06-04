@@ -7,6 +7,7 @@ import {TswHighlightsComponent, TswHighlightsItemComponent} from './tsw-highligh
 import {TswServicesComponent, TswServicesItemComponent} from './tsw-services';
 import {TswLatestNewsComponent, TswLatestNewsItemComponent} from './tsw-latest-news';
 import {TswStatisticsComponent, TswStatisticsItemComponent} from './tsw-statistics';
+import {TswClientsComponent, TswClientsItemComponent} from './tsw-clients';
 import {TswBackToTopComponent} from './tsw-back-to-top';
 import {TswIndexComponent} from './+tsw-index';
 
@@ -28,13 +29,14 @@ import {TswIndexComponent} from './+tsw-index';
     TswLatestNewsItemComponent,
     TswStatisticsComponent,
     TswStatisticsItemComponent,
+    TswClientsComponent,
+    TswClientsItemComponent,
     TswBackToTopComponent,
     TswIndexComponent
   ],
   pipes: []
 })
 export class TestingServicesWebsite2016App implements OnInit {
-
   ngOnInit() {
     var $ = window['$'];
 

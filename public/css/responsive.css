@@ -377,10 +377,11 @@
 
 @media (min-width : 768px) and (max-width: 991px) {
     
-    #main-slide .slider-content h2{
-		font-size: 52px;
-	}
-	#main-slide .slider-content h3{
+    #main-slide .slider-content h2 {
+			font-size: 52px;
+			line-height: 1;
+		}
+	#main-slide .slider-content h3 {
 		font-size: 24px;
 		margin-top: 12px;
 	}
