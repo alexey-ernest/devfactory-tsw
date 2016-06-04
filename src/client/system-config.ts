@@ -5,12 +5,12 @@ const barrels: string[] = [
   'app/shared/tsw-back-to-top',
   'app/shared/tsw-footer',
   'app/+tsw-index',
-  'app/tsw-carousel',
-  'app/tsw-highlights',
-  'app/tsw-services',
-  'app/tsw-latest-news',
-  'app/tsw-statistics',
-  'app/tsw-clients'
+  'app/+tsw-index/tsw-carousel',
+  'app/+tsw-index/tsw-highlights',
+  'app/+tsw-index/tsw-services',
+  'app/+tsw-index/tsw-latest-news',
+  'app/+tsw-index/tsw-statistics',
+  'app/+tsw-index/tsw-clients'
   /** @cli-barrel */
 ];
 

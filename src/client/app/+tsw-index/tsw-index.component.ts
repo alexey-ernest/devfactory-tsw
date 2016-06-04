@@ -1,12 +1,12 @@
 import {Component, OnInit} from 'angular2/core';
 
 import {TswHeaderComponent, TswFooterComponent, TswBackToTopComponent} from '../shared';
-import {CAROUSEL_DIRECTIVES} from '../tsw-carousel';
-import {HIGHLIGHTS_DIRECTIVES} from '../tsw-highlights';
-import {SERVICES_DIRECTIVES} from '../tsw-services';
-import {LATEST_NEWS_DIRECTIVES} from '../tsw-latest-news';
-import {STATISTICS_DIRECTIVES} from '../tsw-statistics';
-import {CLIENTS_DIRECTIVES} from '../tsw-clients';
+import {CAROUSEL_DIRECTIVES} from './tsw-carousel';
+import {HIGHLIGHTS_DIRECTIVES} from './tsw-highlights';
+import {SERVICES_DIRECTIVES} from './tsw-services';
+import {LATEST_NEWS_DIRECTIVES} from './tsw-latest-news';
+import {STATISTICS_DIRECTIVES} from './tsw-statistics';
+import {CLIENTS_DIRECTIVES} from './tsw-clients';
 
 interface Window { $: any; jQuery: any; start: any; }
 @Component({
