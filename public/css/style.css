@@ -634,15 +634,7 @@ input[type="submit"] {
     color: #bbb;
 }
 
-/*************** Custom Carousel ***************/
 
-.custom-carousel .item {
-    padding-right: 20px;
-}
-
-.custom-carousel.show-one-slide .item {
-    padding-right: 0;
-}
 
 /*************** Latest News ***************/
 

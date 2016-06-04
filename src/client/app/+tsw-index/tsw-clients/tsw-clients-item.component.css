@@ -5,6 +5,7 @@
 }
 
 .client-item a img {
+    height: 50px;
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -o-filter: grayscale(100%);
@@ -26,4 +27,14 @@
     -o-filter: grayscale(0);
     filter: none;
     opacity: 1;
+}
+
+/*************** Custom Carousel ***************/
+
+:host-context(.custom-carousel) .item {
+    padding-right: 20px;
+}
+
+:host-context(.custom-carousel.show-one-slide) .item {
+    padding-right: 0;
 }
