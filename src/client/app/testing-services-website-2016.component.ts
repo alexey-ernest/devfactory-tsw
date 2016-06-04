@@ -6,6 +6,7 @@ import {TswCarouselComponent, TswCarouselSlideDirective} from './tsw-carousel';
 import {TswHighlightsComponent, TswHighlightsItemComponent} from './tsw-highlights';
 import {TswServicesComponent, TswServicesItemComponent} from './tsw-services';
 import {TswLatestNewsComponent, TswLatestNewsItemComponent} from './tsw-latest-news';
+import {TswStatisticsComponent, TswStatisticsItemComponent} from './tsw-statistics';
 import {TswBackToTopComponent} from './tsw-back-to-top';
 import {TswIndexComponent} from './+tsw-index';
 
@@ -25,6 +26,8 @@ import {TswIndexComponent} from './+tsw-index';
     TswServicesItemComponent,
     TswLatestNewsComponent,
     TswLatestNewsItemComponent,
+    TswStatisticsComponent,
+    TswStatisticsItemComponent,
     TswBackToTopComponent,
     TswIndexComponent
   ],
@@ -38,11 +41,7 @@ export class TestingServicesWebsite2016App implements OnInit {
     $(document).ready(function ($) {
       "use strict";
 
-      $(document).ready(function() {
-        
-
-
-      });
+      
     });
   }
 }

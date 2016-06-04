@@ -30,18 +30,6 @@ export class TswIndexComponent implements OnInit {
 
     $(document).ready(function ($) {
 
-      /*---------------------------------------------------*/
-      /* Progress Bar
-       /*---------------------------------------------------*/
-      $('.skill-shortcode').appear(function () {
-        $('.progress').each(function () {
-          $('.progress-bar').css('width', function () {
-            return ($(this).attr('data-percentage') + '%')
-          });
-        });
-      }, {accY: -100});
-
-
       /*--------------------------------------------------*/
       /* Counter
        /*--------------------------------------------------*/
