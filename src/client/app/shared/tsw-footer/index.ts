@@ -1,0 +1,1 @@
+export {TswFooterComponent} from './tsw-footer.component';

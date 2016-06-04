@@ -1,14 +1,6 @@
 import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
-import {TswHeaderComponent} from './tsw-header';
-import {TswCarouselComponent, TswCarouselSlideDirective} from './tsw-carousel';
-import {TswHighlightsComponent, TswHighlightsItemComponent} from './tsw-highlights';
-import {TswServicesComponent, TswServicesItemComponent} from './tsw-services';
-import {TswLatestNewsComponent, TswLatestNewsItemComponent} from './tsw-latest-news';
-import {TswStatisticsComponent, TswStatisticsItemComponent} from './tsw-statistics';
-import {TswClientsComponent, TswClientsItemComponent} from './tsw-clients';
-import {TswBackToTopComponent} from './tsw-back-to-top';
 import {TswIndexComponent} from './+tsw-index';
 
 @Component({
@@ -18,32 +10,14 @@ import {TswIndexComponent} from './+tsw-index';
   templateUrl: 'testing-services-website-2016.component.html',
   styleUrls: ['testing-services-website-2016.component.css'],
   directives: [
-    TswHeaderComponent,
-    TswCarouselComponent,
-    TswCarouselSlideDirective,
-    TswHighlightsComponent,
-    TswHighlightsItemComponent,
-    TswServicesComponent,
-    TswServicesItemComponent,
-    TswLatestNewsComponent,
-    TswLatestNewsItemComponent,
-    TswStatisticsComponent,
-    TswStatisticsItemComponent,
-    TswClientsComponent,
-    TswClientsItemComponent,
-    TswBackToTopComponent,
-    TswIndexComponent
-  ],
-  pipes: []
+    ROUTER_DIRECTIVES
+  ]
 })
-export class TestingServicesWebsite2016App implements OnInit {
-  ngOnInit() {
-    var $ = window['$'];
-
-    $(document).ready(function ($) {
-      "use strict";
-
-      
-    });
-  }
+@RouteConfig([{
+  name: 'Index',
+  path: '/',
+  component: TswIndexComponent,
+  useAsDefault: true
+}])
+export class TestingServicesWebsite2016App {
 }

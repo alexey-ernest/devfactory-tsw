@@ -1,13 +1,30 @@
 import {Component, OnInit} from 'angular2/core';
 
-interface Window { $: any; jQuery: any; start: any; }
+import {TswHeaderComponent, TswFooterComponent, TswBackToTopComponent} from '../shared';
+import {CAROUSEL_DIRECTIVES} from '../tsw-carousel';
+import {HIGHLIGHTS_DIRECTIVES} from '../tsw-highlights';
+import {SERVICES_DIRECTIVES} from '../tsw-services';
+import {LATEST_NEWS_DIRECTIVES} from '../tsw-latest-news';
+import {STATISTICS_DIRECTIVES} from '../tsw-statistics';
+import {CLIENTS_DIRECTIVES} from '../tsw-clients';
 
+interface Window { $: any; jQuery: any; start: any; }
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-index',
   templateUrl: 'tsw-index.component.html',
   styleUrls: ['tsw-index.component.css'],
-  directives: []
+  directives: [
+    TswHeaderComponent,
+    CAROUSEL_DIRECTIVES,
+    HIGHLIGHTS_DIRECTIVES,
+    SERVICES_DIRECTIVES,
+    LATEST_NEWS_DIRECTIVES,
+    STATISTICS_DIRECTIVES,
+    CLIENTS_DIRECTIVES,
+    TswBackToTopComponent,
+    TswFooterComponent
+  ]
 })
 export class TswIndexComponent implements OnInit {
 
@@ -490,5 +507,4 @@ export class TswIndexComponent implements OnInit {
     });
 
   }
-
 }

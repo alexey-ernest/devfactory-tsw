@@ -1,2 +1,4 @@
-export {TswStatisticsComponent} from './tsw-statistics.component';
-export {TswStatisticsItemComponent} from './tsw-statistics-item.component';
+import {TswStatisticsComponent} from './tsw-statistics.component';
+import {TswStatisticsItemComponent} from './tsw-statistics-item.component';
+
+export const STATISTICS_DIRECTIVES: any[] = [TswStatisticsComponent, TswStatisticsItemComponent];

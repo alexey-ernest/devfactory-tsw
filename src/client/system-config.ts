@@ -1,15 +1,16 @@
 const barrels: string[] = [
   'app',
   'app/shared',
+  'app/shared/tsw-header',
+  'app/shared/tsw-back-to-top',
+  'app/shared/tsw-footer',
   'app/+tsw-index',
-  'app/tsw-header',
   'app/tsw-carousel',
   'app/tsw-highlights',
   'app/tsw-services',
   'app/tsw-latest-news',
   'app/tsw-statistics',
-  'app/tsw-clients',
-  'app/tsw-back-to-top'
+  'app/tsw-clients'
   /** @cli-barrel */
 ];
 
