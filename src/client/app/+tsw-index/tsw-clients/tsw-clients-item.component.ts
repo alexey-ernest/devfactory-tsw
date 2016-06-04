@@ -3,7 +3,8 @@ import {Component, Input} from 'angular2/core';
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-clients-item',
-  templateUrl: 'tsw-clients-item.component.html'
+  templateUrl: 'tsw-clients-item.component.html',
+  styleUrls: ['tsw-clients-item.component.css']
 })
 export class TswClientsItemComponent {
   /**
