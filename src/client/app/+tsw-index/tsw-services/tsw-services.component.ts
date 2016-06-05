@@ -1,4 +1,4 @@
-import {Component, Input, AfterContentInit} from 'angular2/core';
+import {Component, Input, AfterContentInit, ElementRef} from 'angular2/core';
 
 import {TswServicesItemComponent} from './tsw-services-item.component';
 
@@ -18,14 +18,17 @@ export class TswServicesComponent implements AfterContentInit {
   @Input()
   title: string;
 
+  constructor(private element:ElementRef) { }
+
   ngAfterContentInit() {
     var $ = window['$'];
+    var element = this.element.nativeElement;
 
     $(document).ready(function ($) {
       "use strict";
 
       // Projects Carousel
-      $(".projects-carousel").owlCarousel({
+      $(element).find('.projects-carousel').owlCarousel({
         navigation: true,
         pagination: false,
         slideSpeed: 400,
@@ -41,8 +44,8 @@ export class TswServicesComponent implements AfterContentInit {
       /*  Change Slider Nav Icons
        /*----------------------------------------------------*/
 
-      $('.recent-projects .touch-carousel').find('.owl-prev').html('<i class="fa fa-angle-left"></i>');
-      $('.recent-projects .touch-carousel').find('.owl-next').html('<i class="fa fa-angle-right"></i>');
+      $(element).find('.recent-projects .touch-carousel').find('.owl-prev').html('<i class="fa fa-angle-left"></i>');
+      $(element).find('.recent-projects .touch-carousel').find('.owl-next').html('<i class="fa fa-angle-right"></i>');
     });
   }
 }
