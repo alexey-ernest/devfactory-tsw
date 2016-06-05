@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from 'angular2/core';
+import {Component, Input, OnInit, ElementRef} from 'angular2/core';
 
 import {TswStatisticsItemComponent} from './tsw-statistics-item.component';
 
@@ -17,8 +17,11 @@ export class TswStatisticsComponent implements OnInit {
   @Input()
   title: string;
 
+  constructor(private element:ElementRef) { }
+
   ngOnInit() {
     var $ = window['$'];
+    var element = this.element.nativeElement;
 
     $(document).ready(function ($) {
       "use strict";
@@ -26,9 +29,9 @@ export class TswStatisticsComponent implements OnInit {
       /*---------------------------------------------------*/
       /* Progress Bar
        /*---------------------------------------------------*/
-      $('.skill-shortcode').appear(function () {
-        $('.progress').each(function () {
-          $('.progress-bar').css('width', function () {
+      $(element).find('.skill-shortcode').appear(function () {
+        $(element).find('.progress').each(function () {
+          $(element).find('.progress-bar').css('width', function () {
             return ($(this).attr('data-percentage') + '%')
           });
         });
