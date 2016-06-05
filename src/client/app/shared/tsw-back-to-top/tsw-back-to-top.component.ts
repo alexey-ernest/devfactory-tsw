@@ -7,6 +7,7 @@ import {Component, OnInit, ElementRef} from 'angular2/core';
   styleUrls: ['tsw-back-to-top.component.css']
 })
 export class TswBackToTopComponent implements OnInit {
+  
   constructor(private element:ElementRef) { }
 
   ngOnInit() {
