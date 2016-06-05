@@ -3,7 +3,8 @@ import {Component, Input} from 'angular2/core';
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-latest-news-item',
-  templateUrl: 'tsw-latest-news-item.component.html'
+  templateUrl: 'tsw-latest-news-item.component.html',
+  styleUrls: ['tsw-latest-news-item.component.css']
 })
 export class TswLatestNewsItemComponent {
   /**
