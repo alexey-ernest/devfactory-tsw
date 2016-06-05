@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from 'angular2/core';
+import {Component, Input, AfterContentInit} from 'angular2/core';
 
 import {TswServicesItemComponent} from './tsw-services-item.component';
 
@@ -9,7 +9,7 @@ import {TswServicesItemComponent} from './tsw-services-item.component';
   styleUrls: ['tsw-services.component.css'],
   directives: [TswServicesItemComponent]
 })
-export class TswServicesComponent implements OnInit {
+export class TswServicesComponent implements AfterContentInit {
   /**
    * Services section title.
    * 
@@ -18,7 +18,7 @@ export class TswServicesComponent implements OnInit {
   @Input()
   title: string;
 
-  ngOnInit() {
+  ngAfterContentInit() {
     var $ = window['$'];
 
     $(document).ready(function ($) {
@@ -36,6 +36,13 @@ export class TswServicesComponent implements OnInit {
         itemsTablet: [600, 2],
         itemsMobile: [479, 1]
       });
+
+      /*----------------------------------------------------*/
+      /*  Change Slider Nav Icons
+       /*----------------------------------------------------*/
+
+      $('.recent-projects .touch-carousel').find('.owl-prev').html('<i class="fa fa-angle-left"></i>');
+      $('.recent-projects .touch-carousel').find('.owl-next').html('<i class="fa fa-angle-right"></i>');
     });
   }
 }
