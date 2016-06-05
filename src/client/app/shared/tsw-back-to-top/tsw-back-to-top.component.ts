@@ -3,7 +3,8 @@ import {Component, OnInit} from 'angular2/core';
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-back-to-top',
-  templateUrl: 'tsw-back-to-top.component.html'
+  templateUrl: 'tsw-back-to-top.component.html',
+  styleUrls: ['tsw-back-to-top.component.css']
 })
 export class TswBackToTopComponent implements OnInit {
   ngOnInit() {
