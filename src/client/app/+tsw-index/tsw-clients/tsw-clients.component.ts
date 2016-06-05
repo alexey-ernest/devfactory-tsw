@@ -1,4 +1,4 @@
-import {Component, Input, AfterContentInit, ContentChildren, QueryList} from 'angular2/core';
+import {Component, Input, AfterContentInit, ContentChildren, QueryList, ElementRef} from 'angular2/core';
 
 import {TswClientsItemComponent} from './tsw-clients-item.component';
 
@@ -25,8 +25,11 @@ export class TswClientsComponent implements AfterContentInit {
   @Input()
   title: string;
 
+  constructor(private element:ElementRef) { }
+
   ngAfterContentInit() {
     var $ = window['$'];
+    var element = this.element.nativeElement;
 
     var itemsNum = this.items.length;
 
@@ -34,7 +37,7 @@ export class TswClientsComponent implements AfterContentInit {
       "use strict";
 
       // Custom Carousel
-      $('.our-clients .custom-carousel').each(function () {
+      $(element).find('.our-clients .custom-carousel').each(function () {
         var owl = $(this),
           sliderNavigation = $(this).attr('data-navigation'),
           deskitemsNum:any,
@@ -86,8 +89,8 @@ export class TswClientsComponent implements AfterContentInit {
       /*  Change Slider Nav Icons
        /*----------------------------------------------------*/
 
-      $('.our-clients .touch-carousel').find('.owl-prev').html('<i class="fa fa-angle-left"></i>');
-      $('.our-clients .touch-carousel').find('.owl-next').html('<i class="fa fa-angle-right"></i>');
+      $(element).find('.our-clients .touch-carousel').find('.owl-prev').html('<i class="fa fa-angle-left"></i>');
+      $(element).find('.our-clients .touch-carousel').find('.owl-next').html('<i class="fa fa-angle-right"></i>');
     });
   }
 }

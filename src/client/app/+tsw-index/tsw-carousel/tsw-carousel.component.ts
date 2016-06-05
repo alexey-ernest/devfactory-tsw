@@ -1,4 +1,4 @@
-import {Component, OnInit, ContentChildren, QueryList} from 'angular2/core';
+import {Component, OnInit, ContentChildren, QueryList, ElementRef} from 'angular2/core';
 
 import {TswCarouselSlideComponent} from './tsw-carousel-slide.component';
 
@@ -18,14 +18,17 @@ export class TswCarouselComponent implements OnInit {
   @ContentChildren(TswCarouselSlideComponent)
   slides: QueryList<TswCarouselSlideComponent>;
 
+  constructor(private element:ElementRef) { }
+
   ngOnInit() {
     var $ = window['$'];
+    var element = this.element.nativeElement;
 
     $(document).ready(function ($) {
       "use strict";
 
       // configure bootrstrap carousel
-      $('.carousel').carousel({
+      $(element).find('.carousel').carousel({
         interval: 4000
       });
     });
