@@ -3,7 +3,8 @@ import {Component, Input} from 'angular2/core';
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-highlights-item',
-  templateUrl: 'tsw-highlights-item.component.html'
+  templateUrl: 'tsw-highlights-item.component.html',
+  styleUrls: ['tsw-highlights-item.component.css']
 })
 export class TswHighlightsItemComponent {
   /**
