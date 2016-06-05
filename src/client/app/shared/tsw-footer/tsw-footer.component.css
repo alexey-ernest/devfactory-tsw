@@ -244,3 +244,24 @@ ul.footer-nav li a {
 ul.footer-nav li a:hover {
     color: #fff;
 }
+
+/* Reponsive */
+
+@media (max-width: 991px) {
+    .copyright-section {
+        text-align: center;
+    }
+
+    ul.footer-nav {
+        display: block;
+        float: none !important;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    ul.footer-nav li {
+        display: inline-block;
+        float: none;
+        margin-left: 15px;
+    }
+}
