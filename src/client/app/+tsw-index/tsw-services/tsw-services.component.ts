@@ -6,6 +6,7 @@ import {TswServicesItemComponent} from './tsw-services-item.component';
   moduleId: __moduleName,
   selector: 'tsw-services',
   templateUrl: 'tsw-services.component.html',
+  styleUrls: ['tsw-services.component.css'],
   directives: [TswServicesItemComponent]
 })
 export class TswServicesComponent implements OnInit {
