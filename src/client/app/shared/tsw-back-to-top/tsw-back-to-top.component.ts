@@ -1,4 +1,4 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit, ElementRef} from 'angular2/core';
 
 @Component({
   moduleId: __moduleName,
@@ -7,8 +7,11 @@ import {Component, OnInit} from 'angular2/core';
   styleUrls: ['tsw-back-to-top.component.css']
 })
 export class TswBackToTopComponent implements OnInit {
+  constructor(private element:ElementRef) { }
+
   ngOnInit() {
     var $ = window['$'];
+    var element = this.element.nativeElement;
 
     $(document).ready(function ($) {
       "use strict";
@@ -21,17 +24,17 @@ export class TswBackToTopComponent implements OnInit {
       var duration = 500;
       $(window).scroll(function () {
         if ($(this).scrollTop() > offset) {
-          $('.back-to-top').fadeIn(400);
+          $(element).find('.back-to-top').fadeIn(400);
         } else {
-          $('.back-to-top').fadeOut(400);
+          $(element).find('.back-to-top').fadeOut(400);
         }
       });
-      $('.back-to-top').click(function (event) {
+
+      $(element).find('.back-to-top').click(function (event) {
         event.preventDefault();
         $('html, body').animate({scrollTop: 0}, 600);
         return false;
       })      
-
     });
   }
 }
