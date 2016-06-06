@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+
 import {TswIndexComponent} from './+tsw-index';
 
 @Component({
@@ -8,16 +9,15 @@ import {TswIndexComponent} from './+tsw-index';
   providers: [ROUTER_PROVIDERS],
   templateUrl: 'testing-services-website-2016.component.html',
   styleUrls: ['testing-services-website-2016.component.css'],
-  directives: [ROUTER_DIRECTIVES],
-  pipes: []
+  directives: [
+    ROUTER_DIRECTIVES
+  ]
 })
-@RouteConfig([
-  {path: '/', name: 'TswIndex', component: TswIndexComponent}
-])
+@RouteConfig([{
+  name: 'Index',
+  path: '/',
+  component: TswIndexComponent,
+  useAsDefault: true
+}])
 export class TestingServicesWebsite2016App {
-  defaultMeaning: number = 42;
-
-  meaningOfLife(meaning?: number) {
-    return `The meaning of life is ${meaning || this.defaultMeaning}`;
-  }
 }

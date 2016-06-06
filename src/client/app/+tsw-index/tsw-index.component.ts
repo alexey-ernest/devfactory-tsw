@@ -1,16 +1,31 @@
 import {Component, OnInit} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+
+import {TswHeaderComponent, TswFooterComponent, TswBackToTopComponent} from '../shared';
+import {CAROUSEL_DIRECTIVES} from './tsw-carousel';
+import {HIGHLIGHTS_DIRECTIVES} from './tsw-highlights';
+import {SERVICES_DIRECTIVES} from './tsw-services';
+import {LATEST_NEWS_DIRECTIVES} from './tsw-latest-news';
+import {STATISTICS_DIRECTIVES} from './tsw-statistics';
+import {CLIENTS_DIRECTIVES} from './tsw-clients';
+
 interface Window { $: any; jQuery: any; start: any; }
 @Component({
   moduleId: __moduleName,
   selector: 'tsw-index',
   templateUrl: 'tsw-index.component.html',
   styleUrls: ['tsw-index.component.css'],
-  directives: [ROUTER_DIRECTIVES]
+  directives: [
+    TswHeaderComponent,
+    CAROUSEL_DIRECTIVES,
+    HIGHLIGHTS_DIRECTIVES,
+    SERVICES_DIRECTIVES,
+    LATEST_NEWS_DIRECTIVES,
+    STATISTICS_DIRECTIVES,
+    CLIENTS_DIRECTIVES,
+    TswBackToTopComponent,
+    TswFooterComponent
+  ]
 })
-
-
-
 export class TswIndexComponent implements OnInit {
 
   constructor() {
@@ -31,33 +46,6 @@ export class TswIndexComponent implements OnInit {
     });
 
     $(document).ready(function ($) {
-      "use strict";
-      ////	Hidder Header
-      var headerEle = function () {
-        var $headerHeight = $('header').height();
-        $('.hidden-header').css({'height': $headerHeight + "px"});
-      };
-
-      $(window).load(function () {
-        headerEle();
-      });
-
-      $(window).resize(function () {
-        headerEle();
-      });
-
-
-      /*---------------------------------------------------*/
-      /* Progress Bar
-       /*---------------------------------------------------*/
-      $('.skill-shortcode').appear(function () {
-        $('.progress').each(function () {
-          $('.progress-bar').css('width', function () {
-            return ($(this).attr('data-percentage') + '%')
-          });
-        });
-      }, {accY: -100});
-
 
       /*--------------------------------------------------*/
       /* Counter
@@ -86,41 +74,7 @@ export class TswIndexComponent implements OnInit {
       //   horizrailenabled: false,
       //   cursorborderradius: 0,
       // });
-
-      /*----------------------------------------------------*/
-      /*	Nav Menu & Search
-       /*----------------------------------------------------*/
-
-      $(".nav > li:has(ul)").addClass("drop");
-      $(".nav > li.drop > ul").addClass("dropdown");
-      $(".nav > li.drop > ul.dropdown ul").addClass("sup-dropdown");
-
-      $('.show-search').click(function () {
-        $('.search-form').fadeIn(300);
-        $('.search-form input').focus();
-      });
-      $('.search-form input').blur(function () {
-        $('.search-form').fadeOut(300);
-      });
-
-      /*----------------------------------------------------*/
-      /*	Back Top Link
-       /*----------------------------------------------------*/
-
-      var offset = 200;
-      var duration = 500;
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > offset) {
-          $('.back-to-top').fadeIn(400);
-        } else {
-          $('.back-to-top').fadeOut(400);
-        }
-      });
-      $('.back-to-top').click(function (event) {
-        event.preventDefault();
-        $('html, body').animate({scrollTop: 0}, 600);
-        return false;
-      })
+      // 
 
       /*----------------------------------------------------*/
       /*	Sliders & Carousel
@@ -164,20 +118,20 @@ export class TswIndexComponent implements OnInit {
           returnAutoPlay = true
         }
 
-        owl.owlCarousel({
-          navigation: returnSliderNav,
-          pagination: returnSliderPag,
-          slideSpeed: 400,
-          paginationSpeed: 400,
-          lazyLoad: true,
-          singleItem: true,
-          autoHeight: true,
-          autoPlay: returnAutoPlay,
-          stopOnHover: returnAutoPlay,
-          transitionStyle: "fade",
-          afterInit: returnSliderProgressBar,
-          startDragging: pauseOnDragging
-        });
+        // owl.owlCarousel({
+        //   navigation: returnSliderNav,
+        //   pagination: returnSliderPag,
+        //   slideSpeed: 400,
+        //   paginationSpeed: 400,
+        //   lazyLoad: true,
+        //   singleItem: true,
+        //   autoHeight: true,
+        //   autoPlay: returnAutoPlay,
+        //   stopOnHover: returnAutoPlay,
+        //   transitionStyle: "fade",
+        //   afterInit: returnSliderProgressBar,
+        //   startDragging: pauseOnDragging
+        // });
 
       });
 
@@ -201,20 +155,6 @@ export class TswIndexComponent implements OnInit {
         isPause = true;
       }
 
-      ////------- Projects Carousel
-      $(".projects-carousel").owlCarousel({
-        navigation: true,
-        pagination: false,
-        slideSpeed: 400,
-        stopOnHover: true,
-        autoPlay: 3000,
-        items: 4,
-        itemsDesktopSmall: [900, 3],
-        itemsTablet: [600, 2],
-        itemsMobile: [479, 1]
-      });
-
-
       ////------- Testimonials Carousel
       $(".testimonials-carousel").owlCarousel({
         navigation: true,
@@ -226,58 +166,6 @@ export class TswIndexComponent implements OnInit {
         autoHeight: true,
         transitionStyle: "fade"
       });
-
-
-      ////------- Custom Carousel
-      $('.custom-carousel').each(function () {
-        var owl = jQuery(this),
-          itemsNum = $(this).attr('data-appeared-items'),
-          sliderNavigation = $(this).attr('data-navigation'),
-          deskitemsNum:any,
-          desksmallitemsNum:any,
-          tabletitemsNum:any;
-
-        if (sliderNavigation == 'false' || sliderNavigation == '0') {
-          var returnSliderNavigation = false
-        } else {
-          var returnSliderNavigation = true
-        }
-        if (itemsNum == 1) {
-          deskitemsNum = 1;
-          desksmallitemsNum = 1;
-          tabletitemsNum = 1;
-        }
-        else if (itemsNum >= 2 && itemsNum < 4) {
-          deskitemsNum = itemsNum;
-          desksmallitemsNum = itemsNum - 1;
-          tabletitemsNum = itemsNum - 1;
-        }
-        else if (itemsNum >= 4 && itemsNum < 8) {
-          deskitemsNum = itemsNum - 1;
-          desksmallitemsNum = itemsNum - 2;
-          tabletitemsNum = itemsNum - 3;
-        }
-        else {
-          deskitemsNum = itemsNum - 3;
-          desksmallitemsNum = itemsNum - 6;
-          tabletitemsNum = itemsNum - 8;
-        }
-        owl.owlCarousel({
-          slideSpeed: 300,
-          stopOnHover: true,
-          autoPlay: false,
-          navigation: returnSliderNavigation,
-          pagination: false,
-          lazyLoad: true,
-          items: itemsNum,
-          itemsDesktop: [1000, deskitemsNum],
-          itemsDesktopSmall: [900, desksmallitemsNum],
-          itemsTablet: [600, tabletitemsNum],
-          itemsMobile: false,
-          transitionStyle: "goDown",
-        });
-      });
-
 
       ////------- Testimonials Carousel
       $(".fullwidth-projects-carousel").owlCarousel({
@@ -444,68 +332,6 @@ export class TswIndexComponent implements OnInit {
         },
       });
 
-
-      /*----------------------------------------------------*/
-      /*	Sticky Header
-       /*----------------------------------------------------*/
-
-      (function () {
-
-        var docElem = document.documentElement,
-          didScroll = false,
-          changeHeaderOn = 100;
-        document.querySelector('header');
-
-        function init() {
-          window.addEventListener('scroll', function () {
-            if (!didScroll) {
-              didScroll = true;
-              setTimeout(scrollPage, 250);
-            }
-          }, false);
-        }
-
-        function scrollPage() {
-          var sy = scrollY();
-          if (sy >= changeHeaderOn) {
-            $('.top-bar').slideUp(300);
-            $("header").addClass("fixed-header");
-            $('.navbar-brand').css({'padding-top': 5 + "px", 'padding-bottom': 19 + "px"});
-
-            if (/iPhone|iPod|BlackBerry/i.test(navigator.userAgent) || $(window).width() < 479) {
-              $('.navbar-default .navbar-nav > li > a').css({'padding-top': 0 + "px", 'padding-bottom': 0 + "px"})
-            } else {
-              $('.navbar-default .navbar-nav > li > a').css({'padding-top': 20 + "px", 'padding-bottom': 20 + "px"})
-              $('.search-side').css({'margin-top': -7 + "px"});
-            }
-            ;
-
-          }
-          else {
-            $('.top-bar').slideDown(300);
-            $("header").removeClass("fixed-header");
-            $('.navbar-brand').css({'padding-top': 17 + "px", 'padding-bottom': 27 + "px"});
-
-            if (/iPhone|iPod|BlackBerry/i.test(navigator.userAgent) || $(window).width() < 479) {
-              $('.navbar-default .navbar-nav > li > a').css({'padding-top': 0 + "px", 'padding-bottom': 0 + "px"})
-            } else {
-              $('.navbar-default .navbar-nav > li > a').css({'padding-top': 28 + "px", 'padding-bottom': 28 + "px"})
-              $('.search-side').css({'margin-top': 0 + "px"});
-            }
-            ;
-
-          }
-          didScroll = false;
-        }
-
-        function scrollY() {
-          return window.pageYOffset || docElem.scrollTop;
-        }
-
-        init();
-
-
-      })();
     });
 
 
@@ -680,25 +506,5 @@ export class TswIndexComponent implements OnInit {
 
     });
 
-    /**
-     * Slick Nav
-     */
-
-    $('.wpb-mobile-menu').slicknav({
-      prependTo: '.navbar-header',
-      parentTag: 'margo',
-      allowParentLinks: true,
-      duplicate: false,
-      label: '',
-      closedSymbol: '<i class="fa fa-angle-right"></i>',
-      openedSymbol: '<i class="fa fa-angle-down"></i>',
-    });
-
-    $(document).ready(function() {
-      $('.carousel').carousel({
-        interval: 4000
-      })
-    });
   }
-
 }

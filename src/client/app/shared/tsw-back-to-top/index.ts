@@ -1,0 +1,1 @@
+export {TswBackToTopComponent} from './tsw-back-to-top.component';

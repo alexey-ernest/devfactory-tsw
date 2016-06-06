@@ -1,0 +1,28 @@
+<!-- Start Home Page Slider -->
+<section id="home">
+  <!-- Bootstrap Carousel -->
+  <div id="main-slide" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li *ngFor="#slide of slides; #first=first; #i=index" data-target="#main-slide" [class.active]="first" [attr.data-slide-to]="i"></li>
+    </ol>
+    <!--/ Indicators end-->
+
+    <!-- Carousel inner -->
+    <div class="carousel-inner">
+      <ng-content></ng-content>
+    </div>
+    <!-- Carousel inner end-->
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#main-slide" data-slide="prev">
+      <span><i class="fa fa-angle-left"></i></span>
+    </a>
+    <a class="right carousel-control" href="#main-slide" data-slide="next">
+      <span><i class="fa fa-angle-right"></i></span>
+    </a>
+  </div>
+  <!-- /carousel -->
+</section>
+<!-- End Home Page Slider -->
