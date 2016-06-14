@@ -4,6 +4,7 @@ const barrels: string[] = [
   'app/shared/tsw-header',
   'app/shared/tsw-back-to-top',
   'app/shared/tsw-footer',
+  'app/shared/tsw-google-analytics',
   'app/+tsw-index',
   'app/+tsw-index/tsw-carousel',
   'app/+tsw-index/tsw-highlights',

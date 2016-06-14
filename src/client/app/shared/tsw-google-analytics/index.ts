@@ -1,0 +1,1 @@
+export {TswGoogleAnalyticsComponent} from './tsw-google-analytics.component';
