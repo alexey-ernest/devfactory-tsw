@@ -1,3 +1,4 @@
 export const environment = {
-  production: false
+  production: false,
+  ga: 'UA-79291624-1'
 };
