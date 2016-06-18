@@ -1,1 +1,0 @@
-export {TswIndexComponent} from './tsw-index.component';
