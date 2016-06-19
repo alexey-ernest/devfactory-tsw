@@ -10,6 +10,10 @@ body {
   font-size: 1.6rem;
 }
 
+.align-center {
+  text-align: center;
+}
+
 /* Typography */
 
 @media (max-width: 479px) {
