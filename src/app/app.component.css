@@ -40,7 +40,7 @@ h1.md-display-3 {
 
 h2.md-subhead {
   max-width: 675px;
-  margin: auto auto 6em;
+  margin: auto auto 4em;
   animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
   -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
   animation-delay: 0.25s;
@@ -48,7 +48,7 @@ h2.md-subhead {
 }
 
 .benefit-list {
-  margin: 0 0 2em;
+  margin: 3rem 0 2rem;
   padding: 0;
   list-style: none;
   text-align: left;
@@ -59,10 +59,6 @@ h2.md-subhead {
   -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
-}
-
-.benefit-list md-icon {
-
 }
 
 .benefit-list li {
@@ -184,4 +180,11 @@ h2.md-subhead {
 
 .features .md-subhead {
   opacity: 0.64;
+}
+
+/* Customers */
+
+.customer-logo {
+  max-width: 200px;
+  max-height: 200px;
 }
