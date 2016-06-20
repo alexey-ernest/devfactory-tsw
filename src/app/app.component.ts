@@ -7,6 +7,7 @@ import {MD_TOOLBAR_DIRECTIVES} from '@angular2-material/toolbar';
 
 import {HeroComponent} from './hero';
 import {FeaturesComponent} from './features';;
+import {VideoComponent} from './video';;
 
 import '../../public/css/styles.css';
 
@@ -25,7 +26,8 @@ import '../../public/css/styles.css';
     MD_CARD_DIRECTIVES,
     MD_TOOLBAR_DIRECTIVES,
     HeroComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    VideoComponent
   ]
 })
 export class AppComponent {

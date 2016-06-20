@@ -1,4 +1,17 @@
 
+/* Demo video */
+
+.demo-video {
+  background: url(../../public/images/video_bg.jpg) no-repeat center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
 /* Customers */
 
 .customers {
@@ -35,21 +48,4 @@
 
 .closing-statement {
   padding: 4rem 0;
-}
-
-/* Demo video */
-
-.demo-video {
-  background: url(../../public/images/video_bg.jpg) no-repeat center center ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin: 0;
-  padding-top: 15rem;
-  padding-bottom: 15rem;
-}
-
-.demo-video button {
-  margin: auto 2rem;
 }
