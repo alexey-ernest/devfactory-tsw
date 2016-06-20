@@ -9,6 +9,7 @@ import {HeroComponent} from './hero';
 import {FeaturesComponent} from './features';;
 import {VideoComponent} from './video';
 import {StatisticsComponent} from './statistics';
+import {CustomersComponent} from './customers';
 
 import '../../public/css/styles.css';
 
@@ -29,7 +30,8 @@ import '../../public/css/styles.css';
     HeroComponent,
     FeaturesComponent,
     VideoComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    CustomersComponent
   ]
 })
 export class AppComponent {

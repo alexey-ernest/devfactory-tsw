@@ -1,27 +1,4 @@
 
-/* Demo video */
-
-.demo-video {
-  background: url(../../public/images/video_bg.jpg) no-repeat center center ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin: 0;
-  padding-top: 15rem;
-  padding-bottom: 15rem;
-}
-
-/* Customers */
-
-.customers {
-  margin-top: 3rem;
-}
-
-.customer-logo img {
-  width: 90%;
-}
-
 /* Reviews */
 
 .review {
