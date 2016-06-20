@@ -1,26 +1,4 @@
 
-/* Reviews */
-
-.review {
-  padding: 3rem 0 0;
-}
-
-.review-image {
-  max-width: 150px;
-  margin-bottom: 3rem;
-  display: inline-block;
-}
-
-.review .md-title {
-  font-weight: 400;
-  line-height: 3rem;
-}
-
-.review .md-subhead {
-  font-weight: 300;
-  margin: 3rem 0;
-}
-
 /* Closing statement */
 
 .closing-statement {
