@@ -1,0 +1,47 @@
+.hero {
+  padding-top: 4rem;
+}
+
+.hero md-toolbar-row {
+  text-align: center;
+  height: auto;
+  justify-content: center;
+}
+
+
+
+.brand-image {
+  height: 32px;
+  width: auto;
+  margin-right: 2rem;
+}
+
+.phone {
+  opacity: 0.64;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+h1.md-display-3 {
+  opacity: 0.64;
+  font-weight: 300;
+  margin: 7rem auto 3rem;
+  animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+h2.md-subhead {
+  max-width: 675px;
+  margin: auto auto 4em;
+  animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  animation-delay: 0.25s;
+  -webkit-animation-delay: 0.25s;
+}
+

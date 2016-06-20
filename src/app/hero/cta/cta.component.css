@@ -1,0 +1,41 @@
+/* CTA */
+
+.cta-form {
+  text-align: left;
+  font-size: 1.6rem;
+  color: #000;
+  margin-bottom: 2rem;
+  animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+md-input {
+  margin-bottom: 2rem;
+}
+
+.cta-wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -28px;
+  left: -100px;
+}
+
+.cta-button[md-raised-button] {
+  padding: 4px 16px;
+  font-size: 1.7rem;
+}
+
+.full-width {
+  width: 100%;
+}
