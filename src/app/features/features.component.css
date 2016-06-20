@@ -1,0 +1,16 @@
+
+/* Features */
+
+md-icon {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  line-height: 4rem;
+  opacity: 0.55;
+}
+
+.md-headline {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+

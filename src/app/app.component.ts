@@ -6,6 +6,7 @@ import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 import {MD_TOOLBAR_DIRECTIVES} from '@angular2-material/toolbar';
 
 import {HeroComponent} from './hero';
+import {FeaturesComponent} from './features';;
 
 import '../../public/css/styles.css';
 
@@ -23,7 +24,8 @@ import '../../public/css/styles.css';
     MD_ICON_DIRECTIVES,
     MD_CARD_DIRECTIVES,
     MD_TOOLBAR_DIRECTIVES,
-    HeroComponent
+    HeroComponent,
+    FeaturesComponent
   ]
 })
 export class AppComponent {
