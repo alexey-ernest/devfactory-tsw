@@ -1,9 +1,14 @@
 import {Component} from '@angular/core';
 
+import {WaypointDirective} from '../shared';
+
 @Component({
   selector: 'tsw-customers',
   template: require('./customers.component.html'),
-  styles: [require('./customers.component.css')]
+  styles: [require('./customers.component.css')],
+  directives: [
+    WaypointDirective
+  ]
 })
 export class CustomersComponent {
   customers: any[] = [

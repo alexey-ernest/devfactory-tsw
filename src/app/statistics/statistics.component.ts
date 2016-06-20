@@ -1,9 +1,14 @@
 import {Component} from '@angular/core';
 
+import {WaypointDirective} from '../shared';
+
 @Component({
   selector: 'tsw-statistics',
   template: require('./statistics.component.html'),
-  styles: [require('./statistics.component.css')]
+  styles: [require('./statistics.component.css')],
+  directives: [
+    WaypointDirective
+  ]
 })
 export class StatisticsComponent {
   statistics: any[] = [

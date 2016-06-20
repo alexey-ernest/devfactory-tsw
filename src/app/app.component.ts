@@ -11,6 +11,7 @@ import {VideoComponent} from './video';
 import {StatisticsComponent} from './statistics';
 import {CustomersComponent} from './customers';
 import {ReviewsComponent} from './reviews';
+import {ClosingStatementComponent} from './closing-statement';
 
 import '../../public/css/styles.css';
 
@@ -33,7 +34,8 @@ import '../../public/css/styles.css';
     VideoComponent,
     StatisticsComponent,
     CustomersComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    ClosingStatementComponent
   ]
 })
 export class AppComponent {

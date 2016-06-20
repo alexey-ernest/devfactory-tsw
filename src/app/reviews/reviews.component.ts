@@ -1,9 +1,14 @@
 import {Component} from '@angular/core';
 
+import {WaypointDirective} from '../shared';
+
 @Component({
   selector: 'tsw-reviews',
   template: require('./reviews.component.html'),
-  styles: [require('./reviews.component.css')]
+  styles: [require('./reviews.component.css')],
+  directives: [
+    WaypointDirective
+  ]
 })
 export class ReviewsComponent {
   reviews: any[] = [

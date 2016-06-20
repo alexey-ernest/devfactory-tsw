@@ -1,13 +1,16 @@
 import {Component} from '@angular/core';
 import {MD_ICON_DIRECTIVES, MdIconRegistry} from '@angular2-material/icon';
 
+import {WaypointDirective} from '../shared';
+
 @Component({
   selector: 'tsw-features',
   template: require('./features.component.html'),
   styles: [require('./features.component.css')],
   providers: [MdIconRegistry],
   directives: [
-    MD_ICON_DIRECTIVES
+    MD_ICON_DIRECTIVES,
+    WaypointDirective
   ]
 })
 export class FeaturesComponent {

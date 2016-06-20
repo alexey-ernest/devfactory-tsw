@@ -1,9 +1,11 @@
 <section class="block secondary-block-light align-center">
   <div class="container">
-    <h3 class="md-display-1">Some of the world’s most respected companies trust DevFactory!</h3>
-    <p class="md-subhead secondary">See who saved more than 50% on IT Services by leveraging DevFactory tools.</p>
+    <div waypoint classes="animated fadeInUp" delay="0">
+      <h3 class="md-display-1">Some of the world’s most respected companies trust DevFactory!</h3>
+      <p class="md-subhead secondary">See who saved more than 50% on IT Services by leveraging DevFactory tools.</p>
+    </div>
     <div class="row customers">
-      <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 customer-logo" *ngFor="let customer of customers">
+      <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 customer-logo" *ngFor="let customer of customers; let i = index" waypoint classes="animated fadeInUp" delay="{{(i + 1) * 200}}">
         <img src="{{customer.image}}" alt="{{customer.title}}">
       </div>
     </div>
