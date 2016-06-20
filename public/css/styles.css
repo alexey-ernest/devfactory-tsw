@@ -18,6 +18,24 @@ body {
   opacity: 0.55;
 }
 
+.block {
+  padding: 50px 0;
+}
+
+.primary-block {
+  background-color: #00b3d0;
+  color: #fff;
+}
+
+.secondary-block-light {
+  background-color: #f9f9f9;
+}
+
+.secondary-block-dark {
+  background-color: #eeeeee;
+}
+
+
 /* Typography */
 
 @media (max-width: 479px) {
