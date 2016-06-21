@@ -20,5 +20,8 @@ import '@angular2-material/toolbar';
 // Waypoint
 import '../public/js/noframework.waypoints.min.js';
 
+// Owl carousel
+import '../public/js/owl-carousel/owl.carousel.min.js';
+
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...

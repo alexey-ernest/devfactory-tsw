@@ -1,11 +1,13 @@
 <section class="block primary-block align-center">
-  <div class="container">
+  <div class="container" waypoint classes="animated fadeInUp">
     <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2 col-md-offset-2 col-lg-offset-2" waypoint classes="animated fadeInUp">
-        <div class="review" *ngFor="let review of reviews">
-          <img src="{{review.image}}" alt="{{review.author}}" class="img-circle review-image" />
-          <h4 class="md-title">{{review.comment}}</h4>
-          <p class="md-subhead">- {{review.author}}</p>
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+        <div carousel>
+          <div class="review" *ngFor="let review of reviews">
+            <img src="{{review.image}}" alt="{{review.author}}" class="img-circle review-image" />
+            <h4 class="md-title">{{review.comment}}</h4>
+            <p class="md-subhead">- {{review.author}}</p>
+          </div>
         </div>
       </div>
     </div>
