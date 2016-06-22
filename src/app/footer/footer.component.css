@@ -1,0 +1,11 @@
+.brand-image {
+  height: 32px;
+  width: auto;
+  margin-right: 2rem;
+}
+
+.phone {
+  opacity: 0.64;
+  font-size: 1.7rem;
+  font-weight: 300;
+}

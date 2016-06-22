@@ -12,6 +12,7 @@ import {StatisticsComponent} from './statistics';
 import {CustomersComponent} from './customers';
 import {ReviewsComponent} from './reviews';
 import {ClosingStatementComponent} from './closing-statement';
+import {FooterComponent} from './footer';
 
 import '../../public/css/styles.css';
 
@@ -35,7 +36,8 @@ import '../../public/css/styles.css';
     StatisticsComponent,
     CustomersComponent,
     ReviewsComponent,
-    ClosingStatementComponent
+    ClosingStatementComponent,
+    FooterComponent
   ]
 })
 export class AppComponent {

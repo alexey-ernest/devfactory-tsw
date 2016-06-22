@@ -8,8 +8,6 @@
   justify-content: center;
 }
 
-
-
 .brand-image {
   height: 32px;
   width: auto;
@@ -20,10 +18,6 @@
   opacity: 0.64;
   font-size: 1.7rem;
   font-weight: 300;
-}
-
-.fill-remaining-space {
-  flex: 1 1 auto;
 }
 
 h1.md-display-3 {
