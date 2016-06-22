@@ -13,7 +13,6 @@ export class GoogleAnalyticsComponent implements OnInit {
       return;
     }
 
-    console.log(environment);
     ga('create', environment.ga, 'auto');
     ga('send', 'pageview');
   }
