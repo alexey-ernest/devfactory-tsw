@@ -26,5 +26,8 @@ import '../public/js/owl-carousel/owl.carousel.min.js';
 // Nivo lightbox
 import '../public/js/nivo-lightbox/nivo-lightbox.js';
 
+// Google analytics
+import '../public/js/google-analytics.js';
+
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...

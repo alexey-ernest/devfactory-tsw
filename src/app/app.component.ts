@@ -14,6 +14,8 @@ import {ReviewsComponent} from './reviews';
 import {ClosingStatementComponent} from './closing-statement';
 import {FooterComponent} from './footer';
 
+import {GoogleAnalyticsComponent} from './shared';
+
 import '../../public/css/styles.css';
 
 @Component({
@@ -37,7 +39,8 @@ import '../../public/css/styles.css';
     CustomersComponent,
     ReviewsComponent,
     ClosingStatementComponent,
-    FooterComponent
+    FooterComponent,
+    GoogleAnalyticsComponent
   ]
 })
 export class AppComponent {

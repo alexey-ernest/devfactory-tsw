@@ -1,7 +1,7 @@
 {
-  "name": "angular2-material",
+  "name": "testing-services-website-2016",
   "version": "1.0.0",
-  "description": "Angular2 with material design components sample project",
+  "description": "Landing page for DevFactory Testing Services portal",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start",
