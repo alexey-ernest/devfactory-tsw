@@ -12,6 +12,10 @@ body {
   font-size: 1.6rem;
 }
 
+iframe {
+  border: none;
+}
+
 .flex {
   display: flex;
 }

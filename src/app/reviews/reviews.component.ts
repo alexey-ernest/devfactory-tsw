@@ -2,9 +2,6 @@ import {Component} from '@angular/core';
 
 import {WaypointDirective, CarouselDirective} from '../shared';
 
-import '../../../public/css/owl-carousel/owl.carousel.css';
-import '../../../public/css/owl-carousel/owl.theme.css';
-
 @Component({
   selector: 'tsw-reviews',
   template: require('./reviews.component.html'),
