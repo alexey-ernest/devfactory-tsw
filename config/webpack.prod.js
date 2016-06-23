@@ -26,7 +26,6 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('[name].[hash].css'),
     new webpack.DefinePlugin({
-      WEBPACK_IS_DEVELOPMENT: false,
       'process.env': {
         'ENV': JSON.stringify(ENV)
       }
