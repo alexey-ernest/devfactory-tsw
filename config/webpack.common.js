@@ -36,7 +36,6 @@ module.exports = {
       {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
-        //loaders: ['css', 'resolve-url']
         loaders: ['exports-loader?module.exports.toString()', 'css']
       }
     ]
