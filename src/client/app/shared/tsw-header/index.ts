@@ -1,1 +1,0 @@
-export {TswHeaderComponent} from './tsw-header.component';

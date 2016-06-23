@@ -1,0 +1,10 @@
+<section class="block secondary-block-dark align-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4" *ngFor="let stat of statistics; let i = index" waypoint classes="animated fadeInUp" delay="{{i * 200}}">
+        <h4 class="md-headline">{{stat.title}}:</h4>
+        <p class="md-display-3">{{stat.value}}</p>
+      </div>
+    </div>
+  </div>
+</section>

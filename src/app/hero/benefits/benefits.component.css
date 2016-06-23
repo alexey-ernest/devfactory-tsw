@@ -1,0 +1,19 @@
+/* Benefits */
+
+.benefit-list {
+  margin: 3rem 0 2rem;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  color: #000;
+  font-size: 2rem;
+  line-height: 3rem;
+  animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+.benefit-list li {
+  margin-bottom: 2rem;
+}

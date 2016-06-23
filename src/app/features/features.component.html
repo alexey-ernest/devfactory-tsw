@@ -1,0 +1,12 @@
+<section class="block secondary-block-light align-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4" *ngFor="let feature of features; let i = index" waypoint classes="animated fadeInUp" delay="{{i * 200}}">
+        <md-icon>{{feature.icon}}</md-icon>
+        <h3 class="md-headline">{{feature.title}}</h3>
+        <p class="md-subhead secondary">{{feature.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
