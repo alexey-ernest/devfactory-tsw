@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 
 import {WaypointDirective} from '../shared';
+import {Customer} from './customer';
+import {CUSTOMERS} from './customers';
 
 @Component({
   selector: 'tsw-customers',
@@ -11,12 +13,5 @@ import {WaypointDirective} from '../shared';
   ]
 })
 export class CustomersComponent {
-  customers: any[] = [
-    { image: '../../../public/images/aurea.png', title: 'Aurea' },
-    { image: '../../../public/images/crossover.png', title: 'Crossover' },
-    { image: '../../../public/images/gensym.png', title: 'Gensym' },
-    { image: '../../../public/images/ignite.png', title: 'Ignite' },
-    { image: '../../../public/images/tenrox.png', title: 'Tenrox' },
-    { image: '../../../public/images/versata.png', title: 'Versata' }
-  ];
+  customers: Customer[] = CUSTOMERS;
 }
