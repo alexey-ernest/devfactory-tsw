@@ -36,7 +36,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
-        loader: 'raw'
+        loaders: ['exports-loader?module.exports.toString()', 'css']
       }
     ]
   },
@@ -45,7 +45,6 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
-
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })

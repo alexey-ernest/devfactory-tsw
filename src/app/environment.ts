@@ -3,12 +3,11 @@
 // The build system defaults to the dev environment
 
 let env: {};
-declare var WEBPACK_IS_DEVELOPMENT: any;
 
-if (WEBPACK_IS_DEVELOPMENT) {
-  env = require('../../config/environment.dev.ts');
-} else {
+if (process.env.ENV === 'production') {
   env = require('../../config/environment.prod.ts');
+} else {
+  env = require('../../config/environment.dev.ts');
 }
 
 export const environment = env['environment'];
