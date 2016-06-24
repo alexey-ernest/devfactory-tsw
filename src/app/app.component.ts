@@ -16,6 +16,8 @@ import {FooterComponent} from './footer';
 
 import {GoogleAnalyticsComponent} from './shared';
 
+import {EmailService} from './services';
+
 import '../../public/css/styles.css';
 
 @Component({
@@ -25,7 +27,10 @@ import '../../public/css/styles.css';
     require('./app.component.css'),
     require('./button.css')
   ],
-  providers: [MdIconRegistry],
+  providers: [
+    MdIconRegistry,
+    EmailService
+  ],
   directives: [
     MD_BUTTON_DIRECTIVES,
     MD_INPUT_DIRECTIVES,
