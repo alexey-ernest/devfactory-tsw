@@ -20,4 +20,10 @@ export class ClosingStatementComponent {
   constructor(service: EmailService) {
     service.requestSent$.subscribe(() => this.submitted = true);
   }
+
+  gotoCta() {
+    var $ = window['$'];
+    $('html, body').animate({scrollTop: 150}, 1000);
+    $('.cta-form input[name="name"]').focus();
+  }
 }

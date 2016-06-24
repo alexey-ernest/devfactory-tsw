@@ -1,6 +1,6 @@
 <md-card class="cta-form">
   <form (ngSubmit)="sendRequest(email.value, name.value)">
-    <md-input class="full-width" #name placeholder="Your Name" [disabled]="submitted"></md-input>
+    <md-input name="name" class="full-width" #name placeholder="Your Name" [disabled]="submitted"></md-input>
     <md-input class="full-width" #email placeholder="Your E-mail" required [disabled]="submitted"></md-input>
     <div class="cta-wrapper">
       <button md-raised-button color="accent" type="submit" class="cta-button" [disabled]="loading || submitted">
