@@ -1,13 +1,15 @@
-import {Injectable} from '@angular/core';
+import {Injectable, EventEmitter} from '@angular/core';
 import {Http, Headers} from "@angular/http";
 
 @Injectable()
 export class EmailService {
+  public requestSent$: EventEmitter<boolean>;
 
   /**
    * Constructor
    */
   constructor(private http: Http) {
+    this.requestSent$ = new EventEmitter<boolean>();
   }
 
   /**
@@ -21,6 +23,7 @@ export class EmailService {
     let params = JSON.stringify({email: fromEmail, name: fromName});
     let headers = new Headers({'Content-Type': 'application/json'});
     return this.http.post('https://ts-landing-email.herokuapp.com/',
-      params, {headers: headers});
+      params, {headers: headers})
+        .map(res => this.requestSent$.emit(true));
   }
 }

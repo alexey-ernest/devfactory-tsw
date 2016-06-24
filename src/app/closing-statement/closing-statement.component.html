@@ -2,6 +2,9 @@
   <div class="container closing-statement">
     <h2 class="md-display-1">Instantly improve your product quality <br class="visible-lg visible-md" /> by automation</h2>
     <p>&nbsp;</p>
-    <button md-raised-button color="accent">REQUEST YOUR FREE DEMO NOW</button>
+    <button md-raised-button color="accent" [disabled]="submitted">
+      <span *ngIf="!submitted">REQUEST YOUR FREE DEMO NOW</span>
+      <span *ngIf="submitted">YOUR REQUEST SENT. THANKS!</span>
+    </button>
   </div>
 </section>
