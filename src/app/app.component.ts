@@ -18,7 +18,7 @@ import {GoogleAnalyticsComponent} from './shared';
 
 import {EmailService} from './services';
 
-import '../../public/css/styles.css';
+import '../css/styles.css';
 
 @Component({
   selector: 'tsw-app',

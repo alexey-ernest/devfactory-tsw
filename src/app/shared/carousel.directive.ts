@@ -1,7 +1,7 @@
 import {Directive, OnInit, ElementRef, Input} from '@angular/core';
 
-import '../../../public/css/owl-carousel/owl.carousel.css';
-import '../../../public/css/owl-carousel/owl.theme.css';
+import '../../css/owl-carousel/owl.carousel.css';
+import '../../css/owl-carousel/owl.theme.css';
 
 @Directive({
   selector: '[carousel]'

@@ -14,12 +14,12 @@ import {WaypointDirective, CarouselDirective} from '../shared';
 export class ReviewsComponent {
   reviews: any[] = [
     {
-      image: '../../../public/images/andy.png',
+      image: '/public/images/andy.png',
       comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
       author: 'Andy Montgomery, SVP Engineering Aurea'
     },
     {
-      image: '../../../public/images/andy.png',
+      image: '/public/images/andy.png',
       comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
       author: 'Andy Montgomery, SVP Engineering Aurea'
     }

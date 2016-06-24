@@ -1,8 +1,8 @@
 import {Directive, OnInit, ElementRef, Input} from '@angular/core';
 
-import '../../../public/css/nivo-lightbox/nivo-lightbox.css';
-import '../../../public/css/nivo-lightbox/themes/default/default.css';
-import '../../../public/css/nivo-lightbox/themes/default/color_scheme_light.css';
+import '../../css/nivo-lightbox/nivo-lightbox.css';
+import '../../css/nivo-lightbox/themes/default/default.css';
+import '../../css/nivo-lightbox/themes/default/color_scheme_light.css';
 
 @Directive({
   selector: '[lightbox]'
