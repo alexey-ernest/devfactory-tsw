@@ -29,5 +29,8 @@ import './js/nivo-lightbox/nivo-lightbox.js';
 // Google analytics
 import './js/google-analytics.js';
 
+// Moment.js
+import 'moment';
+
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
