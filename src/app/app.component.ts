@@ -16,7 +16,9 @@ import {FooterComponent} from './footer';
 
 import {GoogleAnalyticsComponent} from './shared';
 
-import '../../public/css/styles.css';
+import {EmailService} from './services';
+
+import '../css/styles.css';
 
 @Component({
   selector: 'tsw-app',
@@ -25,7 +27,10 @@ import '../../public/css/styles.css';
     require('./app.component.css'),
     require('./button.css')
   ],
-  providers: [MdIconRegistry],
+  providers: [
+    MdIconRegistry,
+    EmailService
+  ],
   directives: [
     MD_BUTTON_DIRECTIVES,
     MD_INPUT_DIRECTIVES,

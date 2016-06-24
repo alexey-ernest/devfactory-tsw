@@ -36,7 +36,11 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# OSX artifacts
 .DS_Store
 
-dist
+# TypeScript isntalled typings
+typings
 
+# Output build
+dist
