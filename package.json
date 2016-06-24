@@ -7,7 +7,8 @@
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install",
-    "typings": "typings"
+    "typings": "typings",
+    "deploy": "npm run build && firebase deploy"
   },
   "license": "MIT",
   "dependencies": {
@@ -36,6 +37,7 @@
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "firebase-tools": "^3.0.3",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.15.0",
     "jasmine-core": "^2.4.1",
