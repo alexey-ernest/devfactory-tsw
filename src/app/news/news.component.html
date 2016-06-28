@@ -9,6 +9,10 @@
       </div>
     </div>
 
+    <div waypoint classes="animated fadeInUp">
+      <md-progress-circle class="indicator" *ngIf="loading" mode="indeterminate" color="primary" ></md-progress-circle>
+    </div>
+
     <div class="row" waypoint classes="animated fadeInUp" *ngFor="let row of rows">
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let item of row">
         <div class="news-item">

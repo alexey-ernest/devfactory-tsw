@@ -16,6 +16,7 @@ import '@angular2-material/card';
 import '@angular2-material/input';
 import '@angular2-material/icon';
 import '@angular2-material/toolbar';
+import '@angular2-material/progress-circle';
 
 // Waypoint
 import './js/waypoints/noframework.waypoints.min.js';

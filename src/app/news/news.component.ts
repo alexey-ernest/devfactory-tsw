@@ -1,42 +1,43 @@
 import {Component, OnInit} from '@angular/core';
+import {MD_PROGRESS_CIRCLE_DIRECTIVES} from '@angular2-material/progress-circle';
 
 import {WaypointDirective} from '../shared';
 import {News} from './news';
+import {NewsService} from '../services';
 
 @Component({
   selector: 'tsw-news',
   template: require('./news.component.html'),
-  styles: [require('./news.component.css')],
+  styles: [
+    require('./news.component.css'),
+    require('../progress-circle.css')
+  ],
   directives: [
-    WaypointDirective
+    WaypointDirective,
+    MD_PROGRESS_CIRCLE_DIRECTIVES
   ]
 })
 export class NewsComponent implements OnInit {
-  news: News[] = [{
-    title: "Searching faster",
-    text: "Automation engines like Testcomplete use the tree model to represent a application component structure. Searching for objects in complex object tree takes too long and even tough objects are mostly cached , a normal process tree can contain several thousands of components in intricate hierarchy trees and each component have several properties to match according to required queries.",
-    date: new Date()
-  },
-  {
-    title: "Test life cycle",
-    text: "Here at DevFactory we execute more than hundreds of thousands of automated functional tests every week.Each product has suites of more than thousand test cases which are run at least every day.One can imagine the quantity and variety of issues we face while maintaining these tests.This compels us to continuously search for automation opportunities and better artifacts for managing the process.Test Life cycle is one such artifact that helps us analyze flaky and noisy test cases.",
-    date: new Date()
-  },
-  {
-    title: "Searching faster",
-    text: "Automation engines like Testcomplete use the tree model to represent a application component structure. Searching for objects in complex object tree takes too long and even tough objects are mostly cached , a normal process tree can contain several thousands of components in intricate hierarchy trees and each component have several properties to match according to required queries.",
-    date: new Date()
-  },
-  {
-    title: "Test life cycle",
-    text: "Here at DevFactory we execute more than hundreds of thousands of automated functional tests every week.Each product has suites of more than thousand test cases which are run at least every day.One can imagine the quantity and variety of issues we face while maintaining these tests.This compels us to continuously search for automation opportunities and better artifacts for managing the process.Test Life cycle is one such artifact that helps us analyze flaky and noisy test cases.",
-    date: new Date()
-  }];
-
+  loading: boolean;
+  news: News[] = [];
   rows: News[][] = [];
 
+  constructor(private service: NewsService) {
+  }
+
   ngOnInit() {
-    this.buildRows();
+    this.loading = true;
+    this.service.get().subscribe(
+      (news) => {
+        console.log(news);
+      },
+      (err) => {
+        console.log('Could not load news feed: ', err);
+      },
+      () => {
+        this.loading = false;
+      }
+    );
   }
 
   buildRows() {
