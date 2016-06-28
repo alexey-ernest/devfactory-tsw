@@ -11,6 +11,7 @@ import {VideoComponent} from './video';
 import {StatisticsComponent} from './statistics';
 import {CustomersComponent} from './customers';
 import {ReviewsComponent} from './reviews';
+import {NewsComponent} from './news';
 import {ClosingStatementComponent} from './closing-statement';
 import {FooterComponent} from './footer';
 
@@ -43,6 +44,7 @@ import '../css/styles.css';
     StatisticsComponent,
     CustomersComponent,
     ReviewsComponent,
+    NewsComponent,
     ClosingStatementComponent,
     FooterComponent,
     GoogleAnalyticsComponent
