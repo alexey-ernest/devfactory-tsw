@@ -1,8 +1,8 @@
-<section class="block secondary-block-light align-center">
+<section class="block secondary-block-light align-center features">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-4" *ngFor="let feature of features; let i = index" waypoint classes="animated fadeInUp" delay="{{i * 200}}">
-        <md-icon>{{feature.icon}}</md-icon>
+      <div class="col-xs-12 col-md-4 feature-item" *ngFor="let feature of features; let i = index" waypoint classes="animated fadeInUp" delay="{{i * 200}}">
+        <md-icon color="primary">{{feature.icon}}</md-icon>
         <h3 class="md-headline">{{feature.title}}</h3>
         <p class="md-subhead secondary">{{feature.description}}</p>
       </div>
