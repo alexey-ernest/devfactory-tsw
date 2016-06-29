@@ -9,3 +9,11 @@
   font-size: 1.7rem;
   font-weight: 300;
 }
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
