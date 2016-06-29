@@ -1,12 +1,25 @@
 
 /* Features */
 
+.features {
+  padding-bottom: 2rem;
+}
+
+.feature-item {
+  margin-bottom: 6rem;
+}
+
+
 md-icon {
   width: 4rem;
   height: 4rem;
   font-size: 4rem;
   line-height: 4rem;
-  opacity: 0.55;
+  opacity: 1;
+}
+
+md-icon[color="primary"] {
+  color: #00BCD4;
 }
 
 .md-headline {
