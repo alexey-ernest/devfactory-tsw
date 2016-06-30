@@ -33,7 +33,7 @@ export class NewsComponent implements OnInit {
         this.news = news.posts.map(function (i: any) {
           return {
             title: i.title,
-            text: i.excerp,
+            text: i.excerpt,
             date: i.date,
             link: i.url
           };
@@ -55,9 +55,10 @@ export class NewsComponent implements OnInit {
     let result: News[][] = [];
     let row: News[] = [];
     let itemsPerRow = 2;
+    let length = this.news.length;
     this.news.forEach(function (n, i) {
       row.push(n);
-      if (i % itemsPerRow === (itemsPerRow - 1)) {
+      if (i % itemsPerRow === (itemsPerRow - 1) || i === length - 1) {
         result.push(row);
         row = [];
       }

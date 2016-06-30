@@ -13,11 +13,11 @@
       <md-progress-circle class="indicator" *ngIf="loading" mode="indeterminate" color="primary" ></md-progress-circle>
     </div>
 
-    <div class="row" waypoint classes="animated fadeInUp" *ngFor="let row of rows">
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let item of row">
+    <div class="row" *ngFor="let row of rows">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let item of row" waypoint classes="animated fadeInUp">
         <div class="news-item">
           <h5 class="md-headline">{{item.title}}</h5>
-          <p class="md-subhead secondary">{{item.text}}</p>
+          <div class="md-subhead secondary" [innerHTML]="item.text"></div>
         </div>
       </div>
     </div>
