@@ -15,6 +15,7 @@ export class NewsService {
    * @return {Observable<R>}
    */
   get() {
-    return this.http.get('http://ts-blog.devfactory.com/index.php/feed/');
+    return this.http.get('http://10.39.157.250/?json=get_recent_posts')
+      .map(res => res.json());
   }
 }

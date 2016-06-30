@@ -29,7 +29,18 @@ export class NewsComponent implements OnInit {
     this.loading = true;
     this.service.get().subscribe(
       (news) => {
-        console.log(news);
+        // parse news
+        this.news = news.posts.map(function (i: any) {
+          return {
+            title: i.title,
+            text: i.excerp,
+            date: i.date,
+            link: i.url
+          };
+        });
+
+        // build rows
+        this.buildRows();
       },
       (err) => {
         console.log('Could not load news feed: ', err);

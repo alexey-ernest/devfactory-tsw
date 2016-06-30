@@ -1,5 +1,6 @@
 export class News {
   title: string;
   text: string;
-  date: Date;
+  date: string;
+  link: string;
 }
