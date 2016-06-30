@@ -42,8 +42,8 @@ export class NewsComponent implements OnInit {
         // build rows
         this.buildRows();
       },
-      (err) => {
-        console.log('Could not load news feed: ', err);
+      () => {
+        console.log('Could not load news feed.');
       },
       () => {
         this.loading = false;
