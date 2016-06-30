@@ -1,7 +1,7 @@
 /* Benefits */
 
 .benefit-list {
-  margin: 3rem 0 2rem;
+  margin: 3rem 0 6rem;
   padding: 0;
   list-style: none;
   text-align: left;
@@ -12,6 +12,17 @@
   -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
+}
+
+@media (max-width: 991px) {
+  .benefit-list {
+    text-align: center;
+  }
+}
+
+.benefit-list md-icon {
+  position: relative;
+  top: 4px;
 }
 
 .benefit-list li {
