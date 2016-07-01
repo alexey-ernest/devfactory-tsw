@@ -161,3 +161,17 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: translate3d(0, 200px, 0);
   }
 }
+
+@keyframes animLoadedPage {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes animLoadedPage {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
