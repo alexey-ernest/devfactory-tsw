@@ -1,33 +1,33 @@
 import {Help} from './help';
 
 export const HELP_CONTENTS: Help[] = [
-  {
-    key: `EnvironmentDetailComponent`,
-    title: `EnvironmentDetailComponent`,
-    pages: [
-      {
-        helpText: `
-        <h1>Summary Tab <small>Overview your job</small></h1>
-        <ol>
-          <li>Details Tab; Shows sequences list, tests details.</li>
-        <li>Test results information charts.</li>
-        <li>Active Environments Tab; Shows instance information and lists running instances.</li>
-        <li>Summary about batch fixes and Batch Fix utility link.</li>
-        <li>Summary about one click fixes and One Click Fixes utility link.</li>
-        <li>Auto fixes chart and job information.</li>
-        </ol>`,
-        screenshot: `http://dummyimage.com/600x400/000/fff?text=Screen%201`
-      },
-      {
-        helpText: `<h1>Suscipit tempore lorem facilisi</h1>Earum molestiae, suscipit tempore lorem facilisi ullam saepe, consequatur interdum commodo convallis eveniet reiciendis, exercitation cupidatat! Amet magnam mattis odit nam? Facilisi praesent fugit pede quibusdam similique, eget? Est parturient sollicitudin tincidunt ipsa odio placeat! Id provident cubilia. Consequat quod debitis proin, optio a, accumsan? Parturient expedita ducimus, aliquam aspernatur repellendus quisque delectus minim quia. Facilisis lobortis ligula ornare expedita.`,
-        screenshot: `http://dummyimage.com/600x400/000/fff?text=Screen%202`
-      },
-      {
-        helpText: `Aenean ligula cras sem aut inceptos eveniet turpis, numquam magna. Elit sequi? Libero litora voluptatem parturient in cumque lectus placeat facilisi molestiae, voluptatem ultricies! Et excepteur laoreet consequatur volutpat distinctio quidem nemo! Voluptatum laboriosam dictumst! Dictumst libero? Aut minima elementum, quasi aliquip, dignissim natoque magnis, proident purus adipisci dapibus voluptatibus? Dolores orci fusce id, phasellus eiusmod tortor. Aute eum quia.`,
-        screenshot: `http://dummyimage.com/600x400/000/fff?text=Screen%203`
-      }
-    ]
-  },
+  // {
+  //   key: `EnvironmentDetailComponent`,
+  //   title: `EnvironmentDetailComponent`,
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Summary Tab <small>Overview your job</small></h1>
+  //       <ol>
+  //         <li>Details Tab; Shows sequences list, tests details.</li>
+  //       <li>Test results information charts.</li>
+  //       <li>Active Environments Tab; Shows instance information and lists running instances.</li>
+  //       <li>Summary about batch fixes and Batch Fix utility link.</li>
+  //       <li>Summary about one click fixes and One Click Fixes utility link.</li>
+  //       <li>Auto fixes chart and job information.</li>
+  //       </ol>`,
+  //       screenshot: `http://dummyimage.com/600x400/000/fff?text=Screen%201`
+  //     },
+  //     {
+  //       helpText: `<h1>Suscipit tempore lorem facilisi</h1>Earum molestiae, suscipit tempore lorem facilisi ullam saepe, consequatur interdum commodo convallis eveniet reiciendis, exercitation cupidatat! Amet magnam mattis odit nam? Facilisi praesent fugit pede quibusdam similique, eget? Est parturient sollicitudin tincidunt ipsa odio placeat! Id provident cubilia. Consequat quod debitis proin, optio a, accumsan? Parturient expedita ducimus, aliquam aspernatur repellendus quisque delectus minim quia. Facilisis lobortis ligula ornare expedita.`,
+  //       screenshot: `http://dummyimage.com/600x400/000/fff?text=Screen%202`
+  //     },
+  //     {
+  //       helpText: `Aenean ligula cras sem aut inceptos eveniet turpis, numquam magna. Elit sequi? Libero litora voluptatem parturient in cumque lectus placeat facilisi molestiae, voluptatem ultricies! Et excepteur laoreet consequatur volutpat distinctio quidem nemo! Voluptatum laboriosam dictumst! Dictumst libero? Aut minima elementum, quasi aliquip, dignissim natoque magnis, proident purus adipisci dapibus voluptatibus? Dolores orci fusce id, phasellus eiusmod tortor. Aute eum quia.`,
+  //       screenshot: `http://dummyimage.com/600x400/000/fff?text=Screen%203`
+  //     }
+  //   ]
+  // },
   {
     key: `AutomateRoot-CVT`,
     title: `CVT Tasks`,
@@ -678,50 +678,50 @@ export const HELP_CONTENTS: Help[] = [
       }
     ]
   },
-  {
-    key: 'TspToolingRequestDetailComponent',
-    title: 'Tooling Request Detail',
-    pages: [
-      {
-        helpText: `
-          <h1>Tooling Request Detail Legend</h1>
-          <ol>
-            <li>In case of a user with role Tooler, the Submit button will be replaced with a Complete button</li>
-            <li>Stop button to stop running install, disabled for unrunning install</li>
-            <li>Clicking on install ID will take a user to the install details page</li>
-            <li>Upload install file for current tooling request</li>
-            <li>Toggle button to ask for support, become green if support already sent</li>
-          </ol>
-        `,
-        screenshot: 'images/helps/portal-tooling-request-detail.png'
-      },
-      {
-        helpText: `
-          <h1>Tooling Request Detail Legend</h1>
-          <ol>
-            <li>Click the <strong>Comments</strong> tab</li>
-            <li>Click <strong>Reply</strong> anchor button to toggle the comment form</li>
-            <li>Enter your comment, then click the <strong>Send</strong> anchor button</li>
-          </ol>
-        `,
-        screenshot: 'images/helps/portal-tooling-request-detail-comments.png'
-      },
-      {
-        helpText: `
-          <h1>Operations For Environment Editor</h1>
-          <p>Launch environment editor by clicking "Launch Environment Editor" button.</p>
-          <ol>
-            <li>Follow instruction in left hand side panel</li>
-            <li>
-              Drag file from your computer to blue drag and drop zone or, select it by clicking "browse for file" anchor
-            </li>
-            <li>
-              Click "save" button if all required field filled and valid
-            </li>
-          </ol>
-        `,
-        screenshot: 'images/helps/portal-environment-editor.png'
-      }
-    ]
-  }
+  // {
+  //   key: 'TspToolingRequestDetailComponent',
+  //   title: 'Tooling Request Detail',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //         <h1>Tooling Request Detail Legend</h1>
+  //         <ol>
+  //           <li>In case of a user with role Tooler, the Submit button will be replaced with a Complete button</li>
+  //           <li>Stop button to stop running install, disabled for unrunning install</li>
+  //           <li>Clicking on install ID will take a user to the install details page</li>
+  //           <li>Upload install file for current tooling request</li>
+  //           <li>Toggle button to ask for support, become green if support already sent</li>
+  //         </ol>
+  //       `,
+  //       screenshot: 'images/helps/portal-tooling-request-detail.png'
+  //     },
+  //     {
+  //       helpText: `
+  //         <h1>Tooling Request Detail Legend</h1>
+  //         <ol>
+  //           <li>Click the <strong>Comments</strong> tab</li>
+  //           <li>Click <strong>Reply</strong> anchor button to toggle the comment form</li>
+  //           <li>Enter your comment, then click the <strong>Send</strong> anchor button</li>
+  //         </ol>
+  //       `,
+  //       screenshot: 'images/helps/portal-tooling-request-detail-comments.png'
+  //     },
+  //     {
+  //       helpText: `
+  //         <h1>Operations For Environment Editor</h1>
+  //         <p>Launch environment editor by clicking "Launch Environment Editor" button.</p>
+  //         <ol>
+  //           <li>Follow instruction in left hand side panel</li>
+  //           <li>
+  //             Drag file from your computer to blue drag and drop zone or, select it by clicking "browse for file" anchor
+  //           </li>
+  //           <li>
+  //             Click "save" button if all required field filled and valid
+  //           </li>
+  //         </ol>
+  //       `,
+  //       screenshot: 'images/helps/portal-environment-editor.png'
+  //     }
+  //   ]
+  // }
 ]

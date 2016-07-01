@@ -1,0 +1,24 @@
+/* Help */
+
+.caption {
+  margin-bottom: 10rem;
+}
+
+.help-item {
+  margin-bottom: 4rem;
+}
+
+.help-item h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.help-item .help-screen {
+  height: 260px;
+}
+
+.help-item img {
+  max-width: 100%;
+}
