@@ -1,10 +1,11 @@
 /* CTA */
 
 .cta-form {
+  max-width: 360px;
+  margin: 0 auto 2rem;
   text-align: left;
   font-size: 1.6rem;
   color: #000;
-  margin-bottom: 2rem;
   animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
   -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
   animation-delay: 0.4s;

@@ -16,6 +16,10 @@ a {
   color: #00bcd4;
 }
 
+a:hover {
+  color: #00bcd4;
+}
+
 iframe {
   border: none;
 }

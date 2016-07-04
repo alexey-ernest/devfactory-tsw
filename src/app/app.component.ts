@@ -12,12 +12,13 @@ import {StatisticsComponent} from './statistics';
 import {CustomersComponent} from './customers';
 import {HelpComponent} from './help';
 import {ReviewsComponent} from './reviews';
+import {NewsComponent} from './news';
 import {ClosingStatementComponent} from './closing-statement';
 import {FooterComponent} from './footer';
 
 import {GoogleAnalyticsComponent} from './shared';
 
-import {EmailService} from './services';
+import {EmailService, NewsService} from './services';
 
 import '../css/styles.css';
 
@@ -30,7 +31,8 @@ import '../css/styles.css';
   ],
   providers: [
     MdIconRegistry,
-    EmailService
+    EmailService,
+    NewsService
   ],
   directives: [
     MD_BUTTON_DIRECTIVES,
@@ -45,6 +47,7 @@ import '../css/styles.css';
     CustomersComponent,
     HelpComponent,
     ReviewsComponent,
+    NewsComponent,
     ClosingStatementComponent,
     FooterComponent,
     GoogleAnalyticsComponent
