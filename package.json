@@ -11,6 +11,7 @@
     "deploy": "npm run build && firebase deploy"
   },
   "license": "MIT",
+  "author": "Alexey Melnikov",
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
     "@angular/compiler": "2.0.0-rc.1",
