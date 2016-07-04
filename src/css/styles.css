@@ -36,6 +36,10 @@ iframe {
   text-align: center;
 }
 
+.display-none {
+  display: none;
+}
+
 .secondary {
   opacity: 0.55;
 }
@@ -73,6 +77,9 @@ iframe {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+.img-responsive {
+  max-width: 100%;
+}
 
 /* Typography */
 

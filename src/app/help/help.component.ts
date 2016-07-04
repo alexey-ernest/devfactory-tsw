@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {Help} from './help';
 import {HELP_CONTENTS} from './data';
 import {WaypointDirective} from '../shared';
+import {LightboxDirective} from '../shared';
 
 const PORTAL_URL = 'http://ts-portal.devfactory.com';
 
@@ -11,7 +12,8 @@ const PORTAL_URL = 'http://ts-portal.devfactory.com';
   template: require('./help.component.html'),
   styles: [require('./help.component.css')],
   directives: [
-    WaypointDirective
+    WaypointDirective,
+    LightboxDirective
   ]
 })
 export class HelpComponent implements OnInit {

@@ -15,10 +15,6 @@
   margin: auto 2rem;
 }
 
-#video-modal-box {
-  display: none;
-}
-
 .fluid-width-video-wrapper {
   width: 100%;
   position: relative;

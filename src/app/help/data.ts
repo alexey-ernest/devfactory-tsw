@@ -28,69 +28,69 @@ export const HELP_CONTENTS: Help[] = [
   //     }
   //   ]
   // },
-  {
-    key: `AutomateRoot-CVT`,
-    title: `CVT Tasks`,
-    pages: [
-      {
-        helpText: `
-        <h1>Create an Engagement Event</h1>
-        <ol>
-          <li>Go to tab "Automate"</li>
-          <li>Click "Create an Event"</li>
-          <li>Fill in engagement information</li>
-          <li>Click "Create"</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-cvt-automate-create-event.png'
-      },
-      {
-        helpText: `
-        <h1>Edit an Engagement Event</h1>
-        <ol>
-          <li>Go to tab "Automate"</li>
-          <li>Double click on an event in the calendar</li>
-          <li>Edit date and time of event</li>
-          <li>Click Save</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-cvt-automate-edit-event.png'
-      },
-      {
-        helpText: `
-          <h1>Engagement actions</h1>
-          <ol>
-            <li>Deploy a VM</li>
-            <li>Submit for Automation</li>
-            <li>Cancel an engagement</li>
-          </ol>
-          `,
-        screenshot: '/images/helps/portal-cvt-automate-engagement-actions.png'
-      },
-      {
-        helpText: `
-          <h1>Submit for Automation</h1>
-          <ol>
-            <li>Go to tab "Automate"</li>
-            <li>Click "Submit for Automation"</li>
-            <li>Fill in the information</li>
-            <li>Click "Submit"</li>
-          </ol>
-          `,
-        screenshot: '/images/helps/portal-cvt-automate-submit-4-automation.png'
-      },
-      {
-        helpText: `
-          <h1>Environment actions</h1>
-          <ol>
-            <li>Extend expiry of VM</li>
-            <li>Terminate a VM</li>
-          </ol>
-          `,
-        screenshot: '/images/helps/portal-cvt-automate-env-actions.png'
-      }
-    ]
-  },
+  // {
+  //   key: `AutomateRoot-CVT`,
+  //   title: `CVT Tasks`,
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Create an Engagement Event</h1>
+  //       <ol>
+  //         <li>Go to tab "Automate"</li>
+  //         <li>Click "Create an Event"</li>
+  //         <li>Fill in engagement information</li>
+  //         <li>Click "Create"</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-cvt-automate-create-event.png'
+  //     },
+  //     {
+  //       helpText: `
+  //       <h1>Edit an Engagement Event</h1>
+  //       <ol>
+  //         <li>Go to tab "Automate"</li>
+  //         <li>Double click on an event in the calendar</li>
+  //         <li>Edit date and time of event</li>
+  //         <li>Click Save</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-cvt-automate-edit-event.png'
+  //     },
+  //     {
+  //       helpText: `
+  //         <h1>Engagement actions</h1>
+  //         <ol>
+  //           <li>Deploy a VM</li>
+  //           <li>Submit for Automation</li>
+  //           <li>Cancel an engagement</li>
+  //         </ol>
+  //         `,
+  //       screenshot: '/images/helps/portal-cvt-automate-engagement-actions.png'
+  //     },
+  //     {
+  //       helpText: `
+  //         <h1>Submit for Automation</h1>
+  //         <ol>
+  //           <li>Go to tab "Automate"</li>
+  //           <li>Click "Submit for Automation"</li>
+  //           <li>Fill in the information</li>
+  //           <li>Click "Submit"</li>
+  //         </ol>
+  //         `,
+  //       screenshot: '/images/helps/portal-cvt-automate-submit-4-automation.png'
+  //     },
+  //     {
+  //       helpText: `
+  //         <h1>Environment actions</h1>
+  //         <ol>
+  //           <li>Extend expiry of VM</li>
+  //           <li>Terminate a VM</li>
+  //         </ol>
+  //         `,
+  //       screenshot: '/images/helps/portal-cvt-automate-env-actions.png'
+  //     }
+  //   ]
+  // },
   {
     key: `AutomateRoot-Client`,
     title: `Automate Client Tasks`,
@@ -246,438 +246,438 @@ export const HELP_CONTENTS: Help[] = [
       }
     ],
   },
-  {
-    key: 'DashboardComponent-Automation',
-    title: 'Dashboard for Test Dev',
-    pages: [
-      {
-        helpText: `
-        <h1>Dashboard for Test Dev</h1>
-        <p>The dashboard presents to you three lists</p>
-        <ol>
-          <li>My Assigned Sequences</li>
-        <li>Running Environments</li>
-        <li>Free Sequences</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-test-dev-dashboard.png'
-      },
-      {
-        helpText: `
-        <h1>My Assigned Sequences</h1>
-        <p>You can perform the following actions for each sequence</p>
-        <ol>
-          <li>Deploy a fresh VM</li>
-        <li>Deploy a VM</li>
-        <li>Mark a sequence as complete</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-test-dev-dashboard-my-assigned-sequence-actions.png'
-      },
-      {
-        helpText: `
-        <h1>Running Environments</h1>
-        <p>You can perform the following actions for each environment</p>
-        <ol>
-          <li>Show password to access the VM</li>
-        <li>Extend the expiry date of a VM</li>
-        <li>Terminate a VM immedidately</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-test-dev-dashboard-running-env-actions.png'
-      },
-      {
-        helpText: `
-        <h1>Assign a sequence to you</h1>
-        <ol>
-          <li>Click to assign the sequence to your self...</li>
-        <li>The list of &lquo;My Assigned Sequences&rquo; is repopulated</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-test-dev-dashboard-free-sequence-actions.png'
-      }
-    ]
-  },
-  {
-    key: 'DashboardComponent-CVT',
-    title: 'Dashboard for CVT Users',
-    pages: [
-      {
-        helpText: `
-        <h1>Dashboard for CVT Users</h1>
-        <p>Lorem ipsum sit amet consecteur</p>
-        <ol>
-          <li>Autem quisquam! Vulputate, tempora auctor tincidunt orci aenean est elit</li>
-        <li>porttitor aliquam parturient repellendus dolore, tincidunt, pretium quo</li>
-        <li>iaculis accusamus neque netus, similique, ullamcorpe</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-cvt-dashboard.png'
-      }
-    ]
-  },
-  {
-    key: 'DashboardComponent-Ticket',
-    title: 'Dashboard for Test Maintenance Users',
-    pages: [
-      {
-        helpText: `
-        <h1>Dashboard for Test Maintenance Users</h1>
-        <p>Lorem ipsum sit amet consecteur</p>
-        <ol>
-          <li>Autem quisquam! Vulputate, tempora auctor tincidunt orci aenean est elit</li>
-        <li>porttitor aliquam parturient repellendus dolore, tincidunt, pretium quo</li>
-        <li>iaculis accusamus neque netus, similique, ullamcorpe</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-cvt-dashboard.png'
-      }
-    ]
-  },
-  {
-    key: 'DashboardComponent-Tooler',
-    title: 'Dashboard for Toolers',
-    pages: [
-      {
-        helpText: `
-        <h1>Dashboard for Toolers</h1>
-        <p>Lorem ipsum sit amet consecteur</p>
-        <ol>
-          <li>Autem quisquam! Vulputate, tempora auctor tincidunt orci aenean est elit</li>
-        <li>porttitor aliquam parturient repellendus dolore, tincidunt, pretium quo</li>
-        <li>iaculis accusamus neque netus, similique, ullamcorpe</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-cvt-dashboard.png'
-      }
-    ]
-  },
-  {
-    key: 'DashboardComponent-TestMainMgr',
-    title: 'TODO Dashboard for Test Maintainer Manager',
-    pages: [
-      {
-        helpText: `
-        <h1>Dashboard for Test Maintainer Manager</h1>
-        <p>Lorem ipsum sit amet</p>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'AnalyzeComponent',
-    title: 'TODO AnalyzeComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>AnalyzeComponent</h1>
-        <p>Lorem ipsum sit amet</p>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'BatchFixComponent',
-    title: 'TODO BatchFixComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>BatchFixComponent</h1>
-        <p>Lorem ipsum sit amet</p>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'EnvironmentListComponent',
-    title: 'List all environments',
-    pages: [
-      {
-        helpText: `
-        <h1>List all environments</h1>
-        <ol>
-          <li>Hover tab &lquo;Test&rquo;</li>
-        <li>Select &lquo;Environments&rquo;</li>
-        <li>Filter environments by product and repository</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-environments-list.png'
-      }
-    ]
-  },
-  {
-    key: 'OneClickFixComponent',
-    title: 'TODO OneClickFixComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>BatchFixComponent</h1>
-        <p>Lorem ipsum sit amet</p>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'ProductListComponent',
-    title: 'Products List',
-    pages: [
-      {
-        helpText: `
-        <h1>Products List</h1>
-        <ol>
-          <li>Search for specific product.</li>
-        <li>Click on any product to edit.</li>
-        <li>Click on the X button to delete product.</li>
-        <li>Click to create new product.</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/products-list.png'
-      },
-      {
-        helpText: `
-        <h1>Add/Edit Products</h1>
-        <ol>
-          <li>Add product title.</li>
-        <li>Choose repository to clone.</li>
-        <li>Edit Environment if needed.</li>
-        <li>Press clone to clone the repository.</li>
-        <li>Save your updates once done.</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/products-edit.png'
-      }
-    ]
-  },
-  {
-    key: 'TestDetailComponent',
-    title: 'TODO TestDetailComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>TODO: Add your help text page 1</h1>
-        `,
-        screenshot: 'http://fpoimg.com/300x300?text=Add%20Your%20Shot'
-      }
-    ]
-  },
-  {
-    key: 'TestListComponent',
-    title: 'TODO TestListComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>TODO: Add your help text page 1</h1>
-        `,
-        screenshot: 'http://fpoimg.com/300x300?text=Add%20Your%20Shot'
-      }
-    ]
-  },
-  {
-    key: 'TspBugsDetailComponent',
-    title: 'Bug Detail Legend',
-    pages: [
-      {
-        helpText: `
-        <h1>Bug Detail Legend</h1>
-        <ol>
-          <li>The bug title</li>
-        <li>The step when the bug found</li>
-        <li>The environment where the bug occurred</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-bug-detail.png',
-      }
-    ]
-  },
-  {
-    key: 'TspBugsListComponent',
-    title: 'View The Bug Detail',
-    pages: [
-      {
-        helpText: `
-        <h1>View The Bug Detail</h1>
-        <ol>
-          <li>Click on the reported bug id, you will be redirected into bug detail page.</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-bugs.png'
-      }
-    ]
-  },
-  {
-    key: 'TspEnvEditorQuickSetupFormComponent',
-    title: 'TODO TspEnvEditorQuickSetupFormComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>TODO: Add your help text page 1</h1>
-        `,
-        screenshot: 'http://fpoimg.com/300x300?text=Add%20Your%20Shot'
-      }
-    ]
-  },
-  {
-    key: 'TspInstallDetailComponent',
-    title: 'Operations for an install',
-    pages: [
-      {
-        helpText: `
-        <h1>Operations for an install</h1>
-        <p>Install details can directly navigated to via URL or..</p>
-        <ol>
-          <li>Access an install detail from Install History by clicking on its ID</li>
-        <li>You can view provision information</li>
-        <li>Or rerun the install</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-tooling-request-install-detail.png'
-      }
-    ]
-  },
-  {
-    key: 'TspInstallListComponent',
-    title: 'Search for an install',
-    pages: [
-      {
-        helpText: `
-        <h1>Search for an install</h1>
-        <ol>
-          <li>Select Tooling Request</li>
-        <li>Select Install History</li>
-        <li>Select a product, then a repo</li>
-        <li>Finally you can order an install to stop or view its provision information.</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/portal-tooling-request-install-detail.png'
-      }
-    ]
-  },
-  {
-    key: 'TspMyEnvironmentsComponent',
-    title: 'TODO TspMyEnvironmentsComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>TODO TspMyEnvironmentsComponent</h1>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'TspProvisionsDetailComponent',
-    title: 'Operations for an install',
-    pages: [
-      {
-        helpText: `
-        <h1>Operations for an install</h1>
-        <p>Install details can directly navigated to via URL or..</p>
-        <ol>
-          <li>Access an install detail from Install History by clicking on its ID</li>
-        <li>You can view provision information</li>
-        <li>Or rerun the install</li>
-        </ol>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'TspProvisionsListComponent',
-    title: 'TODO TspProvisionsListComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>TODO TspProvisionsListComponent</h1>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'TspReportsComponent',
-    title: 'TODO TspReportsComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>TODO TspReportsComponent</h1>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'TspResultsChartComponent',
-    title: 'TODO TspResultsChartComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>TODO TspResultsChartComponent</h1>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'TspSequenceDetailComponent',
-    title: 'Sequence Details',
-    pages: [
-      {
-        helpText: `
-        <h1>Sequence Details</h1>
-        <ol>
-          <li>Select test.</li>
-        <li>Click on a step, a screenshot for the test will appear on the right.</li>
-        <li>If you want to change the sequence click on Request change link.</li>
-        <li>You can always change the repo by selecting it from the dropdown menu.</li>
-        </ol>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
-  {
-    key: 'TspSequenceListComponent',
-    title: 'Sequence List',
-    pages: [
-      {
-        helpText: `
-        <h1>Sequence List</h1>
-        <ol>
-          <li>Select product from left navigation.</li>
-        <li>click on product sequence id to view.</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/sequence-list.png'
-      },
-      {
-        helpText: `
-        <h1>Choose Repo for sequence</h1>
-        <ol>
-          <li>Select repo to view.</li>
-          <li>Click ok.</li>
-        </ol>
-        `,
-        screenshot: '/images/helps/sequence-repo-select.png'
-      }
-    ]
-  },
-  {
-    key: 'TspTestMainMgrDashboardComponent',
-    title: 'TODO TspTestMainMgrDashboardComponent',
-    pages: [
-      {
-        helpText: `
-        <h1>TODO TspTestMainMgrDashboardComponent</h1>
-        `,
-        screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
-      }
-    ]
-  },
+  // {
+  //   key: 'DashboardComponent-Automation',
+  //   title: 'Dashboard for Test Dev',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Dashboard for Test Dev</h1>
+  //       <p>The dashboard presents to you three lists</p>
+  //       <ol>
+  //         <li>My Assigned Sequences</li>
+  //       <li>Running Environments</li>
+  //       <li>Free Sequences</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-test-dev-dashboard.png'
+  //     },
+  //     {
+  //       helpText: `
+  //       <h1>My Assigned Sequences</h1>
+  //       <p>You can perform the following actions for each sequence</p>
+  //       <ol>
+  //         <li>Deploy a fresh VM</li>
+  //       <li>Deploy a VM</li>
+  //       <li>Mark a sequence as complete</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-test-dev-dashboard-my-assigned-sequence-actions.png'
+  //     },
+  //     {
+  //       helpText: `
+  //       <h1>Running Environments</h1>
+  //       <p>You can perform the following actions for each environment</p>
+  //       <ol>
+  //         <li>Show password to access the VM</li>
+  //       <li>Extend the expiry date of a VM</li>
+  //       <li>Terminate a VM immedidately</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-test-dev-dashboard-running-env-actions.png'
+  //     },
+  //     {
+  //       helpText: `
+  //       <h1>Assign a sequence to you</h1>
+  //       <ol>
+  //         <li>Click to assign the sequence to your self...</li>
+  //       <li>The list of &lquo;My Assigned Sequences&rquo; is repopulated</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-test-dev-dashboard-free-sequence-actions.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'DashboardComponent-CVT',
+  //   title: 'Dashboard for CVT Users',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Dashboard for CVT Users</h1>
+  //       <p>Lorem ipsum sit amet consecteur</p>
+  //       <ol>
+  //         <li>Autem quisquam! Vulputate, tempora auctor tincidunt orci aenean est elit</li>
+  //       <li>porttitor aliquam parturient repellendus dolore, tincidunt, pretium quo</li>
+  //       <li>iaculis accusamus neque netus, similique, ullamcorpe</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-cvt-dashboard.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'DashboardComponent-Ticket',
+  //   title: 'Dashboard for Test Maintenance Users',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Dashboard for Test Maintenance Users</h1>
+  //       <p>Lorem ipsum sit amet consecteur</p>
+  //       <ol>
+  //         <li>Autem quisquam! Vulputate, tempora auctor tincidunt orci aenean est elit</li>
+  //       <li>porttitor aliquam parturient repellendus dolore, tincidunt, pretium quo</li>
+  //       <li>iaculis accusamus neque netus, similique, ullamcorpe</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-cvt-dashboard.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'DashboardComponent-Tooler',
+  //   title: 'Dashboard for Toolers',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Dashboard for Toolers</h1>
+  //       <p>Lorem ipsum sit amet consecteur</p>
+  //       <ol>
+  //         <li>Autem quisquam! Vulputate, tempora auctor tincidunt orci aenean est elit</li>
+  //       <li>porttitor aliquam parturient repellendus dolore, tincidunt, pretium quo</li>
+  //       <li>iaculis accusamus neque netus, similique, ullamcorpe</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-cvt-dashboard.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'DashboardComponent-TestMainMgr',
+  //   title: 'TODO Dashboard for Test Maintainer Manager',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Dashboard for Test Maintainer Manager</h1>
+  //       <p>Lorem ipsum sit amet</p>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'AnalyzeComponent',
+  //   title: 'TODO AnalyzeComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>AnalyzeComponent</h1>
+  //       <p>Lorem ipsum sit amet</p>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'BatchFixComponent',
+  //   title: 'TODO BatchFixComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>BatchFixComponent</h1>
+  //       <p>Lorem ipsum sit amet</p>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'EnvironmentListComponent',
+  //   title: 'List all environments',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>List all environments</h1>
+  //       <ol>
+  //         <li>Hover tab &lquo;Test&rquo;</li>
+  //       <li>Select &lquo;Environments&rquo;</li>
+  //       <li>Filter environments by product and repository</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-environments-list.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'OneClickFixComponent',
+  //   title: 'TODO OneClickFixComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>BatchFixComponent</h1>
+  //       <p>Lorem ipsum sit amet</p>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'ProductListComponent',
+  //   title: 'Products List',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Products List</h1>
+  //       <ol>
+  //         <li>Search for specific product.</li>
+  //       <li>Click on any product to edit.</li>
+  //       <li>Click on the X button to delete product.</li>
+  //       <li>Click to create new product.</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/products-list.png'
+  //     },
+  //     {
+  //       helpText: `
+  //       <h1>Add/Edit Products</h1>
+  //       <ol>
+  //         <li>Add product title.</li>
+  //       <li>Choose repository to clone.</li>
+  //       <li>Edit Environment if needed.</li>
+  //       <li>Press clone to clone the repository.</li>
+  //       <li>Save your updates once done.</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/products-edit.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TestDetailComponent',
+  //   title: 'TODO TestDetailComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>TODO: Add your help text page 1</h1>
+  //       `,
+  //       screenshot: 'http://fpoimg.com/300x300?text=Add%20Your%20Shot'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TestListComponent',
+  //   title: 'TODO TestListComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>TODO: Add your help text page 1</h1>
+  //       `,
+  //       screenshot: 'http://fpoimg.com/300x300?text=Add%20Your%20Shot'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspBugsDetailComponent',
+  //   title: 'Bug Detail Legend',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Bug Detail Legend</h1>
+  //       <ol>
+  //         <li>The bug title</li>
+  //       <li>The step when the bug found</li>
+  //       <li>The environment where the bug occurred</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-bug-detail.png',
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspBugsListComponent',
+  //   title: 'View The Bug Detail',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>View The Bug Detail</h1>
+  //       <ol>
+  //         <li>Click on the reported bug id, you will be redirected into bug detail page.</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-bugs.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspEnvEditorQuickSetupFormComponent',
+  //   title: 'TODO TspEnvEditorQuickSetupFormComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>TODO: Add your help text page 1</h1>
+  //       `,
+  //       screenshot: 'http://fpoimg.com/300x300?text=Add%20Your%20Shot'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspInstallDetailComponent',
+  //   title: 'Operations for an install',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Operations for an install</h1>
+  //       <p>Install details can directly navigated to via URL or..</p>
+  //       <ol>
+  //         <li>Access an install detail from Install History by clicking on its ID</li>
+  //       <li>You can view provision information</li>
+  //       <li>Or rerun the install</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-tooling-request-install-detail.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspInstallListComponent',
+  //   title: 'Search for an install',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Search for an install</h1>
+  //       <ol>
+  //         <li>Select Tooling Request</li>
+  //       <li>Select Install History</li>
+  //       <li>Select a product, then a repo</li>
+  //       <li>Finally you can order an install to stop or view its provision information.</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/portal-tooling-request-install-detail.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspMyEnvironmentsComponent',
+  //   title: 'TODO TspMyEnvironmentsComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>TODO TspMyEnvironmentsComponent</h1>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspProvisionsDetailComponent',
+  //   title: 'Operations for an install',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Operations for an install</h1>
+  //       <p>Install details can directly navigated to via URL or..</p>
+  //       <ol>
+  //         <li>Access an install detail from Install History by clicking on its ID</li>
+  //       <li>You can view provision information</li>
+  //       <li>Or rerun the install</li>
+  //       </ol>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspProvisionsListComponent',
+  //   title: 'TODO TspProvisionsListComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>TODO TspProvisionsListComponent</h1>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspReportsComponent',
+  //   title: 'TODO TspReportsComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>TODO TspReportsComponent</h1>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspResultsChartComponent',
+  //   title: 'TODO TspResultsChartComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>TODO TspResultsChartComponent</h1>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspSequenceDetailComponent',
+  //   title: 'Sequence Details',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Sequence Details</h1>
+  //       <ol>
+  //         <li>Select test.</li>
+  //       <li>Click on a step, a screenshot for the test will appear on the right.</li>
+  //       <li>If you want to change the sequence click on Request change link.</li>
+  //       <li>You can always change the repo by selecting it from the dropdown menu.</li>
+  //       </ol>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspSequenceListComponent',
+  //   title: 'Sequence List',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>Sequence List</h1>
+  //       <ol>
+  //         <li>Select product from left navigation.</li>
+  //       <li>click on product sequence id to view.</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/sequence-list.png'
+  //     },
+  //     {
+  //       helpText: `
+  //       <h1>Choose Repo for sequence</h1>
+  //       <ol>
+  //         <li>Select repo to view.</li>
+  //         <li>Click ok.</li>
+  //       </ol>
+  //       `,
+  //       screenshot: '/images/helps/sequence-repo-select.png'
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'TspTestMainMgrDashboardComponent',
+  //   title: 'TODO TspTestMainMgrDashboardComponent',
+  //   pages: [
+  //     {
+  //       helpText: `
+  //       <h1>TODO TspTestMainMgrDashboardComponent</h1>
+  //       `,
+  //       screenshot: 'http://dummyimage.com/600x400/000/fff?text=Screen%201'
+  //     }
+  //   ]
+  // },
   // {
   //   key: 'TspToolingRequestDetailComponent',
   //   title: 'Tooling Request Detail',

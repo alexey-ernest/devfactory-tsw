@@ -1,24 +1,19 @@
 /* Help */
 
 .caption {
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
 }
 
 .help-item {
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+  text-align: center;
 }
 
-.help-item h4 {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.help-item .help-screen {
-  height: 260px;
-}
-
-.help-item img {
-  max-width: 100%;
+.help-screens {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
