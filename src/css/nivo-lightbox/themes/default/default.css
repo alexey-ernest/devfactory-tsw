@@ -16,7 +16,6 @@
 	top:90%;
 	opacity: 0.5;
 	margin:2rem;
-  display: none !important;
 }
 .nivo-lightbox-theme-default .nivo-lightbox-nav:hover {
 	opacity: 1;

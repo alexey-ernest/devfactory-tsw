@@ -10,6 +10,7 @@ import {FeaturesComponent} from './features';;
 import {VideoComponent} from './video';
 import {StatisticsComponent} from './statistics';
 import {CustomersComponent} from './customers';
+import {HelpComponent} from './help';
 import {ReviewsComponent} from './reviews';
 import {NewsComponent} from './news';
 import {ClosingStatementComponent} from './closing-statement';
@@ -44,6 +45,7 @@ import '../css/styles.css';
     VideoComponent,
     StatisticsComponent,
     CustomersComponent,
+    HelpComponent,
     ReviewsComponent,
     NewsComponent,
     ClosingStatementComponent,
