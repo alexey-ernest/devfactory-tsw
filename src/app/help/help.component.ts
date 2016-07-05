@@ -17,7 +17,7 @@ const PORTAL_URL = 'http://ts-portal.devfactory.com';
   ]
 })
 export class HelpComponent implements OnInit {
-  help: Help[] = HELP_CONTENTS;
+  help: Help[] = [];
 
   ngOnInit() {
     // filter mocks

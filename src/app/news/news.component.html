@@ -14,7 +14,7 @@
     </div>
 
     <div class="row" *ngFor="let row of rows">
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let item of row" waypoint classes="animated fadeInUp">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let item of row; let i = index" waypoint classes="animated fadeInUp" delay="{{i * 200}}">
         <div class="news-item">
           <h5 class="md-headline">{{item.title}}</h5>
           <div class="md-subhead secondary" [innerHTML]="item.text"></div>
