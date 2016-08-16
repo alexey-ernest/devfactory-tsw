@@ -17,10 +17,6 @@ var CHANGE_EVENT = 'change';
  */
 var _data = [];
 
-function _setData(data) {
-  _data = data;
-}
-
 var FeatureStore = assign({}, EventEmitter.prototype, {
 
   emitChange: function() {
@@ -56,7 +52,7 @@ FeatureStore.dispatchToken = AppDispatcher.register(function(action) {
   switch(action.type) {
 
     case ActionTypes.RECEIVE_FEATURES:
-      _setData(action.features);
+      _data = action.features;
       FeatureStore.emitChange();
       break;
 

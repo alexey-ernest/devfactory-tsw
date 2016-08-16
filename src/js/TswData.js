@@ -4,6 +4,7 @@
 
 var BenefitDataUtils = require('./utils/BenefitDataUtils');
 var DemoDataUtils = require('./utils/DemoDataUtils');
+var FeatureDataUtils = require('./utils/FeatureDataUtils');
 
 module.exports = {
 
@@ -16,6 +17,7 @@ module.exports = {
     DemoDataUtils.getDemo();
 
     // Features
+    FeatureDataUtils.getAllFeatures();
   }
 
 };

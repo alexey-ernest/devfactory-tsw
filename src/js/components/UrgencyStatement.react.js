@@ -12,10 +12,6 @@ var READY_DAYS = 3;
 
 var UrgencyStatement = React.createClass({
 
-  propTypes: {
-    data: ReactPropTypes.object.isRequired
-  },
-
   render: function() {
     var readyDate = moment().add(READY_DAYS, 'days');
     var thisOrNextWeek = +moment().format('E') + READY_DAYS > 7 ? 'next' : 'this';

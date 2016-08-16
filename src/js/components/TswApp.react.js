@@ -3,10 +3,11 @@
  */
 
 var React = require('react');
-var HeaderSection = require('./HeaderSection.react');
 var BenefitStore = require('../stores/BenefitStore');
 var DemoStore = require('../stores/DemoStore');
 var FeatureStore = require('../stores/FeatureStore');
+var HeaderSection = require('./HeaderSection.react');
+var FeatureSection = require('./FeatureSection.react');
 
 function getStateFromStores() {
   return {
@@ -34,6 +35,7 @@ var TswApp = React.createClass({
     return (
       <div className="tswapp">
         <HeaderSection data={this.state} />
+        <FeatureSection data={this.state} />
       </div>
     );
   },

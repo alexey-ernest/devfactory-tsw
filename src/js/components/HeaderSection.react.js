@@ -5,6 +5,7 @@
 var React = require('react');
 var BenefitList = require('./BenefitList.react');
 var Cta = require('./Cta.react');
+var Screenshots = require('./Screenshots.react');
 
 var ReactPropTypes = React.PropTypes;
 
@@ -27,7 +28,7 @@ var HeaderSection = React.createClass({
           <Cta data={this.props.data} />
         </div>
         <div className="screenshots">
-
+          <Screenshots />
         </div>
       </header>
     );
