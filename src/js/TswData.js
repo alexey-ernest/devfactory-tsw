@@ -6,6 +6,7 @@ var BenefitDataUtils = require('./utils/BenefitDataUtils');
 var DemoDataUtils = require('./utils/DemoDataUtils');
 var FeatureDataUtils = require('./utils/FeatureDataUtils');
 var StatisticsDataUtils = require('./utils/StatisticsDataUtils');
+var CustomerActionCreatores = require('./utils/CustomerDataUtils');
 
 module.exports = {
 
@@ -22,6 +23,9 @@ module.exports = {
 
     // Statistics
     StatisticsDataUtils.getAllStatistics();
+
+    // Customers
+    CustomerActionCreatores.getAllCustomers();
   }
 
 };

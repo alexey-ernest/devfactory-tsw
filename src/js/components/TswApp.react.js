@@ -8,18 +8,21 @@ var BenefitStore = require('../stores/BenefitStore');
 var DemoStore = require('../stores/DemoStore');
 var FeatureStore = require('../stores/FeatureStore');
 var StatisticsStore = require('../stores/StatisticsStore');
+var CustomerStore = require('../stores/CustomerStore');
 
 var HeaderSection = require('./HeaderSection.react');
 var FeatureSection = require('./FeatureSection.react');
 var DemoVideoSection = require('./DemoVideoSection.react');
 var StatisticsSection = require('./StatisticsSection.react');
+var CustomerSection = require('./CustomerSection.react');
 
 function getStateFromStores() {
   return {
     benefits: BenefitStore.getAll(),
     demo: DemoStore.get(),
     features: FeatureStore.getAll(),
-    statistics: StatisticsStore.getAll()
+    statistics: StatisticsStore.getAll(),
+    customers: CustomerStore.getAll()
   };
 }
 
@@ -44,6 +47,7 @@ var TswApp = React.createClass({
         <FeatureSection data={this.state} />
         <DemoVideoSection />
         <StatisticsSection data={this.state} />
+        <CustomerSection data={this.state} />
       </div>
     );
   },

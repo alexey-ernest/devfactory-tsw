@@ -12,6 +12,7 @@ module.exports = {
     SUBMIT_DEMO_FORM: null,
     RECEIVE_FEATURES: null,
     RECEIVE_STATISTICS: null,
+    RECEIVE_CUSTOMERS: null,
     RECEIVE_BLOG_ARTICLES: null
   })
 
