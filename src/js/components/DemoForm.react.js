@@ -90,9 +90,12 @@ var DemoForm = React.createClass({
    * @param {object} event
    */
   _onSubmit: function (/*object*/ event) {
-    var state = assign({}, this.state, {
-      isRequested: true
-    });
+    var state = {
+      isRequested: true,
+      name: this.state.name.trim(),
+      email: this.state.email.trim()
+    };
+
     DemoActionCreators.submitForm(state);
   }
 
