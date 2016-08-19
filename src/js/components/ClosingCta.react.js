@@ -3,6 +3,7 @@
  */
 
 var React = require('react');
+var RaisedButton = require('material-ui/RaisedButton').default;
 
 var ReactPropTypes = React.PropTypes;
 
@@ -16,7 +17,10 @@ var ClosingCta = React.createClass({
     var isRequested = this.props.demo.isRequested;
     var demoButton = !isRequested ? 'Request your free demo now' : 'Your request was sent. Thanks!';
     return (
+      <div>
+      <RaisedButton label={demoButton} secondary={true} />
       <button disabled={isRequested} onClick={this._onClick}>{demoButton}</button>
+      </div>
     );
   },
 
