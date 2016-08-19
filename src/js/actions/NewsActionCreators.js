@@ -1,5 +1,5 @@
 /*
- * Blog article action creators.
+ * News action creators.
  */
 
 var AppDispatcher = require('../dispatcher/AppDispatcher');
@@ -10,12 +10,12 @@ var ActionTypes = TswConstants.ActionTypes;
 module.exports = {
 
   /**
-   * @param      {Array}  rawArticles
+   * @param      {Array}  news
    */
-  receiveLatest: function(rawArticles) {
+  receiveAll: function(news) {
     AppDispatcher.dispatch({
-      type: ActionTypes.RECEIVE_BLOG_ARTICLES,
-      rawArticles: rawArticles
+      type: ActionTypes.RECEIVE_NEWS,
+      news: news
     });
   }
 

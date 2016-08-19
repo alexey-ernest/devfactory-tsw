@@ -6,7 +6,8 @@ var BenefitDataUtils = require('./utils/BenefitDataUtils');
 var DemoDataUtils = require('./utils/DemoDataUtils');
 var FeatureDataUtils = require('./utils/FeatureDataUtils');
 var StatisticsDataUtils = require('./utils/StatisticsDataUtils');
-var CustomerActionCreatores = require('./utils/CustomerDataUtils');
+var CustomerDataUtils = require('./utils/CustomerDataUtils');
+var NewsDataUtils = require('./utils/NewsDataUtils');
 
 module.exports = {
 
@@ -25,7 +26,13 @@ module.exports = {
     StatisticsDataUtils.getAllStatistics();
 
     // Customers
-    CustomerActionCreatores.getAllCustomers();
-  }
+    CustomerDataUtils.getAllCustomers();
 
+    // News
+    if (process.env.NODE_ENV !== 'production') {
+      NewsDataUtils.getFakeNews();
+    } else {
+      NewsDataUtils.getLatestNews();
+    }
+  }
 };

@@ -16,7 +16,7 @@ var CustomerSection = React.createClass({
   render: function() {
     return (
       <section className="customers">
-        <h3>Some of the world\’s most respected companies trust DevFactory!</h3>
+        <h3>Some of the world's most respected companies trust DevFactory!</h3>
         <p>See who saved more than 50% on IT Services by leveraging DevFactory tools.</p>
         <CustomerList customers={this.props.data.customers} />
       </section>
