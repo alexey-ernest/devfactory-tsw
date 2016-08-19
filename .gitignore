@@ -44,3 +44,6 @@ typings
 
 # Output build
 dist
+
+# Sass
+src/.sass-cache
