@@ -18,6 +18,7 @@ var StatisticsSection = require('./StatisticsSection.react');
 var CustomerSection = require('./CustomerSection.react');
 var NewsSection = require('./NewsSection.react');
 var ClosingStatementSection = require('./ClosingStatementSection.react');
+var FooterSection = require('./FooterSection.react');
 
 function getStateFromStores() {
   return {
@@ -54,6 +55,7 @@ var TswApp = React.createClass({
         <CustomerSection data={this.state} />
         <NewsSection data={this.state} />
         <ClosingStatementSection data={this.state} />
+        <FooterSection />
       </div>
     );
   },
