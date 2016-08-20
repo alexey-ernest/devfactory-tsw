@@ -11,6 +11,7 @@ var StatisticsStore = require('../stores/StatisticsStore');
 var CustomerStore = require('../stores/CustomerStore');
 var NewsStore = require('../stores/NewsStore');
 
+var AppBarSection = require('./AppBarSection.react');
 var HeaderSection = require('./HeaderSection.react');
 var FeatureSection = require('./FeatureSection.react');
 var DemoVideoSection = require('./DemoVideoSection.react');
@@ -48,6 +49,7 @@ var TswApp = React.createClass({
   render: function() {
     return (
       <div className="tswapp">
+        <AppBarSection />
         <HeaderSection data={this.state} />
         <FeatureSection data={this.state} />
         <DemoVideoSection />

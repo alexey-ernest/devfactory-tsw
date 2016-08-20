@@ -18,7 +18,6 @@ var HeaderSection = React.createClass({
   render: function() {
     return (
       <header className="header">
-        <div className="brand-image">Testing Service by DevFactory</div>
         <h1>Instantly improve your product quality</h1>
         <p>Easily automate and continously improve your software quality checking by running smart functional test suites on daily basis.</p>
         <div className="benefits">

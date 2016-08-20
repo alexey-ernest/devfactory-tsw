@@ -43,10 +43,29 @@ var muiTheme = getMuiTheme({
   }
 });
 
+// Pass muiTheme down to the components tree via context
+var App = React.createClass({
+
+  childContextTypes: {
+    muiTheme: React.PropTypes.object.isRequired
+  },
+
+  getChildContext: function() {
+    return {muiTheme: muiTheme};
+  },
+
+  render: function() {
+    return (
+      <TswApp />
+    );
+  }
+
+});
+
 
 ReactDOM.render(
   <MuiThemeProvider muiTheme={muiTheme}>
-    <TswApp />
+    <App />
   </MuiThemeProvider>,
   document.getElementById('react')
 );
