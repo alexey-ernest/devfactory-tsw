@@ -1,1 +1,0 @@
-console.error("\n/Users/alexey/Documents/devfactory/devfactory-tsw/src/js/app.js:6\nimport React from 'react';\n^\nParseError: 'import' and 'export' may appear only with 'sourceType: module'");

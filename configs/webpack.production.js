@@ -4,6 +4,7 @@ var buildPath = path.resolve(__dirname, '../build');
 var nodeModulesPath = path.resolve(__dirname, '../node_modules');
 var TransferWebpackPlugin = require('transfer-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
   entry: [path.join(__dirname, '../src/js/app.js')],
@@ -12,7 +13,7 @@ var config = {
   // output config
   output: {
     path: buildPath, // Path of output file
-    filename: 'bundle.js', // Name of output file
+    filename: 'js/bundle.js', // Name of output file
   },
   plugins: [
     // Define production build to allow React to strip out unnecessary checks
@@ -33,15 +34,17 @@ var config = {
     }),
     // Allows error warnings but does not stop compiling.
     new webpack.NoErrorsPlugin(),
+    // Extract css
+    new ExtractTextPlugin("css/styles.css"),
     // Generate index.html
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      favicon: 'src/public/favicon.ico',
+      favicon: 'src/favicon.ico',
       hash: true
     }),
     // Moves files
     new TransferWebpackPlugin([
-      {from: 'public'},
+      {from: 'images', to: 'images'},
     ], path.resolve(__dirname, '../src')),
   ],
   module: {
@@ -51,8 +54,18 @@ var config = {
         loaders: ['babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
       },
+      {
+        test: /\.(sass|scss)$/,
+        loader: ExtractTextPlugin.extract("style-loader", "raw-loader!sass-loader")
+      }
     ],
   },
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, "../src/sass"),
+      path.resolve(nodeModulesPath, "./compass-mixins/lib")
+    ]
+  }
 };
 
 module.exports = config;

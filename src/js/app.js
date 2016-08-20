@@ -2,6 +2,9 @@
  * This file bootstraps the entire application.
  */
 
+// CSS
+import * as styles from '../sass/screen.sass';
+
 // React
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -75,7 +78,6 @@ class App extends React.Component {
 App.childContextTypes = {
   muiTheme: React.PropTypes.object.isRequired,
 };
-
 
 ReactDOM.render(
   <App />,
