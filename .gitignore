@@ -43,7 +43,7 @@ jspm_packages
 typings
 
 # Output build
-dist
+build
 
 # Sass
 src/.sass-cache

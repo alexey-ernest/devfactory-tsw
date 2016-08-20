@@ -2,70 +2,82 @@
  * This file bootstraps the entire application.
  */
 
-// App
-var TswApp = require('./components/TswApp.react');
-var TswData = require('./TswData');
-TswData.init();
-
 // React
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // Material UI
-var injectTapEventPlugin = require('react-tap-event-plugin');
+import injectTapEventPlugin from 'react-tap-event-plugin';
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
-var MuiThemeProvider = require('material-ui/styles/MuiThemeProvider').default;
-var getMuiTheme = require('material-ui/styles/getMuiTheme').default;
-var colors = require('material-ui/styles/colors');
-var fade = require('material-ui/utils/colorManipulator').fade;
 
-// This replaces the textColor value on the palette
-// and then update the keys for each component that depends on it.
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {
+  cyan500,
+  cyan700,
+  grey400,
+  amber500,
+  grey100,
+  grey500,
+  darkBlack,
+  white,
+  grey300,
+  fullBlack
+} from 'material-ui/styles/colors';
+import {fade} from 'material-ui/utils/colorManipulator';
+
+
 // More on Colors: http://www.material-ui.com/#/customization/colors
 var muiTheme = getMuiTheme({
   palette: {
-    primary1Color: colors.cyan500,
-    primary2Color: colors.cyan700,
-    primary3Color: colors.grey400,
-    accent1Color: colors.amber500,
-    accent2Color: colors.grey100,
-    accent3Color: colors.grey500,
-    textColor: colors.darkBlack,
-    alternateTextColor: colors.white,
-    canvasColor: colors.white,
-    borderColor: colors.grey300,
-    disabledColor: fade(colors.darkBlack, 0.3),
-    pickerHeaderColor: colors.cyan500,
-    clockCircleColor: fade(colors.darkBlack, 0.07),
-    shadowColor: colors.fullBlack,
+    primary1Color: cyan500,
+    primary2Color: cyan700,
+    primary3Color: grey400,
+    accent1Color: amber500,
+    accent2Color: grey100,
+    accent3Color: grey500,
+    textColor: darkBlack,
+    alternateTextColor: white,
+    canvasColor: white,
+    borderColor: grey300,
+    disabledColor: fade(darkBlack, 0.3),
+    pickerHeaderColor: cyan500,
+    clockCircleColor: fade(darkBlack, 0.07),
+    shadowColor: fullBlack,
   }
 });
+
+// App
+import TswApp from './components/TswApp.react';
+import TswData from './TswData';
+
+// init data
+TswData.init();
+
 
 // Pass muiTheme down to the components tree via context
-var App = React.createClass({
-
-  childContextTypes: {
-    muiTheme: React.PropTypes.object.isRequired
-  },
-
-  getChildContext: function() {
+class App extends React.Component {
+  getChildContext() {
     return {muiTheme: muiTheme};
-  },
-
-  render: function() {
-    return (
-      <TswApp />
-    );
   }
 
-});
+  render() {
+    return (
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <TswApp />
+      </MuiThemeProvider>
+    );
+  }
+}
+
+App.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired,
+};
 
 
 ReactDOM.render(
-  <MuiThemeProvider muiTheme={muiTheme}>
-    <App />
-  </MuiThemeProvider>,
+  <App />,
   document.getElementById('react')
 );
