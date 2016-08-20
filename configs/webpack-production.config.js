@@ -27,6 +27,9 @@ var config = {
         // suppresses warnings, usually from module minification
         warnings: false,
       },
+      output: {
+        comments: false
+      }
     }),
     // Allows error warnings but does not stop compiling.
     new webpack.NoErrorsPlugin(),
@@ -36,7 +39,7 @@ var config = {
       favicon: 'src/public/favicon.ico',
       hash: true
     }),
-    / Moves files
+    // Moves files
     new TransferWebpackPlugin([
       {from: 'public'},
     ], path.resolve(__dirname, '../src')),
