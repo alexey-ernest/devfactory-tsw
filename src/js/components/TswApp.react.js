@@ -2,26 +2,29 @@
  * Tsw App main component.
  */
 
-var React = require('react');
+import React, {Component, PropTypes} from 'react';
 
-var BenefitStore = require('../stores/BenefitStore');
-var DemoStore = require('../stores/DemoStore');
-var FeatureStore = require('../stores/FeatureStore');
-var StatisticsStore = require('../stores/StatisticsStore');
-var CustomerStore = require('../stores/CustomerStore');
-var NewsStore = require('../stores/NewsStore');
+import {
+  BenefitStore,
+  DemoStore,
+  FeatureStore,
+  StatisticsStore,
+  CustomerStore,
+  NewsStore
+} from '../stores';
 
-var AppBarSection = require('./AppBarSection.react');
-var HeaderSection = require('./HeaderSection.react');
-var FeatureSection = require('./FeatureSection.react');
-var DemoVideoSection = require('./DemoVideoSection.react');
-var StatisticsSection = require('./StatisticsSection.react');
-var CustomerSection = require('./CustomerSection.react');
-var NewsSection = require('./NewsSection.react');
-var ClosingStatementSection = require('./ClosingStatementSection.react');
-var FooterSection = require('./FooterSection.react');
+import AppBarSection from './AppBarSection.react';
+import HeaderSection from './HeaderSection.react';
+import FeatureSection from './FeatureSection.react';
+import DemoVideoSection from './DemoVideoSection.react';
+import StatisticsSection from './StatisticsSection.react';
+import CustomerSection from './CustomerSection.react';
+import NewsSection from './NewsSection.react';
+import ClosingStatementSection from './ClosingStatementSection.react';
+import FooterSection from './FooterSection.react';
 
-function getStateFromStores() {
+
+const getStateFromStores = () => {
   return {
     benefits: BenefitStore.getAll(),
     demo: DemoStore.get(),
@@ -30,23 +33,26 @@ function getStateFromStores() {
     customers: CustomerStore.getAll(),
     news: NewsStore.getAll(),
   };
-}
+};
 
-var TswApp = React.createClass({
+export default class TswApp extends Component {
 
-  getInitialState: function() {
-    return getStateFromStores();
-  },
+  constructor(props) {
+    super(props);
 
-  componentDidMount: function() {
+    this.state = getStateFromStores();
+    this._onChange = this._onChange.bind(this);
+  }
+
+  componentDidMount() {
     DemoStore.addChangeListener(this._onChange);
-  },
+  }
 
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     DemoStore.removeChangeListener(this._onChange);
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div className="tswapp">
         <AppBarSection />
@@ -60,15 +66,13 @@ var TswApp = React.createClass({
         <FooterSection />
       </div>
     );
-  },
+  }
 
   /**
    * Event handler for 'change' events coming from the stores
    */
-  _onChange: function() {
+  _onChange() {
     this.setState(getStateFromStores());
   }
 
-});
-
-module.exports = TswApp;
+};

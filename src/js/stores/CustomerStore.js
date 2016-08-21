@@ -5,7 +5,6 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var TswConstants = require('../constants/TswConstants');
 var EventEmitter = require('events').EventEmitter;
-var assign = require('object-assign');
 
 var ActionTypes = TswConstants.ActionTypes;
 var CHANGE_EVENT = 'change';
@@ -17,49 +16,53 @@ var CHANGE_EVENT = 'change';
  */
 var _data = [];
 
-var CustomerStore = assign({}, EventEmitter.prototype, {
+class CustomerStore extends EventEmitter {
 
-  emitChange: function() {
+  emitChange() {
     this.emit(CHANGE_EVENT);
-  },
+  }
 
   /**
    * Adds a change listener.
    *
    * @param      {function}  callback  The callback
    */
-  addChangeListener: function(callback) {
+  addChangeListener(callback) {
     this.on(CHANGE_EVENT, callback);
-  },
+  }
 
   /**
    * Removes a change listener.
    *
    * @param      {Function}  callback  The callback
    */
-  removeChangeListener: function(callback) {
+  removeChangeListener(callback) {
     this.removeListener(CHANGE_EVENT, callback);
-  },
+  }
 
-  getAll: function() {
+  getAll() {
     return _data;
-  },
+  }
 
-});
+}
 
+// single instance
+let store = new CustomerStore();
+
+// dispatch token
 CustomerStore.dispatchToken = AppDispatcher.register(function(action) {
 
   switch(action.type) {
 
     case ActionTypes.RECEIVE_CUSTOMERS:
       _data = action.customers;
-      CustomerStore.emitChange();
+      this.emitChange();
       break;
 
     default:
       // do nothing
   }
 
-});
+}.bind(store));
 
-module.exports = CustomerStore;
+export default store;

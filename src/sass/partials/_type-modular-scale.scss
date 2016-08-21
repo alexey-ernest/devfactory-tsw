@@ -43,7 +43,6 @@ $line-heights: (
   line-height: line-height($level);
 }
 
-
 // Vertycal rhythm helper function
 @function rhythm($lines) {
   @return $base-line-height * $lines;

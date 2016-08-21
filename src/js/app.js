@@ -62,6 +62,7 @@ TswData.init();
 
 // Pass muiTheme down to the components tree via context
 class App extends React.Component {
+
   getChildContext() {
     return {muiTheme: muiTheme};
   }

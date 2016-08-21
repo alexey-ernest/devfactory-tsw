@@ -5,7 +5,6 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var TswConstants = require('../constants/TswConstants');
 var EventEmitter = require('events').EventEmitter;
-var assign = require('object-assign');
 
 var ActionTypes = TswConstants.ActionTypes;
 var CHANGE_EVENT = 'change';
@@ -21,56 +20,60 @@ var _data = {
   email: ''
 };
 
-var DemoStore = assign({}, EventEmitter.prototype, {
+class DemoStore extends EventEmitter {
 
-  emitChange: function() {
+  emitChange() {
     this.emit(CHANGE_EVENT);
-  },
+  }
 
   /**
    * Adds a change listener.
    *
    * @param      {function}  callback  The callback
    */
-  addChangeListener: function(callback) {
+  addChangeListener(callback) {
     this.on(CHANGE_EVENT, callback);
-  },
+  }
 
   /**
    * Removes a change listener.
    *
    * @param      {Function}  callback  The callback
    */
-  removeChangeListener: function(callback) {
+  removeChangeListener(callback) {
     this.removeListener(CHANGE_EVENT, callback);
-  },
+  }
 
-  get: function() {
+  get() {
     return _data;
-  },
+  }
 
-});
+}
 
+// single instance
+let store = new DemoStore();
+
+// dispatch token
 DemoStore.dispatchToken = AppDispatcher.register(function(action) {
 
   switch(action.type) {
 
     case ActionTypes.RECEIVE_DEMO:
       _data = action.demo;
-      DemoStore.emitChange();
+      this.emitChange();
       break;
 
     case ActionTypes.SUBMIT_DEMO_FORM:
       _data.isRequested = true;
       _data.name = action.demo.name;
       _data.email = action.demo.email;
-      DemoStore.emitChange();
+      this.emitChange();
       break;
 
     default:
       // do nothing
   }
 
-});
+}.bind(store));
 
-module.exports = DemoStore;
+export default store;
