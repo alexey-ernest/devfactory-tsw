@@ -2,11 +2,11 @@
  * Screenshots component.
  */
 
-var React = require('react');
+import React, { Component } from 'react';
 
-var Screenshots = React.createClass({
+export default class Screenshots extends Component {
 
-  render: function() {
+  render() {
     return (
       <div className="screenshots-wrapper">
         <img src="./images/screen3.png" className="screen-3" />
@@ -16,6 +16,4 @@ var Screenshots = React.createClass({
     );
   }
 
-});
-
-module.exports = Screenshots;
+}

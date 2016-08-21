@@ -2,28 +2,29 @@
  * Demo form component.
  */
 
-var React = require('react');
-var assign = require('object-assign');
-var DemoActionCreators = require('../actions/DemoActionCreators');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+import DemoActionCreators from '../actions/DemoActionCreators';
 
 var ENTER_KEY_CODE = 13;
 
-var DemoForm = React.createClass({
+export default class DemoForm extends Component {
 
-  propTypes: {
-    demo: ReactPropTypes.object.isRequired
-  },
+  constructor(props) {
+    super(props);
 
-  getInitialState: function() {
-    return {
+    this.state = {
       name: this.props.demo.name || '',
       email: this.props.demo.email || ''
     };
-  },
 
-  render: function() {
+    this._onNameChange = this._onNameChange.bind(this);
+    this._onEmailChange = this._onEmailChange.bind(this);
+    this._onKeyDown = this._onKeyDown.bind(this);
+    this._onSubmit = this._onSubmit.bind(this);
+  }
+
+  render() {
     var isRequested = this.props.demo.isRequested;
     var demoButton = !isRequested ? 'Request your free demo now' : 'Your request was sent. Thanks!';
     return (
@@ -51,45 +52,45 @@ var DemoForm = React.createClass({
         <button type="submit" disabled={isRequested} onClick={this._onSubmit}>{demoButton}</button>
       </form>
     );
-  },
+  }
 
   /**
    * @param {object} event
    */
-  _onNameChange: function(/*object*/ event) {
+  _onNameChange(/*object*/ event) {
     var newState = assign({}, this.state, {
       name: event.target.value
     });
 
     this.setState(newState);
-  },
+  }
 
   /**
    * @param {object} event
    */
-  _onEmailChange: function(/*object*/ event) {
+  _onEmailChange(/*object*/ event) {
     var newState = assign({}, this.state, {
       email: event.target.value
     });
 
     this.setState(newState);
-  },
+  }
 
   /**
    * @param  {object} event
    */
-  _onKeyDown: function(event) {
+  _onKeyDown(event) {
     if (event.keyCode === ENTER_KEY_CODE) {
       this._onSubmit();
     }
-  },
+  }
 
   /**
    * Submits the demo form.
    *
    * @param {object} event
    */
-  _onSubmit: function (/*object*/ event) {
+  _onSubmit(/*object*/ event) {
     var state = {
       isRequested: true,
       name: this.state.name.trim(),
@@ -99,6 +100,8 @@ var DemoForm = React.createClass({
     DemoActionCreators.submitForm(state);
   }
 
-});
+}
 
-module.exports = DemoForm;
+DemoForm.propTypes = {
+  demo: PropTypes.object.isRequired
+}

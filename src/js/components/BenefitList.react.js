@@ -2,18 +2,13 @@
  * Benefit list component.
  */
 
-var React = require('react');
-var BenefitListItem = require('./BenefitListItem.react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+import BenefitListItem from './BenefitListItem.react';
 
-var BenefitList = React.createClass({
+export default class BenefitList extends Component {
 
-  propTypes: {
-    benefits: ReactPropTypes.array.isRequired
-  },
-
-  render: function() {
+  render() {
     var benefits = this.props.benefits.map(function (benefit) {
       return (
         <BenefitListItem key={benefit.id} text={benefit.text} />
@@ -25,8 +20,10 @@ var BenefitList = React.createClass({
         {benefits}
       </ul>
     );
-  },
+  }
 
-});
+}
 
-module.exports = BenefitList;
+BenefitList.propTypes = {
+  benefits: PropTypes.array.isRequired
+}

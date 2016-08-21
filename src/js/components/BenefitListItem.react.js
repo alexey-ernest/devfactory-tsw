@@ -2,17 +2,11 @@
  * Benefit list item component.
  */
 
-var React = require('react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+export default class BenefitListItem extends Component {
 
-var BenefitListItem = React.createClass({
-
-  propTypes: {
-    text: ReactPropTypes.string.isRequired
-  },
-
-  render: function() {
+  render() {
     var text = this.props.text;
     return (
       <li>
@@ -21,6 +15,8 @@ var BenefitListItem = React.createClass({
     );
   }
 
-});
+}
 
-module.exports = BenefitListItem;
+BenefitListItem.propTypes = {
+  text: PropTypes.string.isRequired
+}

@@ -2,20 +2,14 @@
  * Cta component.
  */
 
-var React = require('react');
-var assign = require('object-assign');
-var DemoForm = require('./DemoForm.react');
-var UrgencyStatement = require('./UrgencyStatement.react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+import DemoForm from './DemoForm.react';
+import UrgencyStatement from './UrgencyStatement.react';
 
-var Cta = React.createClass({
+export default class Cta extends Component {
 
-  propTypes: {
-    data: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     return (
       <div className="cta">
         <DemoForm demo={this.props.data.demo} />
@@ -24,6 +18,8 @@ var Cta = React.createClass({
     );
   }
 
-});
+}
 
-module.exports = Cta;
+Cta.propTypes = {
+  data: PropTypes.object.isRequired
+}

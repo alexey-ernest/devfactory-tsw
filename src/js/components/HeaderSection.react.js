@@ -2,20 +2,15 @@
  * Header section component.
  */
 
-var React = require('react');
-var BenefitList = require('./BenefitList.react');
-var Cta = require('./Cta.react');
-var Screenshots = require('./Screenshots.react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+import BenefitList from './BenefitList.react';
+import Cta from './Cta.react';
+import Screenshots from './Screenshots.react';
 
-var HeaderSection = React.createClass({
+export default class HeaderSection extends Component {
 
-  propTypes: {
-    data: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     return (
       <header className="header">
         <h1 className="ms-up-4">Instantly improve your product quality</h1>
@@ -33,6 +28,8 @@ var HeaderSection = React.createClass({
     );
   }
 
-});
+}
 
-module.exports = HeaderSection;
+HeaderSection.propTypes = {
+  data: PropTypes.object.isRequired
+}
