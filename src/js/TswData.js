@@ -2,14 +2,14 @@
  * Initialize app's data.
  */
 
-var BenefitDataUtils = require('./utils/BenefitDataUtils');
-var DemoDataUtils = require('./utils/DemoDataUtils');
-var FeatureDataUtils = require('./utils/FeatureDataUtils');
-var StatisticsDataUtils = require('./utils/StatisticsDataUtils');
-var CustomerDataUtils = require('./utils/CustomerDataUtils');
-var NewsDataUtils = require('./utils/NewsDataUtils');
+import BenefitDataUtils from './utils/BenefitDataUtils';
+import DemoDataUtils from './utils/DemoDataUtils';
+import FeatureDataUtils from './utils/FeatureDataUtils';
+import StatisticsDataUtils from './utils/StatisticsDataUtils';
+import CustomerDataUtils from './utils/CustomerDataUtils';
+import NewsDataUtils from './utils/NewsDataUtils';
 
-module.exports = {
+export default {
 
   init: function() {
 

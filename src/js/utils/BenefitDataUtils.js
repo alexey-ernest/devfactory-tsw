@@ -1,9 +1,9 @@
 
-var BenefitActionCreators = require('../actions/BenefitActionCreators');
+import BenefitActionCreators from '../actions/BenefitActionCreators';
 
-module.exports = {
+export default {
 
-  getAllBenefits: function() {
+  getAllBenefits() {
     var list = [
       'Full functional tests in 3 days',
       'Web, mobile, desktop and CLI',

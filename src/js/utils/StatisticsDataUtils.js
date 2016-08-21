@@ -1,7 +1,7 @@
 
-var StatisticsActionCreators = require('../actions/StatisticsActionCreators');
+import StatisticsActionCreators from '../actions/StatisticsActionCreators';
 
-module.exports = {
+export default {
 
   getAllStatistics: function() {
     var list = [

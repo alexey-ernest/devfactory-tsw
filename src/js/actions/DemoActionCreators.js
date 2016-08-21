@@ -2,13 +2,13 @@
  * Demo action creators.
  */
 
-var AppDispatcher = require('../dispatcher/AppDispatcher');
-var TswConstants = require('../constants/TswConstants');
-var DemoDataUtils = require('../utils/DemoDataUtils');
+import AppDispatcher from '../dispatcher/AppDispatcher';
+import TswConstants from '../constants/TswConstants';
+import DemoDataUtils from '../utils/DemoDataUtils';
 
 var ActionTypes = TswConstants.ActionTypes;
 
-module.exports = {
+export default {
 
   /**
    * @param      {Object}  demo

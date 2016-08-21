@@ -1,9 +1,9 @@
 
-var CustomerActionCreators = require('../actions/CustomerActionCreators');
+import CustomerActionCreators from '../actions/CustomerActionCreators';
 
-module.exports = {
+export default {
 
-  getAllCustomers: function() {
+  getAllCustomers() {
     var list = [
       { image: './images/aurea.png', title: 'Aurea' },
       { image: './images/crossover.png', title: 'Crossover' },

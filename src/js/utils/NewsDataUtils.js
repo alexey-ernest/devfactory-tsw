@@ -1,6 +1,6 @@
 
-var NewsActionCreators = require('../actions/NewsActionCreators');
-var XMLHttpUtils = require('./XMLHttpUtils');
+import NewsActionCreators from '../actions/NewsActionCreators';
+import XMLHttpUtils from './XMLHttpUtils';
 
 var NEWS_URI = 'http://10.39.157.250/?json=get_recent_posts';
 
@@ -23,7 +23,7 @@ function parseNews(str) {
   return list;
 }
 
-module.exports = {
+export default {
 
   getLatestNews: function() {
 

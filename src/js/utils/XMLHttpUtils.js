@@ -2,7 +2,7 @@
  * XMLHttp utils.
  */
 
-module.exports = {
+export default {
 
   loadUri: function(uri, fn) {
     var req = new XMLHttpRequest();

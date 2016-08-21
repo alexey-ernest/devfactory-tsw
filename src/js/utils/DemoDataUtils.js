@@ -1,7 +1,7 @@
 
-var DemoStorageActionCreators = require('../actions/DemoStorageActionCreators');
+import DemoStorageActionCreators from '../actions/DemoStorageActionCreators';
 
-module.exports = {
+export default {
 
   getDemo: function() {
     var demo = JSON.parse(localStorage.getItem('demo')) || {};

@@ -2,9 +2,9 @@
  * React app constants.
  */
 
-var keyMirror = require('keymirror');
+import keyMirror from 'keymirror';
 
-module.exports = {
+const TswConstants = {
 
   ActionTypes: keyMirror({
     RECEIVE_BENEFITS: null,
@@ -17,3 +17,5 @@ module.exports = {
   })
 
 };
+
+export default TswConstants;

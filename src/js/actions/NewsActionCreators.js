@@ -2,12 +2,12 @@
  * News action creators.
  */
 
-var AppDispatcher = require('../dispatcher/AppDispatcher');
-var TswConstants = require('../constants/TswConstants');
+import AppDispatcher from '../dispatcher/AppDispatcher';
+import TswConstants from '../constants/TswConstants';
 
 var ActionTypes = TswConstants.ActionTypes;
 
-module.exports = {
+export default {
 
   /**
    * @param      {Array}  news

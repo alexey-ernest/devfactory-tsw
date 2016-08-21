@@ -2,9 +2,9 @@
  * Customer store.
  */
 
-var AppDispatcher = require('../dispatcher/AppDispatcher');
-var TswConstants = require('../constants/TswConstants');
-var EventEmitter = require('events').EventEmitter;
+import AppDispatcher from '../dispatcher/AppDispatcher';
+import TswConstants from '../constants/TswConstants';
+import EventEmitter from 'events';
 
 var ActionTypes = TswConstants.ActionTypes;
 var CHANGE_EVENT = 'change';

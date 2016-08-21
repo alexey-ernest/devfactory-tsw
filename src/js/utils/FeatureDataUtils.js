@@ -1,7 +1,7 @@
 
-var FeatureActionCreators = require('../actions/FeatureActionCreators');
+import FeatureActionCreators from '../actions/FeatureActionCreators';
 
-module.exports = {
+export default {
 
   getAllFeatures: function() {
     var list = [
