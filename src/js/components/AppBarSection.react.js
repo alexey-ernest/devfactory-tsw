@@ -3,21 +3,17 @@
  * App bar section component.
  */
 
-var React = require('react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+export default class AppBarSection extends Component {
 
-var AppBarSection = React.createClass({
+  constructor(props) {
+    super(props);
 
-  contextTypes: {
-    muiTheme: ReactPropTypes.object.isRequired
-  },
+    this.state = {open: false};
+  }
 
-  getInitialState: function() {
-    return {open: false};
-  },
-
-  render: function() {
+  render() {
     return (
       <section
         className="app-bar"
@@ -29,6 +25,8 @@ var AppBarSection = React.createClass({
     );
   }
 
-});
+}
 
-module.exports = AppBarSection;
+AppBarSection.contextTypes = {
+  muiTheme: PropTypes.object.isRequired
+}
