@@ -4,7 +4,7 @@ var buildPath = path.resolve(__dirname, '../build');
 var nodeModulesPath = path.resolve(__dirname, '../node_modules');
 var TransferWebpackPlugin = require('transfer-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
   // Entry points to the project
@@ -33,7 +33,7 @@ var config = {
     // Allows error warnings but does not stop compiling.
     new webpack.NoErrorsPlugin(),
     // Extract css
-    new ExtractTextPlugin("css/styles.css"),
+    new ExtractTextPlugin('css/styles.css'),
     // Generate index.html
     new HtmlWebpackPlugin({
       template: 'src/index.html',
@@ -54,14 +54,22 @@ var config = {
       },
       {
         test: /\.(sass|scss)$/,
-        loader: ExtractTextPlugin.extract("style-loader", "raw-loader!sass-loader")
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!sass-loader?sourceMap')
+      },
+      {
+        test: /\.png$/,
+        loader: 'url-loader?limit=5000&name=../images/[name].[ext]&emitFile=false'
+      },
+      {
+        test: /\.jpg$/,
+        loader: 'file-loader?name=../images/[name].[ext]&emitFile=false'
       }
     ],
   },
   sassLoader: {
     includePaths: [
-      path.resolve(__dirname, "../src/sass"),
-      path.resolve(nodeModulesPath, "./compass-mixins/lib")
+      path.resolve(__dirname, '../src/sass'),
+      path.resolve(nodeModulesPath, './compass-mixins/lib')
     ]
   }
 };

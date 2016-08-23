@@ -3,7 +3,7 @@
  */
 
 // CSS
-import * as styles from '../sass/screen.sass';
+import * as styles from '../sass/base.sass';
 
 // React
 import React from 'react';

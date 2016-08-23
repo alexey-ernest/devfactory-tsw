@@ -3,6 +3,9 @@
  * App bar section component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/appbar.sass';
+
 import React, {Component, PropTypes} from 'react';
 
 export default class AppBarSection extends Component {
