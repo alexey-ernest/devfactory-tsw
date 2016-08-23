@@ -2,17 +2,15 @@
  * News list item component.
  */
 
-var React = require('react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+export default class NewsListItem extends Component {
 
-var NewsListItem = React.createClass({
+  static propTypes = {
+    news: PropTypes.object.isRequired
+  }
 
-  propTypes: {
-    news: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     var news = this.props.news;
     return (
       <li>
@@ -22,6 +20,4 @@ var NewsListItem = React.createClass({
     );
   }
 
-});
-
-module.exports = NewsListItem;
+}

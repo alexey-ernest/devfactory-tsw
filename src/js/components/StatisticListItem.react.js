@@ -2,17 +2,15 @@
  * Statistic list item component.
  */
 
-var React = require('react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+export default class StatisticListItem extends Component {
 
-var StatisticListItem = React.createClass({
+  static propTypes = {
+    statistic: PropTypes.object.isRequired
+  }
 
-  propTypes: {
-    statistic: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     var statistic = this.props.statistic;
     return (
       <li>
@@ -22,6 +20,4 @@ var StatisticListItem = React.createClass({
     );
   }
 
-});
-
-module.exports = StatisticListItem;
+}

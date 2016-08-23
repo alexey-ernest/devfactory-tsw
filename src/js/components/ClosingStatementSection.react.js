@@ -7,6 +7,10 @@ import ClosingCta from './ClosingCta.react';
 
 export default class ClosingStatementSection extends Component {
 
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  }
+
   render() {
     return (
       <section className="closing-statement">
@@ -18,7 +22,3 @@ export default class ClosingStatementSection extends Component {
   }
 
 }
-
-ClosingStatementSection.propTypes = {
-  data: PropTypes.object.isRequired
-};

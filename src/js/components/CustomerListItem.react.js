@@ -2,17 +2,15 @@
  * Customer list item component.
  */
 
-var React = require('react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+export default class CustomerListItem extends Component {
 
-var CustomerListItem = React.createClass({
+  static propTypes = {
+    customer: PropTypes.object.isRequired
+  }
 
-  propTypes: {
-    customer: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     var customer = this.props.customer;
     return (
       <li>
@@ -21,6 +19,4 @@ var CustomerListItem = React.createClass({
     );
   }
 
-});
-
-module.exports = CustomerListItem;
+}

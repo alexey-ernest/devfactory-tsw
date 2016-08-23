@@ -63,6 +63,10 @@ TswData.init();
 // Pass muiTheme down to the components tree via context
 class App extends React.Component {
 
+  static childContextTypes = {
+    muiTheme: React.PropTypes.object.isRequired,
+  }
+
   getChildContext() {
     return {muiTheme: muiTheme};
   }
@@ -75,10 +79,6 @@ class App extends React.Component {
     );
   }
 }
-
-App.childContextTypes = {
-  muiTheme: React.PropTypes.object.isRequired,
-};
 
 ReactDOM.render(
   <App />,

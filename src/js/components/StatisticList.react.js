@@ -2,18 +2,16 @@
  * Statistic list component.
  */
 
-var React = require('react');
-var StatisticListItem = require('./StatisticListItem.react');
+import React, {Component, PropTypes} from 'react';
+import StatisticListItem from './StatisticListItem.react';
 
-var ReactPropTypes = React.PropTypes;
+export default class StatisticList extends Component {
 
-var StatisticList = React.createClass({
+  static propTypes = {
+    statistics: PropTypes.array.isRequired
+  }
 
-  propTypes: {
-    statistics: ReactPropTypes.array.isRequired
-  },
-
-  render: function() {
+  render() {
     var statistics = this.props.statistics.map(function (stat) {
       return (
         <StatisticListItem key={stat.id} statistic={stat} />
@@ -25,8 +23,6 @@ var StatisticList = React.createClass({
         {statistics}
       </ul>
     );
-  },
+  }
 
-});
-
-module.exports = StatisticList;
+}

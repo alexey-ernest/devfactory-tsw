@@ -6,6 +6,10 @@ import React, {Component, PropTypes} from 'react';
 
 export default class BenefitListItem extends Component {
 
+  static propTypes = {
+    text: PropTypes.string.isRequired
+  }
+
   render() {
     var text = this.props.text;
     return (
@@ -15,8 +19,4 @@ export default class BenefitListItem extends Component {
     );
   }
 
-}
-
-BenefitListItem.propTypes = {
-  text: PropTypes.string.isRequired
 }

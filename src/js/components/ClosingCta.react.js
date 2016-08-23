@@ -7,10 +7,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 export default class ClosingCta extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this._onClick = this._onClick.bind(this);
+  static propTypes = {
+    demo: PropTypes.object.isRequired
   }
 
   render() {
@@ -29,12 +27,8 @@ export default class ClosingCta extends Component {
    *
    * @param {object} event
    */
-  _onClick(/*object*/ event) {
+  _onClick = (event) => {
     window.scrollTo(0, 150);
   }
 
 }
-
-ClosingCta.propTypes = {
-  demo: PropTypes.object.isRequired
-};

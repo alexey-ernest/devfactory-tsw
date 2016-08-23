@@ -2,18 +2,16 @@
  * News section component.
  */
 
-var React = require('react');
-var NewsList = require('./NewsList.react');
+import React, {Component, PropTypes} from 'react';
+import NewsList from './NewsList.react';
 
-var ReactPropTypes = React.PropTypes;
+export default class NewsSection extends Component {
 
-var NewsSection = React.createClass({
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  }
 
-  propTypes: {
-    data: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     return (
       <section className="news">
         <h3>News from the Testing Service's Team</h3>
@@ -23,6 +21,4 @@ var NewsSection = React.createClass({
     );
   }
 
-});
-
-module.exports = NewsSection;
+}

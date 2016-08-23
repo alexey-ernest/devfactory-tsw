@@ -3,25 +3,19 @@
  */
 
 import React, {Component, PropTypes} from 'react';
-
 import DemoActionCreators from '../actions/DemoActionCreators';
 
 var ENTER_KEY_CODE = 13;
 
 export default class DemoForm extends Component {
 
-  constructor(props) {
-    super(props);
+  static propTypes = {
+    demo: PropTypes.object.isRequired
+  }
 
-    this.state = {
-      name: this.props.demo.name || '',
-      email: this.props.demo.email || ''
-    };
-
-    this._onNameChange = this._onNameChange.bind(this);
-    this._onEmailChange = this._onEmailChange.bind(this);
-    this._onKeyDown = this._onKeyDown.bind(this);
-    this._onSubmit = this._onSubmit.bind(this);
+  state = {
+    name: this.props.demo.name || '',
+    email: this.props.demo.email || ''
   }
 
   render() {
@@ -54,10 +48,7 @@ export default class DemoForm extends Component {
     );
   }
 
-  /**
-   * @param {object} event
-   */
-  _onNameChange(/*object*/ event) {
+  _onNameChange = (event) => {
     var newState = assign({}, this.state, {
       name: event.target.value
     });
@@ -65,10 +56,7 @@ export default class DemoForm extends Component {
     this.setState(newState);
   }
 
-  /**
-   * @param {object} event
-   */
-  _onEmailChange(/*object*/ event) {
+  _onEmailChange = (event) => {
     var newState = assign({}, this.state, {
       email: event.target.value
     });
@@ -76,21 +64,13 @@ export default class DemoForm extends Component {
     this.setState(newState);
   }
 
-  /**
-   * @param  {object} event
-   */
-  _onKeyDown(event) {
+  _onKeyDown = (event) => {
     if (event.keyCode === ENTER_KEY_CODE) {
       this._onSubmit();
     }
   }
 
-  /**
-   * Submits the demo form.
-   *
-   * @param {object} event
-   */
-  _onSubmit(/*object*/ event) {
+  _onSubmit = (event) => {
     var state = {
       isRequested: true,
       name: this.state.name.trim(),
@@ -100,8 +80,4 @@ export default class DemoForm extends Component {
     DemoActionCreators.submitForm(state);
   }
 
-}
-
-DemoForm.propTypes = {
-  demo: PropTypes.object.isRequired
 }

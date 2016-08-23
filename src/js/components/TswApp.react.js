@@ -37,12 +37,7 @@ const getStateFromStores = () => {
 
 export default class TswApp extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = getStateFromStores();
-    this._onChange = this._onChange.bind(this);
-  }
+  state = getStateFromStores()
 
   componentDidMount() {
     DemoStore.addChangeListener(this._onChange);
@@ -71,7 +66,7 @@ export default class TswApp extends Component {
   /**
    * Event handler for 'change' events coming from the stores
    */
-  _onChange() {
+  _onChange = () => {
     this.setState(getStateFromStores());
   }
 

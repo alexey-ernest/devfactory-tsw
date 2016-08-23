@@ -9,6 +9,10 @@ import UrgencyStatement from './UrgencyStatement.react';
 
 export default class Cta extends Component {
 
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  }
+
   render() {
     return (
       <div className="cta">
@@ -18,8 +22,4 @@ export default class Cta extends Component {
     );
   }
 
-}
-
-Cta.propTypes = {
-  data: PropTypes.object.isRequired
 }

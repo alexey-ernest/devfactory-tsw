@@ -2,13 +2,11 @@
  * Footer section component.
  */
 
-var React = require('react');
+import React, {Component} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+export default class FooterSection extends Component {
 
-var FooterSection = React.createClass({
-
-  render: function() {
+  render() {
     return (
       <footer className="footer">
         <div className="brand-image">Testing Service by DevFactory</div>
@@ -19,6 +17,4 @@ var FooterSection = React.createClass({
     );
   }
 
-});
-
-module.exports = FooterSection;
+}

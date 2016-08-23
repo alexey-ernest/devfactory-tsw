@@ -2,13 +2,11 @@
  * Demo video section component.
  */
 
-var React = require('react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+export default class DemoVideoSection extends Component {
 
-var DemoVideoSection = React.createClass({
-
-  render: function() {
+  render() {
     return (
       <section className="demo-video">
         Demo video section
@@ -16,6 +14,4 @@ var DemoVideoSection = React.createClass({
     );
   }
 
-});
-
-module.exports = DemoVideoSection;
+}

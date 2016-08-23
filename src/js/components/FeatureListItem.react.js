@@ -2,17 +2,15 @@
  * Feature list item component.
  */
 
-var React = require('react');
+import React, {Component, PropTypes} from 'react';
 
-var ReactPropTypes = React.PropTypes;
+export default class FeatureListItem extends Component {
 
-var FeatureListItem = React.createClass({
+  static propTypes = {
+    feature: PropTypes.object.isRequired
+  }
 
-  propTypes: {
-    feature: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     var feature = this.props.feature;
     return (
       <li>
@@ -22,6 +20,4 @@ var FeatureListItem = React.createClass({
     );
   }
 
-});
-
-module.exports = FeatureListItem;
+}

@@ -2,17 +2,14 @@
  * CTA Urgency statement component.
  */
 
-var React = require('react');
-var assign = require('object-assign');
-var moment = require('moment');
-
-var ReactPropTypes = React.PropTypes;
+import React, {Component, PropTypes} from 'react';
+import moment from 'moment';
 
 var READY_DAYS = 3;
 
-var UrgencyStatement = React.createClass({
+export default class UrgencyStatement extends Component {
 
-  render: function() {
+  render() {
     var readyDate = moment().add(READY_DAYS, 'days');
     var thisOrNextWeek = +moment().format('E') + READY_DAYS > 7 ? 'next' : 'this';
     var readyDay = readyDate.format('dddd');
@@ -24,6 +21,4 @@ var UrgencyStatement = React.createClass({
     );
   }
 
-});
-
-module.exports = UrgencyStatement;
+}

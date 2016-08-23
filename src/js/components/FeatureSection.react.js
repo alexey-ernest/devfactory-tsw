@@ -2,18 +2,16 @@
  * Feature section component.
  */
 
-var React = require('react');
-var FeatureList = require('./FeatureList.react');
+import React, {Component, PropTypes} from 'react';
+import FeatureList from './FeatureList.react';
 
-var ReactPropTypes = React.PropTypes;
+export default class FeatureSection extends Component {
 
-var FeatureSection = React.createClass({
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  }
 
-  propTypes: {
-    data: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     return (
       <section className="features">
         <FeatureList features={this.props.data.features} />
@@ -21,6 +19,4 @@ var FeatureSection = React.createClass({
     );
   }
 
-});
-
-module.exports = FeatureSection;
+}

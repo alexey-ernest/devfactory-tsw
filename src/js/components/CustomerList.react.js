@@ -2,18 +2,16 @@
  * Customer list component.
  */
 
-var React = require('react');
-var CustomerListItem = require('./CustomerListItem.react');
+import React, {Component, PropTypes} from 'react';
+import CustomerListItem from './CustomerListItem.react';
 
-var ReactPropTypes = React.PropTypes;
+export default class CustomerList extends Component {
 
-var CustomerList = React.createClass({
+  static propTypes = {
+    customers: PropTypes.array.isRequired
+  }
 
-  propTypes: {
-    customers: ReactPropTypes.array.isRequired
-  },
-
-  render: function() {
+  render() {
     var customers = this.props.customers.map(function (customer) {
       return (
         <CustomerListItem key={customer.id} customer={customer} />
@@ -25,8 +23,6 @@ var CustomerList = React.createClass({
         {customers}
       </ul>
     );
-  },
+  }
 
-});
-
-module.exports = CustomerList;
+}

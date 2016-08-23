@@ -2,18 +2,16 @@
  * Customer section component.
  */
 
-var React = require('react');
-var CustomerList = require('./CustomerList.react');
+import React, {Component, PropTypes} from 'react';
+import CustomerList from './CustomerList.react';
 
-var ReactPropTypes = React.PropTypes;
+export default class CustomerSection extends Component {
 
-var CustomerSection = React.createClass({
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  }
 
-  propTypes: {
-    data: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     return (
       <section className="customers">
         <h3>Some of the world's most respected companies trust DevFactory!</h3>
@@ -23,6 +21,4 @@ var CustomerSection = React.createClass({
     );
   }
 
-});
-
-module.exports = CustomerSection;
+}

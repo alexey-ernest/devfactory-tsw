@@ -11,12 +11,6 @@ export default class AppBarSection extends Component {
     muiTheme: PropTypes.object.isRequired
   }
 
-  constructor(props) {
-    super(props);
-
-    this.state = {open: false};
-  }
-
   render() {
     return (
       <section

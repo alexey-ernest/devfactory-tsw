@@ -10,6 +10,10 @@ import Screenshots from './Screenshots.react';
 
 export default class HeaderSection extends Component {
 
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  }
+
   render() {
     return (
       <header className="header">
@@ -28,8 +32,4 @@ export default class HeaderSection extends Component {
     );
   }
 
-}
-
-HeaderSection.propTypes = {
-  data: PropTypes.object.isRequired
 }

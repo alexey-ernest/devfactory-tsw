@@ -2,18 +2,16 @@
  * Statistics section component.
  */
 
-var React = require('react');
-var StatisticList = require('./StatisticList.react');
+import React, {Component, PropTypes} from 'react';
+import StatisticList from './StatisticList.react';
 
-var ReactPropTypes = React.PropTypes;
+export default class StatisticsSection extends Component {
 
-var StatisticsSection = React.createClass({
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  }
 
-  propTypes: {
-    data: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     return (
       <section className="statistics">
         <StatisticList statistics={this.props.data.statistics} />
@@ -21,6 +19,4 @@ var StatisticsSection = React.createClass({
     );
   }
 
-});
-
-module.exports = StatisticsSection;
+}

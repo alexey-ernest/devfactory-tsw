@@ -2,18 +2,16 @@
  * News list component.
  */
 
-var React = require('react');
-var NewsListItem = require('./NewsListItem.react');
+import React, {Component, PropTypes} from 'react';
+import NewsListItem from './NewsListItem.react';
 
-var ReactPropTypes = React.PropTypes;
+export default class NewsList extends Component {
 
-var NewsList = React.createClass({
+  static propTypes = {
+    news: PropTypes.array.isRequired
+  }
 
-  propTypes: {
-    news: ReactPropTypes.array.isRequired
-  },
-
-  render: function() {
+  render() {
     var news = this.props.news.map(function (news) {
       return (
         <NewsListItem key={news.id} news={news} />
@@ -25,8 +23,6 @@ var NewsList = React.createClass({
         {news}
       </ul>
     );
-  },
+  }
 
-});
-
-module.exports = NewsList;
+}
