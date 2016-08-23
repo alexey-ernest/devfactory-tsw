@@ -2,18 +2,18 @@
  * Closing Cta component.
  */
 
-var React = require('react');
-var RaisedButton = require('material-ui/RaisedButton').default;
+import React, {Component, PropTypes} from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 
-var ReactPropTypes = React.PropTypes;
+export default class ClosingCta extends Component {
 
-var ClosingCta = React.createClass({
+  constructor(props) {
+    super(props);
 
-  propTypes: {
-    demo: ReactPropTypes.object.isRequired
-  },
+    this._onClick = this._onClick.bind(this);
+  }
 
-  render: function() {
+  render() {
     var isRequested = this.props.demo.isRequested;
     var demoButton = !isRequested ? 'Request your free demo now' : 'Your request was sent. Thanks!';
     return (
@@ -22,17 +22,19 @@ var ClosingCta = React.createClass({
       <button disabled={isRequested} onClick={this._onClick}>{demoButton}</button>
       </div>
     );
-  },
+  }
 
   /**
    * Click event handler.
    *
    * @param {object} event
    */
-  _onClick: function (/*object*/ event) {
+  _onClick(/*object*/ event) {
     window.scrollTo(0, 150);
   }
 
-});
+}
 
-module.exports = ClosingCta;
+ClosingCta.propTypes = {
+  demo: PropTypes.object.isRequired
+};

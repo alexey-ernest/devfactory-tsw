@@ -8,6 +8,10 @@ import BenefitListItem from './BenefitListItem.react';
 
 export default class BenefitList extends Component {
 
+  static propTypes = {
+    benefits: PropTypes.array.isRequired
+  }
+
   render() {
     var benefits = this.props.benefits.map(function (benefit) {
       return (
@@ -22,8 +26,4 @@ export default class BenefitList extends Component {
     );
   }
 
-}
-
-BenefitList.propTypes = {
-  benefits: PropTypes.array.isRequired
 }

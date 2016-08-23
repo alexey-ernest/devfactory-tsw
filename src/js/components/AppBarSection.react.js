@@ -7,6 +7,10 @@ import React, {Component, PropTypes} from 'react';
 
 export default class AppBarSection extends Component {
 
+  static contextTypes = {
+    muiTheme: PropTypes.object.isRequired
+  }
+
   constructor(props) {
     super(props);
 
@@ -25,8 +29,4 @@ export default class AppBarSection extends Component {
     );
   }
 
-}
-
-AppBarSection.contextTypes = {
-  muiTheme: PropTypes.object.isRequired
 }

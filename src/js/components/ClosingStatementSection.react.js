@@ -2,18 +2,12 @@
  * Closing statement section component.
  */
 
-var React = require('react');
-var ClosingCta = require('./ClosingCta.react');
+import React, {Component, PropTypes} from 'react';
+import ClosingCta from './ClosingCta.react';
 
-var ReactPropTypes = React.PropTypes;
+export default class ClosingStatementSection extends Component {
 
-var ClosingStatementSection = React.createClass({
-
-  propTypes: {
-    data: ReactPropTypes.object.isRequired
-  },
-
-  render: function() {
+  render() {
     return (
       <section className="closing-statement">
         <div className="closing-cta">
@@ -23,6 +17,8 @@ var ClosingStatementSection = React.createClass({
     );
   }
 
-});
+}
 
-module.exports = ClosingStatementSection;
+ClosingStatementSection.propTypes = {
+  data: PropTypes.object.isRequired
+};
