@@ -69,7 +69,9 @@ var config = {
   sassLoader: {
     includePaths: [
       path.resolve(__dirname, '../src/sass'),
-      path.resolve(nodeModulesPath, './compass-mixins/lib')
+      path.resolve(nodeModulesPath, './compass-mixins/lib'),
+      path.resolve(nodeModulesPath, './susy/sass'),
+      path.resolve(nodeModulesPath, './breakpoint-sass/stylesheets')
     ]
   }
 };

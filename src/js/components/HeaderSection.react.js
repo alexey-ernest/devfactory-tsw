@@ -2,6 +2,9 @@
  * Header section component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/header.sass';
+
 import React, {Component, PropTypes} from 'react';
 
 import BenefitList from './BenefitList.react';
@@ -14,19 +17,30 @@ export default class HeaderSection extends Component {
     data: PropTypes.object.isRequired
   }
 
+  static contextTypes = {
+    muiTheme: PropTypes.object.isRequired
+  }
+
   render() {
     return (
-      <header className="header">
-        <h1 className="ms-up-4">Instantly improve your product quality</h1>
-        <p>Easily automate and continously improve your software quality checking by running smart functional test suites on daily basis.</p>
-        <div className="benefits">
-          <BenefitList benefits={this.props.data.benefits} />
-        </div>
-        <div className="cta">
-          <Cta data={this.props.data} />
-        </div>
-        <div className="screenshots">
-          <Screenshots />
+      <header
+        className="header"
+        style={{
+          backgroundColor: this.context.muiTheme.palette.primary1Color,
+          color: this.context.muiTheme.palette.alternateTextColor
+        }}>
+        <div className="header__container">
+          <h1 className="ms-up-4">Instantly improve your product quality</h1>
+          <p>Easily automate and continously improve your software quality checking by running smart functional test suites on daily basis.</p>
+          <div className="benefits">
+            <BenefitList benefits={this.props.data.benefits} />
+          </div>
+          <div className="cta">
+            <Cta data={this.props.data} />
+          </div>
+          <div className="screenshots">
+            <Screenshots />
+          </div>
         </div>
       </header>
     );

@@ -1,13 +1,19 @@
 @import "compass"
+@import "../typography"
+@import "../layout"
 
 .app-bar
-  padding-top: rhythm(1)
+  padding-top: rhythm(2)
   height: rhythm(3)
+
+.app-bar__container
+  @extend .container
 
 .brand-image
   +replace-text("../../images/testingservices.png")
-  margin-top: 4px
-  height: 32px
-  width: rhythm(10)
+  margin-top: rhythm(0.5)
+  height: rhythm(1.5)
+  width: rhythm(8)
+  margin-right: rhythm(1)
   background-size: contain
   display: inline-block

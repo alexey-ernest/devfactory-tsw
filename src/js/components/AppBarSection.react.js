@@ -21,7 +21,9 @@ export default class AppBarSection extends Component {
         style={{
           backgroundColor: this.context.muiTheme.palette.primary1Color
         }}>
-        <div className="brand-image">Testing Service by DevFactory</div>
+        <div className="app-bar__container">
+          <a href="http://ts-portal.devfactory.com/" className="brand-image">Testing Service by DevFactory</a>
+        </div>
       </section>
     );
   }

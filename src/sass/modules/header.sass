@@ -1,2 +1,14 @@
+@import "../layout"
+@import "../typography"
+
 .header
-  background: #ccc
+  padding: rhythm(2) 0 0
+
+  +respond-to('large')
+    text-align: center
+
+  h1
+    opacity: 0.64
+
+.header__container
+  @extend .container

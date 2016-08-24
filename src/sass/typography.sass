@@ -1,6 +1,6 @@
 // Base typography based on modular scale
 
-@import "modular-scale";
+@import "typography/modular-scale";
 
 
 html
@@ -8,7 +8,7 @@ html
 
 body
   font-family: Roboto, serif
-  font-weight: 400
+  font-weight: 300
   color: #333
   +type-setting(0)
 
@@ -21,7 +21,7 @@ p
 
 @for $i from 1 through $ms-levels
   .ms-up-#{$i}
-    font-weight: 300
+    font-weight: 100
     +type-setting($i)
 
 .ms-up-6
