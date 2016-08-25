@@ -2,6 +2,9 @@
  * Feature list component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/feature-list.sass';
+
 import React, {Component, PropTypes} from 'react';
 import FeatureListItem from './FeatureListItem.react';
 
@@ -19,7 +22,7 @@ export default class FeatureList extends Component {
     });
 
     return (
-      <ul>
+      <ul className="feature-list">
         {features}
       </ul>
     );

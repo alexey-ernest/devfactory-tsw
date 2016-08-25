@@ -2,6 +2,9 @@
  * Feature section component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/features.sass';
+
 import React, {Component, PropTypes} from 'react';
 import FeatureList from './FeatureList.react';
 

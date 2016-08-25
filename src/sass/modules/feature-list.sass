@@ -1,0 +1,17 @@
+@import "../typography"
+@import "../layout"
+
+.feature-list
+  @extend .container
+  text-align: center
+
+  & li
+    margin: rhythm(4) 0
+
+    .material-icons
+      +type-setting(3)
+
+    h3
+      +type-setting(1)
+      font-weight: 400
+      margin: rhythm(0.5) 0
