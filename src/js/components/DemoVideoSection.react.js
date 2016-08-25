@@ -8,7 +8,6 @@ import * as styles from '../../sass/modules/demo-video.sass';
 import React, {Component} from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import FontIcon from 'material-ui/FontIcon';
-import AvPlayArrow from 'material-ui/svg-icons/av/play-arrow';
 
 export default class DemoVideoSection extends Component {
 
