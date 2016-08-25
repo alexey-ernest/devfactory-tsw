@@ -2,6 +2,9 @@
  * Customer list component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/customer-list.sass';
+
 import React, {Component, PropTypes} from 'react';
 import CustomerListItem from './CustomerListItem.react';
 
@@ -19,7 +22,7 @@ export default class CustomerList extends Component {
     });
 
     return (
-      <ul>
+      <ul className="customer-list">
         {customers}
       </ul>
     );
