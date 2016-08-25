@@ -15,7 +15,7 @@ export default class Cta extends Component {
 
   render() {
     return (
-      <div className="cta">
+      <div className="cta-form">
         <DemoForm demo={this.props.data.demo} />
         <UrgencyStatement />
       </div>

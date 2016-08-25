@@ -3,6 +3,14 @@
  */
 
 import React, {Component, PropTypes} from 'react';
+import FontIcon from 'material-ui/FontIcon';
+
+const iconStyles = {
+  color: 'inherit',
+  fontSize: 'inherit',
+  lineHeight: 'inherit',
+  verticalAlign: 'bottom'
+};
 
 export default class BenefitListItem extends Component {
 
@@ -14,7 +22,8 @@ export default class BenefitListItem extends Component {
     var text = this.props.text;
     return (
       <li>
-        {text}
+        <FontIcon className="material-icons" style={iconStyles}>done</FontIcon>
+        <span>{text}</span>
       </li>
     );
   }

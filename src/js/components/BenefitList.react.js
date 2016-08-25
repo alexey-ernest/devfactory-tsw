@@ -2,6 +2,9 @@
  * Benefit list component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/benefit-list.sass';
+
 import React, {Component, PropTypes} from 'react';
 
 import BenefitListItem from './BenefitListItem.react';
@@ -20,7 +23,7 @@ export default class BenefitList extends Component {
     });
 
     return (
-      <ul>
+      <ul className="benefit-list">
         {benefits}
       </ul>
     );
