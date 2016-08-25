@@ -11,11 +11,14 @@ export default class NewsListItem extends Component {
   }
 
   render() {
-    var news = this.props.news;
+    let news = this.props.news;
+
+    // enable raw html
+    let textHtml = { __html: news.text };
     return (
       <li>
         <h5>{news.title}</h5>
-        <p>{news.text}</p>
+        <p dangerouslySetInnerHTML={textHtml}></p>
       </li>
     );
   }

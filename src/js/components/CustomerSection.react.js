@@ -17,7 +17,7 @@ export default class CustomerSection extends Component {
   render() {
     return (
       <section className="customers">
-        <div className="customer-container">
+        <div className="customer__container">
           <h3>Some of the world's most respected companies trust DevFactory!</h3>
           <p>See who saved more than 50% on IT Services by leveraging DevFactory tools.</p>
           <CustomerList customers={this.props.data.customers} />

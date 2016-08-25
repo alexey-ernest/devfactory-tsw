@@ -1,0 +1,13 @@
+@import "../typography"
+@import "../layout"
+
+.news-list
+  @extend .container
+  text-align: center
+
+  & li
+    margin: rhythm(4) 0
+
+    h5
+      +type-setting(1)
+      font-weight: 400
