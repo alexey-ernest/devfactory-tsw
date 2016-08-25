@@ -14,8 +14,7 @@ export default class StatisticListItem extends Component {
     var statistic = this.props.statistic;
     return (
       <li>
-        <h4>{statistic.title}</h4>
-        <p>{statistic.value}</p>
+        <h4>{statistic.title}: <strong>{statistic.value}</strong></h4>
       </li>
     );
   }

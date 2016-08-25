@@ -2,6 +2,9 @@
  * Statistic list component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/statistic-list.sass';
+
 import React, {Component, PropTypes} from 'react';
 import StatisticListItem from './StatisticListItem.react';
 
@@ -19,7 +22,7 @@ export default class StatisticList extends Component {
     });
 
     return (
-      <ul>
+      <ul className="statistic-list">
         {statistics}
       </ul>
     );

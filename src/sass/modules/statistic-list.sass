@@ -1,0 +1,17 @@
+@import "../typography"
+@import "../layout"
+
+.statistic-list
+  @extend .container
+  text-align: center
+
+  & li
+    margin: rhythm(4) 0
+
+    h4
+      +type-setting(1)
+      margin: rhythm(0.5) 0
+
+      strong
+        display: block
+        +type-setting(3)

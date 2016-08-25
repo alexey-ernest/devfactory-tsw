@@ -2,6 +2,9 @@
  * Statistics section component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/statistics.sass';
+
 import React, {Component, PropTypes} from 'react';
 import StatisticList from './StatisticList.react';
 
