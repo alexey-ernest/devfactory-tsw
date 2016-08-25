@@ -3,7 +3,6 @@
  */
 
 import BenefitDataUtils from './utils/BenefitDataUtils';
-import DemoDataUtils from './utils/DemoDataUtils';
 import FeatureDataUtils from './utils/FeatureDataUtils';
 import StatisticsDataUtils from './utils/StatisticsDataUtils';
 import CustomerDataUtils from './utils/CustomerDataUtils';
@@ -15,9 +14,6 @@ export default {
 
     // Benefits
     BenefitDataUtils.getAllBenefits();
-
-    // Demo form
-    DemoDataUtils.getDemo();
 
     // Features
     FeatureDataUtils.getAllFeatures();
