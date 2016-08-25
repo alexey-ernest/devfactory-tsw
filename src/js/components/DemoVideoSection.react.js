@@ -2,14 +2,24 @@
  * Demo video section component.
  */
 
-import React, {Component, PropTypes} from 'react';
+// CSS
+import * as styles from '../../sass/modules/demo-video.sass';
+
+import React, {Component} from 'react';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import FontIcon from 'material-ui/FontIcon';
+import AvPlayArrow from 'material-ui/svg-icons/av/play-arrow';
 
 export default class DemoVideoSection extends Component {
 
   render() {
     return (
       <section className="demo-video">
-        Demo video section
+        Check out
+        <FloatingActionButton className="play-button">
+          <FontIcon className="material-icons">play_arrow</FontIcon>
+        </FloatingActionButton>
+        5 min video
       </section>
     );
   }
