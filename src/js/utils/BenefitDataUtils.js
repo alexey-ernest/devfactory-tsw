@@ -7,8 +7,8 @@ export default {
     var list = [
       'Full functional tests in 3 days',
       'Web, mobile, desktop and CLI',
-      'CI/CD friendly',
-      'Easy maintenace'
+      'API docs, CI/CD friendly',
+      '1-click maintenace'
     ];
 
     BenefitActionCreators.receiveAll(list.map(function (t, i) {

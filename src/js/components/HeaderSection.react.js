@@ -38,9 +38,9 @@ export default class HeaderSection extends Component {
           <div className="cta">
             <Cta data={this.props.data} />
           </div>
-          <div className="screenshots">
-            <Screenshots />
-          </div>
+        </div>
+        <div className="screenshots">
+          <Screenshots />
         </div>
       </header>
     );
