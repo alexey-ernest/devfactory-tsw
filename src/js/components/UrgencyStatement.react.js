@@ -2,6 +2,9 @@
  * CTA Urgency statement component.
  */
 
+// CSS
+import * as styles from '../../sass/modules/urgency-statement.sass';
+
 import React, {Component, PropTypes} from 'react';
 import moment from 'moment';
 
@@ -15,9 +18,9 @@ export default class UrgencyStatement extends Component {
     var readyDay = readyDate.format('dddd');
 
     return (
-      <span>
+      <div className="urgency-statement">
         To have your quality tests running by <strong>{thisOrNextWeek} {readyDay}</strong>, start by requesting a quick demo today.
-      </span>
+      </div>
     );
   }
 
