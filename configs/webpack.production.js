@@ -59,12 +59,8 @@ var config = {
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!sass-loader?sourceMap')
       },
       {
-        test: /\.png$/,
+        test: /\.(png|gif|jpg)$/,
         loader: 'url-loader?limit=5000&name=../images/[name].[ext]&emitFile=false'
-      },
-      {
-        test: /\.jpg$/,
-        loader: 'file-loader?name=../images/[name].[ext]&emitFile=false'
       }
     ],
   },

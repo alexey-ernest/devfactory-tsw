@@ -63,15 +63,18 @@ export default class DemoForm extends Component {
           fullWidth={true}
           required={true}
         />
-        <RaisedButton
-          className="cta-submit-button"
-          label={demoButton}
-          secondary={true}
-          type="submit"
-          disabled={isRequested || !isFormValid}
-          onClick={this._onSubmit}
-          fullWidth={true}
-        />
+        <div className="cta-wrapper">
+          <RaisedButton
+            className="cta-submit-button"
+            label={demoButton}
+            secondary={true}
+            type="submit"
+            disabled={isRequested || !isFormValid}
+            onClick={this._onSubmit}
+            fullWidth={true}
+          />
+          <div className="cta-arrow"></div>
+        </div>
       </form>
     );
   }

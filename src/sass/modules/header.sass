@@ -13,14 +13,27 @@
   @extend .container
 
 .benefits
-  text-align: left
+  text-align: right
   width: rhythm(20)
-  margin: rhythm(4) auto
+  margin: rhythm(6) auto
+
+  +respond-to('large')
+    +span(6 of 12)
+
+  +respond-to('wide')
+    margin-left: span(2 of 12) + gutter()
+    width: span(4 of 12)
 
 .cta
   text-align: left
   width: rhythm(20)
   margin: rhythm(4) auto
+
+  +respond-to('large')
+    +span(6 of 12 last)
+
+  +respond-to('wide')
+    +span(4 of 12)
 
 .screenshots
   margin: rhythm(2) 0 0
