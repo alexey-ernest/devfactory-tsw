@@ -8,6 +8,11 @@
   li
     text-align: center
 
+    img
+      max-width: 100%
+      width: 150px
+      height: auto
+
     +respond-to('small')
       +span(6 of 12)
 
@@ -17,16 +22,17 @@
     +respond-to('medium')
       +span(3 of 12)
 
+      &:nth-child(2n)
+        +span(3 of 12)
       &:nth-child(4n)
         +last
 
     +respond-to('large')
       +span(2 of 12)
 
+      &:nth-child(2n)
+        +span(2 of 12)
+      &:nth-child(4n)
+        +span(2 of 12)
       &:nth-child(6n)
         +last
-
-    img
-      max-width: 100%
-      width: 150px
-      height: auto
