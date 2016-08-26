@@ -40,12 +40,19 @@ export default class DemoForm extends Component {
 
   render() {
     var isFormValid = validate(this.state);
+
     var isRequested = this.props.demo.isRequested;
-    var demoButton = !isRequested ? 'Request your free demo now' : 'Your request was sent. Thanks!';
+    var isLoading = this.props.demo.isLoading;
+
+    var demoButton = isRequested && !isLoading ?
+      'Your request was sent. Thanks!' :
+      'Request your free demo now';
+
     return (
       <form onSubmit={this._onSubmit}>
         <TextField
           id="DemoFormName"
+          name="demo-name"
           hintText="Your Name"
           defaultValue={this.state.name}
           autoFocus={true}
@@ -55,6 +62,8 @@ export default class DemoForm extends Component {
           fullWidth={true}
         />
         <TextField
+          id="DemoFormEmail"
+          name="demo-email"
           hintText="Your Email*"
           defaultValue={this.state.email}
           onChange={this._onEmailChange}
@@ -103,12 +112,12 @@ export default class DemoForm extends Component {
 
   _onSubmit = (event) => {
     var state = {
-      isRequested: true,
       name: this.state.name.trim(),
       email: this.state.email.trim()
     };
 
     DemoActionCreators.submitForm(state);
+    event.preventDefault();
   }
 
 }

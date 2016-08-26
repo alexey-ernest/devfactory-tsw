@@ -40,10 +40,12 @@ export default class TswApp extends Component {
   state = getStateFromStores()
 
   componentDidMount() {
+    DemoStore.addChangeListener(this._onChange);
     NewsStore.addChangeListener(this._onChange);
   }
 
   componentWillUnmount() {
+    DemoStore.removeChangeListener(this._onChange);
     NewsStore.removeChangeListener(this._onChange);
   }
 

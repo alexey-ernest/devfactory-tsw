@@ -5,6 +5,7 @@
 import AppDispatcher from '../dispatcher/AppDispatcher';
 import TswConstants from '../constants/TswConstants';
 import EventEmitter from 'events';
+import DemoDataUtils from '../utils/DemoDataUtils';
 
 var ActionTypes = TswConstants.ActionTypes;
 var CHANGE_EVENT = 'change';
@@ -16,6 +17,7 @@ var CHANGE_EVENT = 'change';
  */
 var _data = {
   isRequested: false,
+  isLoading: false,
   name: '',
   email: ''
 };
@@ -65,10 +67,25 @@ DemoStore.dispatchToken = AppDispatcher.register(function(action) {
 
     case ActionTypes.SUBMIT_DEMO_FORM:
       _data.isRequested = true;
+      _data.isLoading = true;
       _data.name = action.demo.name;
       _data.email = action.demo.email;
+
+      // submit request
+      var demoRequest = {
+        name: _data.name,
+        email: _data.email
+      };
+      DemoDataUtils.sendDemoRequest(demoRequest);
+
       this.emitChange();
       break;
+
+    case ActionTypes.RECEIVE_SUCCESSFULL_DEMO_RESPONSE:
+      _data.isLoading = false;
+      this.emitChange();
+      break;
+
 
     default:
       // do nothing

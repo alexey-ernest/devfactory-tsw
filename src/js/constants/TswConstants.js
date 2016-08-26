@@ -10,6 +10,7 @@ const TswConstants = {
     RECEIVE_BENEFITS: null,
     RECEIVE_DEMO: null,
     SUBMIT_DEMO_FORM: null,
+    RECEIVE_SUCCESSFULL_DEMO_RESPONSE: null,
     RECEIVE_FEATURES: null,
     RECEIVE_STATISTICS: null,
     RECEIVE_CUSTOMERS: null,

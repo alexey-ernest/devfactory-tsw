@@ -15,13 +15,19 @@ export default class ClosingCta extends Component {
 
   render() {
     var isRequested = this.props.demo.isRequested;
-    var demoButton = !isRequested ? 'Request your free demo now' : 'Your request was sent. Thanks!';
+    var isLoading = this.props.demo.isLoading;
+
+    var demoButton = isRequested && !isLoading ?
+      'Your request was sent. Thanks!' :
+      'Request your free demo now';
+
     return (
       <div className="closing-cta">
         <FlatButton
           label={demoButton}
           primary={true}
           onClick={this._onClick}
+          disabled={isRequested}
         />
       </div>
     );
