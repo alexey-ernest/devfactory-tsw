@@ -1,9 +1,11 @@
 /**
  * Closing Cta component.
  */
+// CSS
+import * as styles from '../../sass/modules/closing-cta.sass';
 
 import React, {Component, PropTypes} from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 export default class ClosingCta extends Component {
 
@@ -15,9 +17,12 @@ export default class ClosingCta extends Component {
     var isRequested = this.props.demo.isRequested;
     var demoButton = !isRequested ? 'Request your free demo now' : 'Your request was sent. Thanks!';
     return (
-      <div>
-      <RaisedButton label={demoButton} secondary={true} />
-      <button disabled={isRequested} onClick={this._onClick}>{demoButton}</button>
+      <div className="closing-cta">
+        <FlatButton
+          label={demoButton}
+          primary={true}
+          onClick={this._onClick}
+        />
       </div>
     );
   }
@@ -28,7 +33,7 @@ export default class ClosingCta extends Component {
    * @param {object} event
    */
   _onClick = (event) => {
-    window.scrollTo(0, 150);
+    document.getElementById('DemoFormName').focus();
   }
 
 }

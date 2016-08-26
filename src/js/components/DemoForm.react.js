@@ -45,6 +45,7 @@ export default class DemoForm extends Component {
     return (
       <form onSubmit={this._onSubmit}>
         <TextField
+          id="DemoFormName"
           hintText="Your Name"
           defaultValue={this.state.name}
           autoFocus={true}
