@@ -1,9 +1,5 @@
-
 // Grid
 @import "susy"
-
-// Vertical rhythm
-@import "typography"
 
 // Breakpoint
 @import "breakpoint"
@@ -15,8 +11,7 @@
 +add-breakpoint('wide', 1200px)
 +add-breakpoint('mega', 1400px)
 
-
-.container
+%container
   +container(100%)
   margin: 0 rhythm(1)
 
@@ -25,4 +20,3 @@
 
   +respond-to('wide')
     +container(1170px)
-
