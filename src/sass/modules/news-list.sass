@@ -11,3 +11,11 @@
     h5
       +type-setting(1)
       font-weight: 400
+
+    p
+      padding: 0 rhythm(2)
+
+    +respond-to('wide')
+      +span(6 of 12)
+      &:nth-child(2n)
+        +last
