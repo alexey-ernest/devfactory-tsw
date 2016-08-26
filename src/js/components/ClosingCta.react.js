@@ -11,7 +11,7 @@ export default class ClosingCta extends Component {
 
   static propTypes = {
     demo: PropTypes.object.isRequired
-  }
+  };
 
   render() {
     var isRequested = this.props.demo.isRequested;

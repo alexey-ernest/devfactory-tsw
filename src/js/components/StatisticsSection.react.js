@@ -12,7 +12,7 @@ export default class StatisticsSection extends Component {
 
   static propTypes = {
     data: PropTypes.object.isRequired
-  }
+  };
 
   render() {
     return (

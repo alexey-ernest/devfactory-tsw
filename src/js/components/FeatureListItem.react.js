@@ -14,11 +14,11 @@ export default class FeatureListItem extends Component {
 
   static propTypes = {
     feature: PropTypes.object.isRequired
-  }
+  };
 
   static contextTypes = {
     muiTheme: PropTypes.object.isRequired
-  }
+  };
 
   render() {
     // set icon color = primary theme color

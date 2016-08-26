@@ -8,7 +8,7 @@ export default class StatisticListItem extends Component {
 
   static propTypes = {
     statistic: PropTypes.object.isRequired
-  }
+  };
 
   render() {
     var statistic = this.props.statistic;

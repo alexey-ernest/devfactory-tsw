@@ -31,12 +31,12 @@ export default class DemoForm extends Component {
 
   static propTypes = {
     demo: PropTypes.object.isRequired
-  }
+  };
 
   state = {
     name: this.props.demo.name || '',
     email: this.props.demo.email || ''
-  }
+  };
 
   render() {
     var isFormValid = validate(this.state);

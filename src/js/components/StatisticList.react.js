@@ -12,7 +12,7 @@ export default class StatisticList extends Component {
 
   static propTypes = {
     statistics: PropTypes.array.isRequired
-  }
+  };
 
   render() {
     var statistics = this.props.statistics.map(function (stat) {

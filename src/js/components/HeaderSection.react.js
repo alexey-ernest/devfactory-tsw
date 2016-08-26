@@ -15,11 +15,11 @@ export default class HeaderSection extends Component {
 
   static propTypes = {
     data: PropTypes.object.isRequired
-  }
+  };
 
   static contextTypes = {
     muiTheme: PropTypes.object.isRequired
-  }
+  };
 
   render() {
     return (

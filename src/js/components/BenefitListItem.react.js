@@ -16,7 +16,7 @@ export default class BenefitListItem extends Component {
 
   static propTypes = {
     text: PropTypes.string.isRequired
-  }
+  };
 
   render() {
     var text = this.props.text;

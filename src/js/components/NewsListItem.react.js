@@ -8,7 +8,7 @@ export default class NewsListItem extends Component {
 
   static propTypes = {
     news: PropTypes.object.isRequired
-  }
+  };
 
   render() {
     let news = this.props.news;

@@ -37,7 +37,7 @@ const getStateFromStores = () => {
 
 export default class TswApp extends Component {
 
-  state = getStateFromStores()
+  state = getStateFromStores();
 
   componentDidMount() {
     DemoStore.addChangeListener(this._onChange);

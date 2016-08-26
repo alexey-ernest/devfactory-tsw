@@ -8,7 +8,7 @@ export default class CustomerListItem extends Component {
 
   static propTypes = {
     customer: PropTypes.object.isRequired
-  }
+  };
 
   render() {
     var customer = this.props.customer;

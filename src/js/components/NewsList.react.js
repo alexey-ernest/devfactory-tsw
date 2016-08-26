@@ -14,7 +14,7 @@ export default class NewsList extends Component {
 
   static propTypes = {
     news: PropTypes.array.isRequired
-  }
+  };
 
   render() {
     var news = this.props.news;

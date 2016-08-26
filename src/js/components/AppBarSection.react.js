@@ -12,7 +12,7 @@ export default class AppBarSection extends Component {
 
   static contextTypes = {
     muiTheme: PropTypes.object.isRequired
-  }
+  };
 
   render() {
     return (

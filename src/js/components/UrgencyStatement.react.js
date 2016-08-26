@@ -8,7 +8,7 @@ import * as styles from '../../sass/modules/urgency-statement.sass';
 import React, {Component, PropTypes} from 'react';
 import moment from 'moment';
 
-var READY_DAYS = 3;
+const READY_DAYS = 3;
 
 export default class UrgencyStatement extends Component {
 

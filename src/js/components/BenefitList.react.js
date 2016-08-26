@@ -13,7 +13,7 @@ export default class BenefitList extends Component {
 
   static propTypes = {
     benefits: PropTypes.array.isRequired
-  }
+  };
 
   render() {
     var benefits = this.props.benefits.map(function (benefit) {

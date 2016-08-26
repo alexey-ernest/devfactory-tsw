@@ -12,7 +12,7 @@ export default class FeatureList extends Component {
 
   static propTypes = {
     features: PropTypes.array.isRequired
-  }
+  };
 
   render() {
     var features = this.props.features.map(function (feature) {
