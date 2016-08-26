@@ -1,0 +1,23 @@
+@import "compass"
+@import "../typography"
+@import "../colors"
+@import "../layout"
+
+.footer
+  background-color: $block-dark
+  padding: rhythm(1) 0
+  +type-setting(-1)
+
+  a
+    +link-colors(#FFFFFF, #FFFFFF)
+    +hover-link
+
+  .brand-image
+    margin-top: 0
+
+.footer__container
+  @extend .container
+  height: rhythm(2)
+
+.footer-menu
+  float: right
