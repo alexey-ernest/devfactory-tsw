@@ -15,3 +15,8 @@
       strong
         display: block
         +type-setting(3)
+
+    +respond-to('wide')
+      +span(4 of 12)
+      &:nth-child(3n)
+        +last
