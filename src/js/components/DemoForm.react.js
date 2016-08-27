@@ -55,7 +55,6 @@ export default class DemoForm extends Component {
           name="demo-name"
           hintText="Your Name"
           defaultValue={this.state.name}
-          autoFocus={true}
           onChange={this._onNameChange}
           onKeyDown={this._onKeyDown}
           disabled={isRequested}

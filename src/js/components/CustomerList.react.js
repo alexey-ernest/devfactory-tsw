@@ -14,10 +14,19 @@ export default class CustomerList extends Component {
     customers: PropTypes.array.isRequired
   };
 
+  state = {
+    visibleItems: {},
+    lastIdx: 0
+  };
+
   render() {
-    var customers = this.props.customers.map(function (customer) {
+    var customers = this.props.customers.map((customer) => {
       return (
-        <CustomerListItem key={customer.id} customer={customer} />
+        <CustomerListItem
+          key={customer.id}
+          customer={customer}
+          visible={!!this.state.visibleItems[customer.id]}
+          onVisible={this._onVisible} />
       );
     });
 
@@ -26,6 +35,17 @@ export default class CustomerList extends Component {
         {customers}
       </ul>
     );
+  }
+
+  _onVisible = (customer) => {
+    var idx = this.props.customers.indexOf(customer);
+    var delay = (idx - this.state.lastIdx) * 100;
+
+    setTimeout(() => {
+      this.state.visibleItems[customer.id] = true;
+      this.forceUpdate();
+      this.state.lastIdx = idx;
+    }, delay);
   }
 
 }

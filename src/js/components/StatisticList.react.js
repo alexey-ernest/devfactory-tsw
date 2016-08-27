@@ -15,9 +15,9 @@ export default class StatisticList extends Component {
   };
 
   render() {
-    var statistics = this.props.statistics.map(function (stat) {
+    var statistics = this.props.statistics.map(function (stat, i) {
       return (
-        <StatisticListItem key={stat.id} statistic={stat} />
+        <StatisticListItem key={stat.id} statistic={stat}/>
       );
     });
 
