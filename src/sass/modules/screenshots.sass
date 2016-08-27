@@ -1,4 +1,5 @@
 @import "../typography"
+@import "../animation"
 
 .screenshots-container
   height: rhythm(16)
@@ -7,10 +8,12 @@
 
 %screen
   height: 100%
+  @extend %animated
 
 .screen-1
   @extend %screen
   position: relative
+  +animation-delay(1.5s)
 
 .screen-2, .screen-3
   @extend %screen
@@ -20,3 +23,9 @@
   right: 0
   left: 0
   bottom: 0
+
+.screen-2
+  +animation-delay(2s)
+
+.screen-3
+  +animation-delay(2.5s)

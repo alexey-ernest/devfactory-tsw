@@ -31,7 +31,7 @@ export default class HeaderSection extends Component {
         }}>
         <div className="header__container">
           <h1 className="ms-up-4">Instantly improve your product quality</h1>
-          <p>Easily automate and continously improve your software quality by running smart functional test suites on daily basis.</p>
+          <h2>Easily automate and continously improve your software quality by running smart functional test suites on daily basis.</h2>
           <div className="benefits">
             <BenefitList benefits={this.props.data.benefits} />
           </div>

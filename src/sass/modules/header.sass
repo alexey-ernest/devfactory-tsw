@@ -1,5 +1,6 @@
 @import "../typography"
 @import "../layout"
+@import "../animation"
 
 .header
   padding: rhythm(2) 0 0
@@ -8,6 +9,12 @@
 
   h1
     opacity: 0.64
+    @extend %animated
+    +animation-delay(0.2s)
+
+  h2
+    @extend %animated
+    +animation-delay(0.25s)
 
 .header__container
   @extend %container
@@ -16,6 +23,8 @@
   text-align: right
   width: rhythm(20)
   margin: rhythm(6) auto
+  @extend %animated
+  +animation-delay(0.3s)
 
   +respond-to('large')
     +span(6 of 12)
@@ -28,6 +37,8 @@
   text-align: left
   width: rhythm(20)
   margin: rhythm(4) auto
+  @extend %animated
+  +animation-delay(0.4s)
 
   +respond-to('large')
     +span(6 of 12 last)

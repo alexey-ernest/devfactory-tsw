@@ -86,7 +86,7 @@ export default {
           'type': 'post',
           'slug': 'hello-world',
           'url': 'http:\/\/localhost\/wordpress\/?p=1',
-          'title': 'Hello world!',
+          'title': 'Here are fake news for development build',
           'title_plain': 'Hello world!',
           'content': '<p>Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!<\/p>\n',
           'excerpt': 'Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!\n',
