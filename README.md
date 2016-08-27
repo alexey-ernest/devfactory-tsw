@@ -1,7 +1,7 @@
 # DevFactory TS Website
 DevFactory Testing Service landing Website
 
-<img src="assets/ss.png" width="500">
+<img src="assets/ss.png">
 
 ## Example
 https://ts-landing.firebaseapp.com/
