@@ -2,7 +2,7 @@
   "name": "testing-services-website-2016",
   "version": "0.0.1",
   "description": "DevFactory Testing Services Landing Page",
-  "main": "dist/js/app.js",
+  "main": "dist/js/bundle.js",
   "scripts": {
     "start": "webpack-dev-server --config ./configs/webpack.dev.js --progress --inline --colors",
     "build": "webpack --config ./configs/webpack.production.js --progress --colors",

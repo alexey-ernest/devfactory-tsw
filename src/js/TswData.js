@@ -25,10 +25,11 @@ export default {
     CustomerDataUtils.getAllCustomers();
 
     // News
-    if (process.env.NODE_ENV !== 'production') {
-      NewsDataUtils.getFakeNews();
-    } else {
-      NewsDataUtils.getLatestNews();
-    }
+    NewsDataUtils.getFakeNews();
+    // if (process.env.NODE_ENV !== 'production') {
+    //   NewsDataUtils.getFakeNews();
+    // } else {
+    //   NewsDataUtils.getLatestNews();
+    // }
   }
 };
